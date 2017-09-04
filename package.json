@@ -1,0 +1,34 @@
+{
+  "name": "supermall",
+  "version": "1.0.0",
+  "description": "通用电商平台的设计与实现：）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "server": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junior2Ran/superMall.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junior2Ran/superMall/issues"
+  },
+  "dependencies": {
+    "antd": "^2.13.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-transform-hmr": "^1.0.4",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
