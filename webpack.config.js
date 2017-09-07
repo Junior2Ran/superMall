@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+  context: path.resolve(__dirname, 'src'),
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -21,6 +22,9 @@ module.exports = {
     },{
       test: /\.less$/, 
       loader: 'style-loader!css-loader!less-loader'
+    },{
+      test:/(\.jpg$)|(\.png$)|(\.gif$)/,
+      loader:'url-loader?limit=10000&name=images/[name].[ext]'
     }]
   },
   devServer: {
@@ -29,6 +33,6 @@ module.exports = {
     hot: true
   },
   plugins: [ 
-    new webpack.HotModuleReplacementPlugin()//热加载插件
+    new webpack.HotModuleReplacementPlugin()  //热加载插件
   ]
 };
