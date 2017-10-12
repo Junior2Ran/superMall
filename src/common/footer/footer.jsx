@@ -1,5 +1,4 @@
 import React from 'react';
-import {render} from 'react-dom';
 import {Layout, Menu, Icon, Row, Col } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 
