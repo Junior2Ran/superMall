@@ -1,14 +1,19 @@
 import React from 'react';
 import {Layout} from 'antd';
 const { Content } = Layout;
-import Footer from '../footer/footer.jsx';
+import Footer from '../footer/mfooter.jsx';
 import Header from '../header/header.jsx';
 
-export default class App extends React.Component {
-    
+export default class MyLayout extends React.Component {
+    constructor(props,context) {
+        super(props,context);
+    }
+
     render(){
-        return <Layout>
-            <Header />
+        const header = this.props.header ? <Header /> : null;
+        
+        return <Layout style={{marginBottom:'56px'}}>
+            {header}
             <Content>
                 {this.props.children}
             </Content>

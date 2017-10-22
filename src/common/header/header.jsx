@@ -1,16 +1,34 @@
 import React from 'react';
-import { Input } from 'antd';
-const Search = Input.Search;
+import { SearchBar, Button, WhiteSpace, WingBlank } from 'antd-mobile';
 import "./header.less";
 
-export default class App extends React.Component {
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: ''
+        }
+    }
+
+    onCancel(value){
+        this.setState({
+            value: ''
+        });
+    }
+
+    onChange(value){
+        this.setState({
+            value: value
+        });
+    }
+
     render(){
         return <div className="header">
-            <span className="header-text">搜索</span>
-            <Search
-                placeholder="input search text"
-                onSearch={value => console.log(value)}
-                className="header-search"
+            <SearchBar
+                value={this.state.value}
+                placeholder="Search"
+                onCancel={this.onCancel.bind(this)}
+                onChange={this.onChange.bind(this)}
             />
         </div>
     }
