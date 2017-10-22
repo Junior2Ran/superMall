@@ -14,7 +14,7 @@ export default class MFooter extends React.Component {
         };
     }
 
-    contextTypes: {
+    contextTypes() {
         router: React.PropTypes.object
     }
 

@@ -11,8 +11,8 @@ import My from "./mobile/my/index.jsx";
 
 export default class App extends React.Component {
 
-    contextTypes: {
-        router: React.PropTypes.object
+    contextTypes() {
+        router: React.PropTypes.Object
     }
     
     render(){
