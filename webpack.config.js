@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const svgDirs = [
   require.resolve('antd-mobile').replace(/warn\.js$/, '')  // 1. 属于 antd-mobile 内置 svg 文件
@@ -47,6 +48,6 @@ module.exports = {
   },
   plugins: [ 
     new webpack.HotModuleReplacementPlugin(),  //热加载插件
-    // new BundleAnalyzerPlugin(),                //打包分析工具
+    // new BundleAnalyzerPlugin()                 //打包分析工具
   ]
 };

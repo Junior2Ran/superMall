@@ -1,8 +1,7 @@
 import React from 'react';
-import {Layout} from 'antd';
-const { Content } = Layout;
 import Footer from '../footer/footer.jsx';
 import Header from '../header/header.jsx';
+import Content from '../content/content.jsx';
 
 export default class MyLayout extends React.Component {
     constructor(props,context) {
@@ -12,12 +11,12 @@ export default class MyLayout extends React.Component {
     render(){
         const header = this.props.header ? <Header /> : null;
         
-        return <Layout style={{marginBottom:'56px'}}>
+        return <div>
             {header}
             <Content>
                 {this.props.children}
             </Content>
             <Footer />
-        </Layout>
+        </div>
     }
 }

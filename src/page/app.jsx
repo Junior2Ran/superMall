@@ -1,7 +1,6 @@
 import React from 'react';
 import {HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
-// import 'antd/dist/antd.css'; 
 import Help from './pc/help.jsx';
 import Home from './mobile/home/index.jsx';
 import Category from "./mobile/category/index.jsx";
