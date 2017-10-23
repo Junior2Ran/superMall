@@ -1,7 +1,7 @@
 import React from 'react';
 import {Layout} from 'antd';
 const { Content } = Layout;
-import Footer from '../footer/mfooter.jsx';
+import Footer from '../footer/footer.jsx';
 import Header from '../header/header.jsx';
 
 export default class MyLayout extends React.Component {

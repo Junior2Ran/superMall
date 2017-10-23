@@ -1,5 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const svgDirs = [
   require.resolve('antd-mobile').replace(/warn\.js$/, '')  // 1. 属于 antd-mobile 内置 svg 文件
@@ -11,7 +14,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle-[hash].js'
   },
   module: {
     rules: [
@@ -47,5 +50,28 @@ module.exports = {
   },
   plugins: [ 
     new webpack.HotModuleReplacementPlugin(),  //热加载插件
+    new HtmlWebpackPlugin({
+      template: __dirname + "/src/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+    }),
+    // new BundleAnalyzerPlugin(),                //打包分析工具
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+    }),
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        ie8: false,
+        output: {
+          comments: false,
+          beautify: false
+        },
+        mangle: {
+          keep_fnames: true
+        },
+        compress: {
+          warnings: false,
+          drop_console: true
+        }
+      }
+    })
   ]
 };
