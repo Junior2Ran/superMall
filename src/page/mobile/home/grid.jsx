@@ -24,10 +24,20 @@ export default class Grid extends React.Component {
             </Flex>
             <WhiteSpace />
             <Flex>
-              <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
               <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-              <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+              <Flex.Item>
+                  <Flex>
+                      <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+                      <Flex.Item>
+                          <Flex>
+                              <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
+                              <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                          </Flex>
+                      </Flex.Item>
+                  </Flex>
+              </Flex.Item>
             </Flex>
+            <WhiteSpace />
         </div>
     }
 }
