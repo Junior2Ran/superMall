@@ -47,5 +47,6 @@ module.exports = {
   },
   plugins: [ 
     new webpack.HotModuleReplacementPlugin(),  //热加载插件
+    // new BundleAnalyzerPlugin(),                //打包分析工具
   ]
 };

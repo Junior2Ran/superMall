@@ -57,8 +57,8 @@ export default class MyFooter extends React.Component {
                 title="分类"
                 key="分类"
                 badge={'new'}
-                selected={this.state.selectedTab === 'catagory'}
-                onPress={() => { this.linkTo('catagory'); }}
+                selected={this.state.selectedTab === 'category'}
+                onPress={() => { this.linkTo('category'); }}
                 data-seed="logId1"
             >
             </TabBar.Item>

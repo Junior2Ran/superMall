@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive';
 // import 'antd/dist/antd.css'; 
 import Help from './pc/help.jsx';
 import Home from './mobile/home/index.jsx';
-import Catagory from "./mobile/catagory/index.jsx";
+import Category from "./mobile/category/index.jsx";
 import Cart from "./mobile/cart/index.jsx";
 import My from "./mobile/my/index.jsx";
 
@@ -19,7 +19,7 @@ export default class App extends React.Component {
                 <Router>
                     <Switch>
                         <Route component={Home} path='/home'></Route>
-                        <Route component={Catagory} path='/catagory'></Route>
+                        <Route component={Category} path='/category'></Route>
                         <Route component={Cart} path='/cart'></Route>
                         <Route component={My} path='/my'></Route>
                         <Redirect to="/home" />
