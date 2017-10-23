@@ -1,7 +1,7 @@
 import React from 'react';
 import {WhiteSpace,Flex} from 'antd-mobile';
 
-export default class Home extends React.Component {
+export default class Grid extends React.Component {
     constructor(props,context) {
         super(props,context);
     }

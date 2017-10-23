@@ -4,23 +4,52 @@ import Layout from "../../../common/layout/layout.jsx";
 import Carousel from "./carousel.jsx";
 import Grid from "./grid.jsx";
 import Separator from "./separator.jsx";
-import homedata from "../../../static/data/home.js";
+import home_data from "../../../static/data/home.js";   //mock假数据
+import './index.less';
 
 export default class Home extends React.Component {
-    constructor(props,context) {
-        super(props,context);
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            carousel: {},
+            grid: {},
+            separator: {}
+        };
     }
 
     componentDidMount() {
-        console.log(homedata);
+        this.requestData();
+    }
+
+    requestData() {
+        // 通过API获取首页配置文件数据
+        const data = home_data.data.rows;   //mock假数据
+        let carousel = {},
+            grid = {},
+            separator = {};
+        if (data.length) {
+            for (let i in data) {
+                if (data[i].style_id === 'carousel_view') {
+                    carousel = data[i];
+                } else if (data[i].style_id === 'grid_view') {
+                    grid = data[i];
+                } else if (data[i].style_id === 'separator_view') {
+                    separator = data[i];
+                }
+            }
+        }
+        this.setState({
+            carousel,
+            grid,
+            separator
+        });
     }
 
     render(){
-
         return <Layout header={true}>
-            <Carousel />
-            <Separator />
-            <Grid />
+            <Carousel carouselData={this.state.carousel} />
+            <Separator separatorData={this.state.separator} />
+            <Grid gridData={this.state.grid} />
         </Layout>
     }
 }

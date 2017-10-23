@@ -7,16 +7,16 @@ var data = {
                 "ratio":0.5,
                 "data":[
                     {
-                        "img_url":"http://img1",
-                        "url":"wfshop://abc"
+                        "img_url":"http://real.acessummer.org/img/chs_banner1.jpg",
+                        "url":"/my"
                     },
                     {
-                        "img_url":"http://img2",
-                        "url":"wfshop://abc"
+                        "img_url":"http://real.acessummer.org/img/chs_banner2.jpg",
+                        "url":"/category"
                     },
                     {
-                        "img_url":"http://img3",
-                        "url":"wfshop://abc"
+                        "img_url":"http://real.acessummer.org/img/chs_banner3.jpg",
+                        "url":"/cart"
                     }
                 ]
             },
