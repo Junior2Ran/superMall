@@ -7,15 +7,15 @@ var data = {
                 "ratio":0.5,
                 "data":[
                     {
-                        "img_url":"http://real.acessummer.org/img/chs_banner1.jpg",
+                        "img_url":"/images/chs_banner1.jpg",
                         "url":"/my"
                     },
                     {
-                        "img_url":"http://real.acessummer.org/img/chs_banner2.jpg",
+                        "img_url":"/images/chs_banner2.jpg",
                         "url":"/category"
                     },
                     {
-                        "img_url":"http://real.acessummer.org/img/chs_banner3.jpg",
+                        "img_url":"/images/chs_banner3.jpg",
                         "url":"/cart"
                     }
                 ]
@@ -28,41 +28,43 @@ var data = {
                     "weight": 1,
                     "cells": [
                         {
-                            "image_url": "http://img",
-                            "url":"wfshop://abc",
+                            "image_url": "/images/1.jpg",
+                            "url":"/my",
                             "weight": 1
                         },
                         {
                             "cells": [
-                            {
-                                "image": "http://img",
-                                "url":"wfshop://abc",
-                                "weight": 1
-                            },
-                            {
-                                "image": "http://img1",
-                                "url":"wfshop://abc",
-                                "weight": 1
-                            },
-                            {
-                                "cells": [
-                                    {
-                                        "image": "http://img1",
-                                        "url":"wfshop://abc",
-                                        "weight": 1
-                                    },
-                                    {
-                                        "image": "http://img1",
-                                        "url":"wfshop://abc",
-                                        "weight": 1
-                                    } 
-                                ],
-                                "orientation": "h",
-                                "weight": 1
-                            }],
-                        "orientation": "v",
-                        "weight": 1
-                    }]
+                                {
+                                    "image_url": "/images/1.jpg",
+                                    "url":"/my",
+                                    "weight": 1
+                                },
+                                {
+                                    "image_url": "/images/2.jpg",
+                                    "url":"/my",
+                                    "weight": 1
+                                },
+                                {
+                                    "cells": [
+                                        {
+                                            "image_url": "/images/2.jpg",
+                                            "url":"/my",
+                                            "weight": 1
+                                        },
+                                        {
+                                            "image_url": "/images/3.jpg",
+                                            "url":"/my",
+                                            "weight": 1
+                                        } 
+                                    ],
+                                    "orientation": "h",
+                                    "weight": 1
+                                }
+                            ],
+                            "orientation": "v",
+                            "weight": 1
+                        }
+                    ]
                 }
             },
             {
@@ -70,8 +72,8 @@ var data = {
                 "ratio":0.5,
                 "data":{
                     "title":"男装",
-                    "img_url":"http://img4",
-                    "url":"wfshop://abcd"
+                    "img_url":"/images/1.jpg",
+                    "url":"/category"
                 }
             }
         ],

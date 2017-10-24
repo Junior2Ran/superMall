@@ -22,7 +22,7 @@ export default class MyCarousel extends React.Component {
             });
         }
         
-        return <div className="carousel">
+        return <div className="carousel_view">
             <Carousel className="my-carousel"
                 autoplay={true}
                 infinite

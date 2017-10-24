@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {WhiteSpace} from 'antd-mobile';
 
 export default class Separator extends React.Component {
@@ -11,18 +12,14 @@ export default class Separator extends React.Component {
     componentDidMount() {
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.separatorData && nextProps.separatorData!==this.props.separatorData) {
-        }
-    }
-
     render(){
-        let title = '';
-        if (this.props.separatorData && this.props.separatorData.data) {
-            title = this.props.separatorData.data.title;
+        let separator = this.props.separatorData && this.props.separatorData.data;
+        if (!separator) {
+            return null;
         }
-        return <div>
-            <span>{title}</span>
+
+        return <div className="separator_view">
+            <Link to={separator.url}>{separator.title}</Link>
             <WhiteSpace/>
         </div>
     }

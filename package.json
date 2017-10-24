@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "webpack-dev-server",
-    "build": "set NODE_ENV=production && webpack --config ./webpack.prod.config.js --color --progress"
+    "build": "rm -rf dist && set NODE_ENV=production && webpack --config ./webpack.prod.config.js --color --progress"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "url": "https://github.com/Junior2Ran/superMall/issues"
   },
   "dependencies": {
-    "antd-mobile": "^1.7.0",
+    "antd-mobile": "^1.7.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.1",
@@ -30,6 +30,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
+    "html-withimg-loader": "^0.1.16",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "react": "^15.6.1",

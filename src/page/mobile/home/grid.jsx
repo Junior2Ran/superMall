@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {WhiteSpace,Flex} from 'antd-mobile';
 
 export default class Grid extends React.Component {
@@ -9,33 +10,45 @@ export default class Grid extends React.Component {
     componentDidMount() {
     }
 
-    render(){
+    // 生成栅格布局
+    generateGrid(cell, key){
+        var vdom = [];
+        console.log(cell);
+        for (let i in cell) {
+            const data = cell[i];
+            const keyz = key + i + "";
+            if (data.hasOwnProperty('cells')) {
+                let list = [];
+                // console.log(data)
+                list.push(this.generateGrid(data.cells));
+                vdom.push(
+                    <Flex.Item key={keyz}>
+                        <Flex>
+                            {list}
+                        </Flex>
+                    </Flex.Item>
+                );
+            } else {
+                vdom.push(
+                    <Flex.Item key={keyz}>
+                        <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
+                    </Flex.Item>
+                );
+            }
+        }
+        return vdom;
+    }
 
-        return <div>
+    render(){
+        let content = [];
+        if (this.props.gridData && this.props.gridData.data) {
+            var gridCells = this.props.gridData.data.cells;
+            content = this.generateGrid(gridCells, 0);
+        }
+
+        return <div className="grid_view">
             <Flex>
-              <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
-              <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-            </Flex>
-            <WhiteSpace />
-            <Flex>
-              <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
-              <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-              <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
-            </Flex>
-            <WhiteSpace />
-            <Flex>
-              <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-              <Flex.Item>
-                  <Flex>
-                      <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
-                      <Flex.Item>
-                          <Flex>
-                              <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-                              <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
-                          </Flex>
-                      </Flex.Item>
-                  </Flex>
-              </Flex.Item>
+            {content}
             </Flex>
             <WhiteSpace />
         </div>
