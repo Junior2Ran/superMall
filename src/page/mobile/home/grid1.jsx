@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {WhiteSpace,Flex} from 'antd-mobile';
@@ -40,6 +41,12 @@ export default class Grid extends React.Component {
                           </Flex>
                       </Flex.Item>
                   </Flex>
+                  <WhiteSpace />
+                  <Flex>
+                      <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+                      <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                  </Flex>
+                  <WhiteSpace />
               </Flex.Item>
             </Flex>
             <WhiteSpace />

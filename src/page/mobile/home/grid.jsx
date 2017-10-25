@@ -11,30 +11,37 @@ export default class Grid extends React.Component {
     }
 
     // 生成栅格布局
-    generateGrid(cell, key){
+    generateGrid(data, key){
         var vdom = [];
-        console.log(cell);
-        for (let i in cell) {
-            const data = cell[i];
-            const keyz = key + i + "";
-            if (data.hasOwnProperty('cells')) {
-                let list = [];
-                // console.log(data)
-                list.push(this.generateGrid(data.cells));
+        console.log(data);
+        if (data.hasOwnProperty('cells')) {
+            let list = [];
+            data.cells.map((item, index) => {
+                var keyz = key + index + "";
+                list.push(this.generateGrid(item, keyz));
+            });
+            const orientation = data.orientation;
+
+            if (orientation === 'h') {
                 vdom.push(
-                    <Flex.Item key={keyz}>
-                        <Flex>
-                            {list}
-                        </Flex>
-                    </Flex.Item>
+                    <Flex key={key}>
+                        {list}
+                    </Flex>
                 );
             } else {
-                vdom.push(
-                    <Flex.Item key={keyz}>
-                        <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
-                    </Flex.Item>
-                );
+                <Flex.Item key={key}>
+                    <Flex>
+                        {list}
+                    </Flex>
+                </Flex.Item>
             }
+            
+        } else {
+            vdom.push(
+                <Flex.Item key={key}>
+                    <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
+                </Flex.Item>
+            );
         }
         return vdom;
     }
@@ -42,14 +49,12 @@ export default class Grid extends React.Component {
     render(){
         let content = [];
         if (this.props.gridData && this.props.gridData.data) {
-            var gridCells = this.props.gridData.data.cells;
-            content = this.generateGrid(gridCells, 0);
+            const data = this.props.gridData.data;
+            content = this.generateGrid(data, 0);
         }
 
         return <div className="grid_view">
-            <Flex>
             {content}
-            </Flex>
             <WhiteSpace />
         </div>
     }

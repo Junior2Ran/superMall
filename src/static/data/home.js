@@ -32,10 +32,12 @@ var data = {
                             "url":"/my",
                             "weight": 1
                         },
-                        {
+                        {   
+                            "orientation": "v",
+                            "weight": 1,
                             "cells": [
                                 {
-                                    "image_url": "/images/1.jpg",
+                                    "image_url": "/images/2.jpg",
                                     "url":"/my",
                                     "weight": 1
                                 },
@@ -44,10 +46,12 @@ var data = {
                                     "url":"/my",
                                     "weight": 1
                                 },
-                                {
+                                {   
+                                    "orientation": "h",
+                                    "weight": 1,
                                     "cells": [
                                         {
-                                            "image_url": "/images/2.jpg",
+                                            "image_url": "/images/3.jpg",
                                             "url":"/my",
                                             "weight": 1
                                         },
@@ -56,13 +60,9 @@ var data = {
                                             "url":"/my",
                                             "weight": 1
                                         } 
-                                    ],
-                                    "orientation": "h",
-                                    "weight": 1
+                                    ]
                                 }
-                            ],
-                            "orientation": "v",
-                            "weight": 1
+                            ]
                         }
                     ]
                 }

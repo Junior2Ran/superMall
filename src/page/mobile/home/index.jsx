@@ -1,6 +1,7 @@
 import React from 'react';
 import {WhiteSpace,Flex} from 'antd-mobile';
 import Layout from "../../../common/layout/layout.jsx";
+import Bottom from "../../../common/bottom/bottom.jsx";
 import Carousel from "./carousel.jsx";
 import Grid from "./grid.jsx";
 import Separator from "./separator.jsx";
@@ -50,6 +51,7 @@ export default class Home extends React.Component {
             <Carousel carouselData={this.state.carousel} />
             <Separator separatorData={this.state.separator} />
             <Grid gridData={this.state.grid} />
+            <Bottom>我是有底线的</Bottom>
         </Layout>
     }
 }
