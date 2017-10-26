@@ -6,6 +6,7 @@ import Home from './mobile/home/index.jsx';
 import Category from "./mobile/category/index.jsx";
 import Cart from "./mobile/cart/index.jsx";
 import My from "./mobile/my/index.jsx";
+import Search from "./mobile/search/index.jsx";
 
 export default class App extends React.Component {
     
@@ -21,6 +22,8 @@ export default class App extends React.Component {
                         <Route component={Category} path='/category'></Route>
                         <Route component={Cart} path='/cart'></Route>
                         <Route component={My} path='/my'></Route>
+
+                        <Route component={Search} path='/search'></Route>
                         <Redirect to="/home" />
                     </Switch>
                 </Router>

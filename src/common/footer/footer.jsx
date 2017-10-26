@@ -14,7 +14,7 @@ export default class MyFooter extends React.Component {
     getInitialState() {
         let link = this.getLink() || 'home';
         return {
-            hidden: false,
+            hidden: this.props.hideFooter || false,
             selectedTab: link,
         };
     }
@@ -34,6 +34,7 @@ export default class MyFooter extends React.Component {
     }
 
     render(){
+        console.log(this.props)
         return <TabBar
               unselectedTintColor="#949494"
               tintColor="#33A3F4"

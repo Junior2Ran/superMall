@@ -3,12 +3,16 @@ import { SearchBar, Button, WhiteSpace, WingBlank } from 'antd-mobile';
 // import "./header.less";
 
 export default class Header extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor(props, context) {
+        super(props, context);
         this.state = {
             value: ''
         }
     }
+
+    static contextTypes = {  
+        router: React.PropTypes.object
+    } 
 
     onCancel(value){
         this.setState({
@@ -22,6 +26,11 @@ export default class Header extends React.Component {
         });
     }
 
+    onSubmit(value){
+        this.context.router.history.push('search');
+        console.log(this.context.router)
+    }
+
     render(){
         return <div className="header">
             <SearchBar
@@ -29,6 +38,7 @@ export default class Header extends React.Component {
                 placeholder="Search"
                 onCancel={this.onCancel.bind(this)}
                 onChange={this.onChange.bind(this)}
+                onSubmit={this.onSubmit.bind(this)}
             />
         </div>
     }

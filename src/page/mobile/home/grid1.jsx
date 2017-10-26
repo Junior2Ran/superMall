@@ -15,7 +15,6 @@ export default class Grid extends React.Component {
         if (this.props.gridData && this.props.gridData.data) {
             
         }
-        console.log(this.props.gridData)
 
         return <div className="grid_view">
             <Flex>
@@ -29,6 +28,7 @@ export default class Grid extends React.Component {
               <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
             </Flex>
             <WhiteSpace />
+
             <Flex>
               <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
               <Flex.Item>
@@ -48,6 +48,20 @@ export default class Grid extends React.Component {
                   </Flex>
                   <WhiteSpace />
               </Flex.Item>
+            </Flex>
+            <WhiteSpace />
+
+            <Flex>
+                <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+                <Flex.Item>
+                    <Flex><Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item></Flex>
+                    <WhiteSpace />
+                    <Flex>
+                        <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                        <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                    </Flex>
+                    <WhiteSpace />
+                </Flex.Item>
             </Flex>
             <WhiteSpace />
         </div>

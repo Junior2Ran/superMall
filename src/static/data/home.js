@@ -41,11 +41,6 @@ var data = {
                                     "url":"/my",
                                     "weight": 1
                                 },
-                                {
-                                    "image_url": "/images/2.jpg",
-                                    "url":"/my",
-                                    "weight": 1
-                                },
                                 {   
                                     "orientation": "h",
                                     "weight": 1,

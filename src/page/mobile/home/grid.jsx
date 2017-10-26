@@ -11,37 +11,46 @@ export default class Grid extends React.Component {
     }
 
     // 生成栅格布局
-    generateGrid(data, key){
+    generateGrid(data, key, parentOrientation='h'){
         var vdom = [];
-        console.log(data);
         if (data.hasOwnProperty('cells')) {
             let list = [];
-            data.cells.map((item, index) => {
+            list = data.cells.map((item, index) => {
                 var keyz = key + index + "";
-                list.push(this.generateGrid(item, keyz));
+                return this.generateGrid(item, keyz, data.orientation);
             });
-            const orientation = data.orientation;
+            const cellOrientation = data.orientation;
 
-            if (orientation === 'h') {
+            if (cellOrientation === 'h') {
                 vdom.push(
                     <Flex key={key}>
                         {list}
                     </Flex>
                 );
+                vdom.push(<WhiteSpace key={`ws${key}`}/>);
             } else {
-                <Flex.Item key={key}>
-                    <Flex>
+                vdom.push(
+                    <Flex.Item key={key}>
                         {list}
-                    </Flex>
-                </Flex.Item>
+                    </Flex.Item>
+                );
             }
             
         } else {
-            vdom.push(
-                <Flex.Item key={key}>
-                    <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
-                </Flex.Item>
-            );
+            if (parentOrientation === 'h') {
+                vdom.push(
+                    <Flex.Item key={key}>
+                        <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
+                    </Flex.Item>
+                );
+            } else {
+                vdom.push(
+                    <Flex key={key}><Flex.Item>
+                        <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
+                    </Flex.Item></Flex>
+                );
+                vdom.push(<WhiteSpace key={`ws${key}`}/>);
+            }
         }
         return vdom;
     }
