@@ -14,8 +14,7 @@ export default class MyFooter extends React.Component {
     getInitialState() {
         let link = this.getLink() || 'home';
         return {
-            hidden: this.props.hideFooter || false,
-            selectedTab: link,
+            selectedTab: link
         };
     }
 
@@ -29,18 +28,17 @@ export default class MyFooter extends React.Component {
     linkTo(link) {
         this.context.router.history.push(link);
         this.setState({
-          selectedTab: link,
+          selectedTab: link
         });
     }
 
     render(){
-        console.log(this.props)
         return <TabBar
-              unselectedTintColor="#949494"
-              tintColor="#33A3F4"
-              barTintColor="white"
-              hidden={this.state.hidden}
-            >
+            unselectedTintColor="#949494"
+            tintColor="#33A3F4"
+            barTintColor="white"
+            hidden={!this.props.footer}
+        >
             <TabBar.Item
                 title="首页"
                 key="首页"

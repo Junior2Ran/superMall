@@ -47,7 +47,7 @@ export default class Home extends React.Component {
     }
 
     render(){
-        return <Layout header={true}>
+        return <Layout header={true} footer={true}>
             <Carousel carouselData={this.state.carousel} />
             <Separator separatorData={this.state.separator} />
             <Grid gridData={this.state.grid} />

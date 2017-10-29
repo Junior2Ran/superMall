@@ -4,7 +4,7 @@ import Layout from "../../../common/layout/layout.jsx";
 export default class Cart extends React.Component {
     
     render(){
-        return <Layout>
+        return <Layout footer={true}>
             cart
         </Layout>
     }

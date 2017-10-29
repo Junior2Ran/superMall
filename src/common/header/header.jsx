@@ -28,7 +28,6 @@ export default class Header extends React.Component {
 
     onSubmit(value){
         this.context.router.history.push('search');
-        console.log(this.context.router)
     }
 
     render(){
