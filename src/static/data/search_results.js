@@ -1,4 +1,4 @@
-{
+var data = {
     "code":1,
     "data":[
         {
@@ -80,3 +80,5 @@
         }
     ]
 }
+
+export default data;

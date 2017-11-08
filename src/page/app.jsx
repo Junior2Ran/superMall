@@ -25,7 +25,7 @@ export default class App extends React.Component {
                         <Route component={My} path='/my'></Route>
 
                         <Route component={Search} path='/search'></Route>
-                        <Route component={Product} path='/product'></Route>
+                        <Route component={Product} path='/product/:id'></Route>
                         <Redirect to="/home" />
                     </Switch>
                 </Router>

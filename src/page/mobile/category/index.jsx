@@ -7,6 +7,8 @@ import ReactDOM from "react-dom";
 import { ListView } from 'antd-mobile';
 import Layout from "../../../common/layout/layout.jsx";
 
+import category_data from "../../../static/data/category.js";   //mock假数据
+
 export default class Category extends React.Component {
     constructor(props) {
         super(props);
@@ -80,12 +82,12 @@ export default class Category extends React.Component {
                 }}
             />
         );
-        let index = data.length - 1;
-        const row = (rowData, sectionID, rowID) => {
+        let index = cata.length - 1;
+        const row = (rowcata, sectionID, rowID) => {
             if (index < 0) {
-                index = data.length - 1;
+                index = cata.length - 1;
             }
-            const obj = data[index--];
+            const obj = cata[index--];
             return (
                 <div key={rowID} style={{ padding: '0 15px' }}>
                   <div
@@ -95,9 +97,9 @@ export default class Category extends React.Component {
                       fontSize: 18,
                       borderBottom: '1px solid #F6F6F6',
                     }}
-                  >{obj.title}</div>
+                  >{obj.name}</div>
                   <div style={{ display: '-webkit-box', display: 'flex', padding: '15px 0' }}>
-                    <img style={{ height: '64px', marginRight: '15px' }} src={obj.img} alt="" />
+                    <img style={{ height: '64px', marginRight: '15px' }} src={obj.img_url} alt="" />
                     <div style={{ lineHeight: 1 }}>
                       <div style={{ marginBottom: '8px', fontWeight: 'bold' }}>{obj.des}</div>
                       <div><span style={{ fontSize: '30px', color: '#FF6E27' }}>35</span>¥ {rowID}</div>
@@ -159,6 +161,126 @@ const data = [
         des: '不是所有的兼职汪都需要风吹日晒',
     },
 ];
+
+const cata = [
+    {
+        "name":"手机数码",
+        "img_url":"",
+        "children":[
+            {
+                "name":"男装",
+                "img_url":"",
+                "children":[
+                    {
+                        "name":"马甲/背心",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                    }
+                ]
+            },
+            {
+                "name":"家具内衣",
+                "img_url":"",
+                "children":[
+                    {
+                        "name":"男娃",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                    },
+                    {
+                        "name":"睡袍",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                    },
+                    {
+                        "name":"男士内裤",
+                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                    },
+                    {
+                        "name":"家居服",
+                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                    },
+                    {
+                        "name":"保暖内衣",
+                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                    },
+                    {
+                        "name":"抹胸",
+                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                    }
+                ]
+            },
+            {
+                "name":"服饰配件",
+                "img_url":"",
+                "children":[
+                    {
+                        "name":"墨镜",
+                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                    },
+                    {
+                        "name":"围巾",
+                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                    },
+                    {
+                        "name":"丝巾",
+                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                    },
+                    {
+                        "name":"帽子",
+                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                    }
+                ]
+            },
+            {
+                "name":"男鞋",
+                "img_url":"",
+                "children":[
+                    {
+                        "name":"休闲鞋",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                    },
+                    {
+                        "name":"布鞋",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                    },
+                    {
+                        "name":"板鞋",
+                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                    },
+                    {
+                        "name":"帆布鞋",
+                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                    },
+                    {
+                        "name":"凉鞋",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                    }
+                ]
+            },
+            {
+                "name":"女鞋",
+                "img_url":"",
+                "children":[
+                    {
+                        "name":"女鞋",
+                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                    },
+                    {
+                        "name":"高跟鞋",
+                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                    },
+                    {
+                        "name":"松糕鞋",
+                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                    },
+                    {
+                        "name":"休闲鞋",
+                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                    }
+                ]
+            }
+        ]
+    }
+];
+
 const NUM_SECTIONS = 5;
 const NUM_ROWS_PER_SECTION = 5;
 let pageIndex = 0;

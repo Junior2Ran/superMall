@@ -3,6 +3,7 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const svgDirs = [
   require.resolve('antd-mobile').replace(/warn\.js$/, '')  // 1. 属于 antd-mobile 内置 svg 文件
@@ -75,7 +76,14 @@ module.exports = {
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-        names: ['vendor']
+      names: ['vendor']
+    }),
+    // Make sure that the plugin is after any plugins that add images
+    new ImageminPlugin({
+      disable: process.env.NODE_ENV !== 'production', 
+      pngquant: {
+        quality: '95-100'
+      }
     })
   ]
 };
