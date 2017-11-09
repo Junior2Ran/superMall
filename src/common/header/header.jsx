@@ -1,6 +1,6 @@
 import React from 'react';
 import { SearchBar, Button, WhiteSpace, WingBlank } from 'antd-mobile';
-// import "./header.less";
+import "./header.less";
 
 export default class Header extends React.Component {
     constructor(props, context) {

@@ -4,7 +4,6 @@ import Layout from "../../../common/layout/layout.jsx";
 import Bottom from "../../../common/bottom/bottom.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
-import { StickyContainer, Sticky } from 'react-sticky';
 
 import search_data from "../../../static/data/search_results.js";   //mock假数据
 
@@ -39,7 +38,6 @@ class Search extends React.Component {
             isLoading: true,
             tabIndex: index
         });
-        console.log(tab,index)
         // 模拟ajax异步获取数据
         setTimeout(() => {
             this.setState({
@@ -51,7 +49,7 @@ class Search extends React.Component {
     render() {
         const content = this.state.data && this.state.data.map((item, index) => {
         	return <Link to={`/product/${item.id}`} key={index}>
-        		<Flex>
+        		<Flex style={{background:'#fff'}}>
 	        		<Flex.Item>
 	        			<img src={item.img_url} style={{width: '100%'}}/>
 	        		</Flex.Item>
@@ -66,26 +64,17 @@ class Search extends React.Component {
         });
 
         return <Layout header={true}>
-            <StickyContainer>
-                <Tabs tabs={tabs}
-                    renderTabBar={renderTabBar}
-                    onChange={this.onTabsChange.bind(this)} 
-                    initialPage={this.state.tabIndex}
-                >
-                </Tabs>
-            </StickyContainer>
+            <Tabs tabs={tabs}
+                onChange={this.onTabsChange.bind(this)} 
+                initialPage={this.state.tabIndex}
+                useOnPan={false}
+            >
+            </Tabs>
             <WhiteSpace size='xs' />
             {content}
             <Bottom>我是有底线的</Bottom>
         </Layout>
     }
-}
-
-function renderTabBar(props) {
-    console.log(props)
-    return (<Sticky>
-        {({ style }) => <div style={{ ...style, zIndex: 1 }}><Tabs.DefaultTabBar {...props} /></div>}
-    </Sticky>);
 }
 
 const tabs = [

@@ -11,7 +11,7 @@ export default class MyLayout extends React.Component {
     render(){
         const header = this.props.header ? <Header /> : null;
         
-        return <div>
+        return <div className="layout">
             {header}
             <Content {...this.props}>
                 {this.props.children}
