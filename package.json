@@ -18,7 +18,7 @@
     "url": "https://github.com/Junior2Ran/superMall/issues"
   },
   "dependencies": {
-    "antd-mobile": "^1.7.1",
+    "antd-mobile": "^2.0.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.1",

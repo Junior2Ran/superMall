@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
 import Bottom from "../../../common/bottom/bottom.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
-import {WhiteSpace,Flex} from 'antd-mobile';
+import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import search_data from "../../../static/data/search_results.js";   //mock假数据
 
@@ -33,12 +34,11 @@ class Search extends React.Component {
     }
 
     render(){
-        console.log(this.state.data);
         const content = this.state.data && this.state.data.map((item, index) => {
         	return <Link to={`/product/${item.id}`} key={index}>
         		<Flex>
 	        		<Flex.Item>
-	        			<img src={item.img_url} />
+	        			<img src={item.img_url} style={{width: '100%'}}/>
 	        		</Flex.Item>
 	        		<Flex.Item>
 	        			<div style={{marginBottom: 10}}>{item.name}</div>
@@ -49,10 +49,33 @@ class Search extends React.Component {
     			<WhiteSpace />
 			</Link>
         });
+
         return <Layout header={true}>
+            <StickyContainer>
+                <Tabs tabs={tabs}
+                    initalPage={'t2'}
+                    renderTabBar={renderTabBar}
+                >
+                </Tabs>
+            </StickyContainer>
+            <WhiteSpace size='xs' />
             {content}
             <Bottom>我是有底线的</Bottom>
         </Layout>
     }
 }
+
+function renderTabBar(props) {
+    console.log(props)
+    return (<Sticky>
+        {({ style }) => <div style={{ ...style, zIndex: 1 }} key={1}><Tabs.DefaultTabBar {...props} /></div>}
+    </Sticky>);
+}
+
+const tabs = [
+    { title: '综合排序' },
+    { title: '按价格排序' },
+    { title: '按评论排序' },
+];
+
 export default LoadingHoc(Search);

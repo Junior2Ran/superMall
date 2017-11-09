@@ -13,7 +13,7 @@ export default class MyLayout extends React.Component {
         
         return <div>
             {header}
-            <Content footer={this.props.footer}>
+            <Content {...this.props}>
                 {this.props.children}
             </Content>
             <Footer footer={this.props.footer}/>
