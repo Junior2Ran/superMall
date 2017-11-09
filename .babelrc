@@ -11,5 +11,7 @@
       }]]
     }
   },
-  "plugins": [["import", { "style": "css", "libraryName": "antd-mobile" }]]
+  "plugins": [
+    ["import", {"libraryName": "antd-mobile", "style": true}]
+  ]
 }

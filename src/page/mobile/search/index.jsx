@@ -13,6 +13,7 @@ class Search extends React.Component {
         super(props, context);
         this.state = {
         	isLoading: true,
+            tabIndex: 0,
             data: []
         };
     }
@@ -30,25 +31,24 @@ class Search extends React.Component {
                 data,
                 isLoading: false
             });
-        }, 1000);
+        }, 500);
     }
 
     onTabsChange(tab, index){
         this.setState({
-            isLoading: true
+            isLoading: true,
+            tabIndex: index
         });
         console.log(tab,index)
         // 模拟ajax异步获取数据
         setTimeout(() => {
-            const data = search_data.data;   //mock假数据
             this.setState({
-                data,
                 isLoading: false
             });
-        }, 1000);
+        }, 300);
     }
 
-    render(){
+    render() {
         const content = this.state.data && this.state.data.map((item, index) => {
         	return <Link to={`/product/${item.id}`} key={index}>
         		<Flex>
@@ -69,17 +69,20 @@ class Search extends React.Component {
             <StickyContainer>
                 <Tabs tabs={tabs}
                     renderTabBar={renderTabBar}
-                    onChange={this.onTabsChange.bind(this)}
+                    onChange={this.onTabsChange.bind(this)} 
+                    initialPage={this.state.tabIndex}
                 >
                 </Tabs>
             </StickyContainer>
             <WhiteSpace size='xs' />
+            {content}
             <Bottom>我是有底线的</Bottom>
         </Layout>
     }
 }
 
 function renderTabBar(props) {
+    console.log(props)
     return (<Sticky>
         {({ style }) => <div style={{ ...style, zIndex: 1 }}><Tabs.DefaultTabBar {...props} /></div>}
     </Sticky>);

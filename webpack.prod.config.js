@@ -4,6 +4,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const theme = require('./package.json').theme;  // antd-mobile 主题自定义设置
 
 const svgDirs = [
   require.resolve('antd-mobile').replace(/warn\.js$/, '')  // 1. 属于 antd-mobile 内置 svg 文件
@@ -31,7 +32,11 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },{
         test: /\.less$/, 
-        loader: 'style-loader!css-loader!less-loader'
+        use: [
+          'style-loader',
+          'css-loader',
+          {loader: 'less-loader', options: {modifyVars: theme}},
+        ]
       },{
         test:/(\.jpg$)|(\.png$)|(\.gif$)/,
         loader:'url-loader?limit=10000&name=images/[name]-[hash:6].[ext]'

@@ -39,7 +39,7 @@ export default class MyFooter extends React.Component {
         return <div className="footer">
             <TabBar
                 unselectedTintColor="#949494"
-                tintColor="#33A3F4"
+                tintColor="#f28b12"
                 barTintColor="white"
                 hidden={!this.props.footer}
             >

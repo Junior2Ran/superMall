@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/Junior2Ran/superMall/issues"
   },
+  "theme": {
+    "brand-primary": "#f28b12"
+  },
   "dependencies": {
     "antd-mobile": "^2.0.2",
     "babel-core": "^6.26.0",

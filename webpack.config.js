@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const theme = require('./package.json').theme;  // antd-mobile 主题自定义设置
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const svgDirs = [
@@ -25,7 +26,11 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },{
         test: /\.less$/, 
-        loader: 'style-loader!css-loader!less-loader'
+        use: [
+          'style-loader',
+          'css-loader',
+          {loader: 'less-loader', options: {modifyVars: theme}},
+        ]
       },{
         test:/(\.jpg$)|(\.png$)|(\.gif$)/,
         loader:'url-loader?limit=10000&name=images/[name].[ext]'
