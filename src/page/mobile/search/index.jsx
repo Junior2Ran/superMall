@@ -4,7 +4,7 @@ import Layout from "../../../common/layout/layout.jsx";
 import Bottom from "../../../common/bottom/bottom.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
-
+import './search.less';
 import search_data from "../../../static/data/search_results.js";   //mock假数据
 
 class Search extends React.Component {
