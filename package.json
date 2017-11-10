@@ -18,7 +18,9 @@
     "url": "https://github.com/Junior2Ran/superMall/issues"
   },
   "theme": {
-    "brand-primary": "#f28b12"
+    "brand-primary": "#f28b12",
+    "tabHeight": "3.125rem",
+    "searchHeight": "2.75rem"
   },
   "dependencies": {
     "antd-mobile": "^2.0.2",

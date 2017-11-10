@@ -1,0 +1,36 @@
+@tabHeight: 3.125rem;
+@searchHeight: 2.75rem;
+
+.clearfix {
+    overflow: hidden;
+    _zoom: 1;
+}
+
+.fullHeightContainer {
+    height: calc(~'100% - ' (@tabHeight + @searchHeight));
+
+    .primaryMenu {
+        float: left;
+        width: 40%;
+        height: 100%;
+        overflow-y: auto;
+        background: #fff;
+    }
+
+    .secondaryMenu {
+        float: left;
+        width: 60%;
+        height: 100%;
+        overflow-y: auto;
+
+        .cate_item {
+            width: 50%;
+            float: left;
+            text-align: center;
+            
+            .cate_img {
+                width: 80%;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@ import Layout from "../../../common/layout/layout.jsx";
 import {Carousel, WhiteSpace, WingBlank, Modal, List, Button} from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
-import './product.less';
+import './index.less';
 
 export default class Product extends React.Component {
     constructor(props,context) {
@@ -45,7 +45,9 @@ export default class Product extends React.Component {
             ---
             <WingBlank size="lg">商品详情</WingBlank>
             <WhiteSpace />
-            <img src="./images/chs_banner1.jpg" style={{width:'100%'}} />
+            <img src="./images/1.jpg" style={{width:'100%'}} />
+            <img src="./images/2.jpg" style={{width:'100%'}} />
+            <img src="./images/3.jpg" style={{width:'100%'}} />
             <WhiteSpace size="lg"/>
             <PutInCart style={{height:'3.125rem'}}
                 showModal={this.toggleModal.bind(this)}

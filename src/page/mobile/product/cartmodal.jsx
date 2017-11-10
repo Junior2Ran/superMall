@@ -1,7 +1,7 @@
 import React from 'react';
 import {WhiteSpace, WingBlank, Modal, List, Button} from 'antd-mobile';
 
-export default class PutInCart extends React.Component {
+export default class CartModal extends React.Component {
 
     render() {
         return <Modal
