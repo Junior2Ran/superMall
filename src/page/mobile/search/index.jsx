@@ -33,7 +33,7 @@ class Search extends React.Component {
         }, 500);
     }
 
-    onTabsChange(tab, index){
+    onTabsChange(tab, index) {
         this.setState({
             isLoading: true,
             tabIndex: index

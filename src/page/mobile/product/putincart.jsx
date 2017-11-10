@@ -1,17 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default class PutInCart extends React.Component {
     
     renderButton() {
-        if (this.props.isPutting) {
-            return <a className="primary-btn" style={{width:'100%'}}>加入购物车</a>
-        } else {
-            return <div className="putincart">
-                <a className="secondary-btn" style={{width:'25%'}}>主页</a>
-                <a className="secondary-btn" style={{width:'25%'}}>购物车</a>
-                <a className="primary-btn" style={{width:'50%'}}>加入购物车</a>
-            </div>
-        }
+        return <div className="putincart">
+            <Link to="/home" className="secondary-btn" style={{width:'25%'}}>主页</Link>
+            <Link to="/cart" className="secondary-btn" style={{width:'25%'}}>购物车</Link>
+            <a onClick={()=>{this.props.showModal && this.props.showModal()}} className="primary-btn" style={{width:'50%'}}>加入购物车</a>
+        </div>
     }
 
     render() {

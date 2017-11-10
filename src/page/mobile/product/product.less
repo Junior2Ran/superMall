@@ -8,20 +8,28 @@
     background: #eee;
 
     .primary-btn {
-        display: inline-block;
+        display: block;
+        float: right;
         height: 100%;
         text-align: center;
         line-height: @sectionHeight;
         background: @brand-primary;
         color: #fff;
         font-size: 1.2rem;
+        box-sizing: border-box;
     }
 
     .secondary-btn {
-        display: inline-block;
+        display: block;
+        float: left;
         height: 100%;
         text-align: center;
         line-height: @sectionHeight;
         font-size: 0.5rem;
+        box-sizing: border-box;
+        border-top: 1px solid #ccc;
+        &:first-child{
+            border-right: 1px solid #ccc;
+        }
     }
 }
