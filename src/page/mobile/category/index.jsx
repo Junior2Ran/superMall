@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import {Link} from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
+import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {Accordion, List} from 'antd-mobile';
 import './index.less';
 import category_data from "../../../static/data/category.js";   //mock假数据
 
-export default class Category extends React.Component {
+class Category extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [],
             isLoading: true,
-            height: document.documentElement.clientHeight * 3 / 4,
         };
     }
 
@@ -49,7 +49,7 @@ export default class Category extends React.Component {
                     // 三级list结构
                     const secondList = item.children.map((child, i) => {
                         return <div key={i} className="cate_item">
-                            <Link to="product/1"><img src={child.img_url} className="cate_img" /></Link>
+                            <Link to="/search"><img src={child.img_url} className="cate_img" /></Link>
                             <p>{child.name}</p>
                         </div>
                     });
@@ -89,3 +89,5 @@ export default class Category extends React.Component {
         </Layout>
     }     
 }
+
+export default LoadingHoc(Category);

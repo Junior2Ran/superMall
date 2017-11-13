@@ -1,5 +1,36 @@
 @sectionHeight: 3.125rem;
 
+.general_container {
+    background: #fff;
+}
+
+.selector_container {
+    font-size: 0.9rem;
+    background: #fff;
+    .selector_sec {
+        height: 2rem;
+        line-height: 2rem;
+        &:first-child{
+            border-bottom: 1px solid #ccc;
+        }
+        span{
+            &:first-child{
+                color: #ccc;
+            }
+            &:nth-child(2){
+                margin-left: 1rem;
+            }
+            &:last-child{
+                float: right;
+            }
+        }
+    }
+}
+
+.detail_container {
+    background: #fff;
+}
+
 .putincart {
     position: fixed;
     bottom: 0;

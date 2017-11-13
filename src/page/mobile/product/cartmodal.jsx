@@ -5,19 +5,16 @@ export default class CartModal extends React.Component {
 
     render() {
         return <Modal
-            popup
             visible={this.props.modal}
-            maskClosable={false}
+            popup
             animationType="slide-up"
+            closable
+            onClose={()=>{console.log('test');}}
+            platform="ios"
+            title={<div>asd</div>}
+            footer={["asd","123"]}
         >
-            <List renderHeader={() => <div>委托买入</div>} className="popup-list">
-                {['股票名称', '股票代码', '买入价格'].map((i, index) => (
-                    <List.Item key={index}>{i}</List.Item>
-                ))}
-                <List.Item>
-                    <Button type="primary" onClick={()=>{this.props.hideModal && this.props.hideModal()}}>买入</Button>
-                </List.Item>
-            </List>
+            <Button type="primary" onClick={()=>{this.props.hideModal && this.props.hideModal()}}>买入</Button>
         </Modal>
     }
 }
