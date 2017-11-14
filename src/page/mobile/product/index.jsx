@@ -29,7 +29,7 @@ export default class Product extends React.Component {
     }
 
     showToast() {
-        Toast.success('This is a toast tips !!!', 1, null, false);
+        Toast.success('加入成功，快去购物车看看你的宝贝吧～', 1, null, false);
     }
 
     render() {

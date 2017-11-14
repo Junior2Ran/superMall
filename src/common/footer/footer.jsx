@@ -41,7 +41,6 @@ export default class MyFooter extends React.Component {
                 unselectedTintColor="#949494"
                 tintColor="#f28b12"
                 barTintColor="white"
-                hidden={!this.props.footer}
             >
                 <TabBar.Item
                     title="首页"

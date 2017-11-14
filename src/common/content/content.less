@@ -1,11 +1,17 @@
-@tabHeight: 3.125remrem;
-
 .content{
   width: 100%;
-  min-height: 50%;
-  // margin-bottom: @tabHeight; 
   background-color:#eee;
-  position: relative;
+  position: absolute;
   overflow: auto;
   color: #333;
+  top: @searchHeight;
+  bottom: @tabHeight;
+}
+
+.noHeader{
+	top: 0;
+}
+
+.noFooter{
+	bottom: 0;
 }

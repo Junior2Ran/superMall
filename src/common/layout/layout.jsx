@@ -10,13 +10,14 @@ export default class MyLayout extends React.Component {
 
     render(){
         const header = this.props.header ? <Header /> : null;
-        
+        const footer = this.props.footer ? <Footer /> : null;
+
         return <div className="layout">
             {header}
             <Content {...this.props}>
                 {this.props.children}
             </Content>
-            <Footer footer={this.props.footer}/>
+            {footer}
         </div>
     }
 }

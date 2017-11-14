@@ -3,11 +3,9 @@ import "./content.less";
 
 export default class Content extends React.Component {
     render(){
-        const tabHeight = '3.125rem';
+        const className = `content${this.props.header?'':' noHeader'}${this.props.footer?'':' noFooter'}`;
         
-        return <div className="content" style={{
-            marginBottom: this.props.footer ? tabHeight : '0'
-        }}>
+        return <div className={className}>
             {this.props.children}
         </div>
     }
