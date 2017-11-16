@@ -38,7 +38,7 @@
     height: @sectionHeight;
     background: #eee;
 
-    .primary-btn {
+    .primary_btn {
         display: block;
         float: right;
         height: 100%;
@@ -50,7 +50,7 @@
         box-sizing: border-box;
     }
 
-    .secondary-btn {
+    .secondary_btn {
         display: block;
         float: left;
         height: 100%;
@@ -65,12 +65,39 @@
     }
 }
 
-.popup-modal {
+.popup_modal {
     .am-modal-button-group-v .am-modal-button {
         background: @brand-primary;
         color: #fff;
     }
-    .popup-modal-header {
-        background: #ff1;
+    .popup_modal_header {
+        border-bottom: 1px solid #ccc;
+        font-size: 1rem;
+    }
+    .popup_modal_content {
+        max-height: 20rem;
+
+        .content_sec {
+            padding-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ccc;
+
+            header {
+                color: #333;
+            }
+            .select_item {
+                display: inline-block;
+                text-align: center;
+                min-width: 2rem;
+                border: 1px solid #ccc;
+                margin: 0.5rem 1rem 0 0;
+                padding: 0.2rem 1rem;
+            }
+            .active {
+                color: #333;
+                border-color: #999;
+                font-weight: bold;
+            }
+        }
     }
 }

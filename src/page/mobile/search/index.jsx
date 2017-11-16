@@ -64,15 +64,18 @@ class Search extends React.Component {
         });
 
         return <Layout header={true}>
-            <Tabs tabs={tabs}
-                onChange={this.onTabsChange.bind(this)} 
-                initialPage={this.state.tabIndex}
-                useOnPan={false}
-            >
-            </Tabs>
-            <WhiteSpace size='xs' />
-            {content}
-            <Bottom>我是有底线的</Bottom>
+            <div className="search_container">
+                <Tabs tabs={tabs}
+                    onChange={this.onTabsChange.bind(this)} 
+                    initialPage={this.state.tabIndex}
+                    useOnPan={false}
+                    className="search_tabs"
+                >
+                </Tabs>
+                <WhiteSpace size='xs' />
+                {content}
+                <Bottom>我是有底线的</Bottom>
+            </div>
         </Layout>
     }
 }

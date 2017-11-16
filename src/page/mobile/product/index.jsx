@@ -3,13 +3,16 @@ import Layout from "../../../common/layout/layout.jsx";
 import {Carousel, WhiteSpace, WingBlank, Modal, List, Button, Toast} from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
+import Detail from "./detail.jsx";
 import './index.less';
+import product_data from "../../../static/data/product_feature.js";   //mock假数据
 
 export default class Product extends React.Component {
     constructor(props,context) {
         super(props,context);
         this.state = {
-            modal: false
+            modal: false,
+            data: []
         }
     }
 
@@ -17,15 +20,29 @@ export default class Product extends React.Component {
         setTimeout(() => {
             window.dispatchEvent(new Event('resize'));
         }, 0);
+        this.requestData();
+    }
+
+    requestData() {
+        // 通过API获取首页配置文件数据
+        // 模拟ajax异步获取数据
+        setTimeout(() => {
+            const data = product_data.data;   //mock假数据
+            this.setState({
+                data
+            });
+        }, 500);
     }
 
     showModal() {
         this.setState({modal: true});
     }
 
-    hideModal() {
+    hideModal(status) {
         this.setState({modal: false});
-        this.showToast();
+        if (status === 'success') {
+            this.showToast();
+        }
     }
 
     showToast() {
@@ -42,9 +59,9 @@ export default class Product extends React.Component {
                     selectedIndex={0}
                     swipeSpeed={35}
                 >
-                    <img src="./images/1.jpg" style={{width:'100%'}} />
-                    <img src="./images/2.jpg" style={{width:'100%'}} />
-                    <img src="./images/3.jpg" style={{width:'100%'}} />
+                    <img src="./images/1.jpg" style={{width:'200px', height:'200px', margin:'0 auto'}} />
+                    <img src="./images/2.jpg" style={{width:'200px', height:'200px', margin:'0 auto'}} />
+                    <img src="./images/3.jpg" style={{width:'200px', height:'200px', margin:'0 auto'}} />
                 </Carousel>
                 <WingBlank size="lg">
                     <h3>联想超级战舰电脑<small>【大显卡，大怪兽】</small></h3>
@@ -56,7 +73,7 @@ export default class Product extends React.Component {
             <WhiteSpace size="lg"/>
 
             <div className="selector_container">
-                <div className="selector_sec">
+                <div className="selector_sec" onClick={this.showModal.bind(this)}>
                     <WingBlank>
                         <span>已选</span>
                         <span>联想 拯救者R720 15.6寸 1年质保×1</span>
@@ -73,21 +90,18 @@ export default class Product extends React.Component {
             </div>
             <WhiteSpace size="lg" />
 
-            <div className="detail_container">
-                <WhiteSpace size="lg"/>
-                <WingBlank size="lg">商品详情</WingBlank>
-                <WhiteSpace />
-                <img src="./images/1.jpg" style={{width:'100%'}} />
-                <img src="./images/2.jpg" style={{width:'100%'}} />
-                <img src="./images/3.jpg" style={{width:'100%'}} />
-            </div>
+            <Detail />
             <WhiteSpace size="lg"/>
 
             <PutInCart style={{height:'3.125rem'}}
                 showModal={this.showModal.bind(this)}
             />
 
-            <CartModal modal={this.state.modal} hideModal={this.hideModal.bind(this)}/>
+            <CartModal 
+                modalData={this.state.data}
+                modal={this.state.modal} 
+                hideModal={this.hideModal.bind(this)}
+            />
         </Layout>
     }
 }
