@@ -1,7 +1,7 @@
 {
   "name": "supermall",
   "version": "1.0.0",
-  "description": "通用电商平台的设计与实现：）",
+  "description": "电商平台移动端",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,5 +1,8 @@
 # superMall
-通用电商平台的设计与实现：）
+电商平台移动端
+
+## 技术框架
+react + antd-mobile + webpack
 
 ## 环境搭建说明
 1. 将本仓库代码克隆到本地
