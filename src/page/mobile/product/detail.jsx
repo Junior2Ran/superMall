@@ -16,13 +16,13 @@ export default class Product extends React.Component {
                     renderTabBar={renderTabBar}
                 >
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                        <img src="./images/1.jpg" style={{width:'100%'}} />
+                        content 1
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                        <img src="./images/2.jpg" style={{width:'100%'}} />
+                        content 2
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                        <img src="./images/3.jpg" style={{width:'100%'}} />
+                        content 3
                     </div>
                 </Tabs>
             </StickyContainer>

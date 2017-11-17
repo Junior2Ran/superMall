@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import {Link} from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
-import {Accordion, List} from 'antd-mobile';
+import {Accordion, List, WingBlank} from 'antd-mobile';
 import './index.less';
 import category_data from "../../../static/data/category.js";   //mock假数据
 
@@ -83,7 +83,9 @@ class Category extends React.Component {
                     </Accordion>
                 </div>
                 <div className="secondaryMenu">
-                    {secondaryMenu}
+                    <WingBlank size="md">
+                        {secondaryMenu}
+                    </WingBlank>
                 </div>
             </div>
         </Layout>
