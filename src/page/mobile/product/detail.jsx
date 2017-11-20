@@ -14,7 +14,7 @@ export default class Product extends React.Component {
             <WingBlank>商品详情</WingBlank>
             <WhiteSpace />
             {this.props.ImgsData.map((img, key)=>{
-                return <img src={img.img_url} style={{width:'100%'}}/>
+                return <img src={img.img_url} key={key} style={{width:'100%'}}/>
             })}
 
 

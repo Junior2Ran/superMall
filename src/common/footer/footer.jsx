@@ -45,38 +45,67 @@ export default class MyFooter extends React.Component {
                 <TabBar.Item
                     title="首页"
                     key="首页"
-                    icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                    selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                    icon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/home.png) center center /  24px 24px no-repeat' }}
+                    />}
+                    selectedIcon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/home-fill.png) center center /  24px 24px no-repeat' }}
+                    />}
                     selected={this.state.selectedTab === 'home'}
-                    badge={1}
                     onPress={() => { this.linkTo('home'); }}
                     data-seed="logId"
                 >
                 </TabBar.Item>
                 <TabBar.Item
-                    icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                    selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                    icon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/catagory.png) center center /  24px 24px no-repeat' }}
+                    />}
+                    selectedIcon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/catagory-fill.png) center center /  24px 24px no-repeat' }}
+                    />}
                     title="分类"
                     key="分类"
-                    badge={'new'}
                     selected={this.state.selectedTab === 'category'}
                     onPress={() => { this.linkTo('category'); }}
                     data-seed="logId1"
                 >
                 </TabBar.Item>
                 <TabBar.Item
-                    icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                    selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                    icon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/cart.png) center center /  24px 24px no-repeat' }}
+                    />}
+                    selectedIcon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/cart-fill.png) center center /  24px 24px no-repeat' }}
+                    />}
                     title="购物车"
                     key="购物车"
-                    dot
                     selected={this.state.selectedTab === 'cart'}
                     onPress={() => { this.linkTo('cart'); }}
                 >
                 </TabBar.Item>
                 <TabBar.Item
-                    icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                    selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                    icon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/user.png) center center /  24px 24px no-repeat' }}
+                    />}
+                    selectedIcon={<div style={{
+                        width: '22px',
+                        height: '22px',
+                        background: 'url(./images/icons/user-fill.png) center center /  24px 24px no-repeat' }}
+                    />}
                     title="我的"
                     key="我的"
                     selected={this.state.selectedTab === 'my'}

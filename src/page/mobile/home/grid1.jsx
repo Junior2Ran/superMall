@@ -18,14 +18,14 @@ export default class Grid extends React.Component {
 
         return <div className="grid_view">
             <Flex>
-              <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+              <Flex.Item><img src='./images/4.png' style={{width:'100%'}}/></Flex.Item>
               <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
             </Flex>
             <WhiteSpace />
             <Flex>
-              <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+              <Flex.Item><img src='./images/4.png' style={{width:'100%'}}/></Flex.Item>
               <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-              <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+              <Flex.Item><img src='./images/5.png' style={{width:'100%'}}/></Flex.Item>
             </Flex>
             <WhiteSpace />
 
@@ -33,18 +33,18 @@ export default class Grid extends React.Component {
               <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
               <Flex.Item>
                   <Flex>
-                      <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+                      <Flex.Item><img src='./images/4.png' style={{width:'100%'}}/></Flex.Item>
                       <Flex.Item>
                           <Flex>
                               <Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item>
-                              <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                              <Flex.Item><img src='./images/5.png' style={{width:'100%'}}/></Flex.Item>
                           </Flex>
                       </Flex.Item>
                   </Flex>
                   <WhiteSpace />
                   <Flex>
-                      <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
-                      <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                      <Flex.Item><img src='./images/4.png' style={{width:'100%'}}/></Flex.Item>
+                      <Flex.Item><img src='./images/5.png' style={{width:'100%'}}/></Flex.Item>
                   </Flex>
                   <WhiteSpace />
               </Flex.Item>
@@ -52,13 +52,13 @@ export default class Grid extends React.Component {
             <WhiteSpace />
 
             <Flex>
-                <Flex.Item><img src='./images/1.jpg' style={{width:'100%'}}/></Flex.Item>
+                <Flex.Item><img src='./images/4.png' style={{width:'100%'}}/></Flex.Item>
                 <Flex.Item>
                     <Flex><Flex.Item><img src='./images/2.jpg' style={{width:'100%'}}/></Flex.Item></Flex>
                     <WhiteSpace />
                     <Flex>
-                        <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
-                        <Flex.Item><img src='./images/3.jpg' style={{width:'100%'}}/></Flex.Item>
+                        <Flex.Item><img src='./images/5.png' style={{width:'100%'}}/></Flex.Item>
+                        <Flex.Item><img src='./images/5.png' style={{width:'100%'}}/></Flex.Item>
                     </Flex>
                     <WhiteSpace />
                 </Flex.Item>
