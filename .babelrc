@@ -9,7 +9,8 @@
           "locals": ["module"]
         }]
       }]]
-    }
+    },
+    "production": {}
   },
   "plugins": [
     ["import", {"libraryName": "antd-mobile", "style": true}]

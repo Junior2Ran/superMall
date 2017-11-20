@@ -8,8 +8,8 @@ var data = {
         "price":5299,
         "ship_fee":12,
         "img_urls":[
-            "http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
-            "http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
+            "//gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
+            "//gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
         ],
         "product_info":[
             {
@@ -24,19 +24,19 @@ var data = {
         "intro_imgs":[
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg"
+                "img_url": "//gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg"
             },
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
+                "img_url": "//gfs12.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
             },
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg"
+                "img_url": "//gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg"
             },
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
+                "img_url": "//gfs12.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
             }
         ],
         "product_features":[
@@ -172,7 +172,7 @@ var data = {
             "id" : 1,
             "shop_name":"Nike旗舰店",
             "sub_title":"nike官方旗舰店",
-            "cover_img":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png"
+            "cover_img":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png"
         }
     }
 }

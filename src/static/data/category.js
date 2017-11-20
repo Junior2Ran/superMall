@@ -10,7 +10,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -20,27 +20,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -50,19 +50,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -72,23 +72,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -98,19 +98,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -125,7 +125,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -135,27 +135,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -165,19 +165,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -187,23 +187,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -213,19 +213,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -240,7 +240,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -250,27 +250,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -280,19 +280,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -302,23 +302,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -328,19 +328,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -355,7 +355,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -365,27 +365,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -395,19 +395,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -417,23 +417,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -443,19 +443,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -470,7 +470,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -480,27 +480,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -510,19 +510,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -532,23 +532,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -558,19 +558,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -585,7 +585,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -595,27 +595,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -625,19 +625,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -647,23 +647,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -673,19 +673,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -700,7 +700,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -710,27 +710,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -740,19 +740,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -762,23 +762,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -788,19 +788,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -815,7 +815,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -825,27 +825,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -855,19 +855,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -877,23 +877,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -903,19 +903,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -930,7 +930,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -940,27 +940,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -970,19 +970,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -992,23 +992,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -1018,19 +1018,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -1045,7 +1045,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -1055,27 +1055,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -1085,19 +1085,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -1107,23 +1107,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -1133,19 +1133,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
@@ -1160,7 +1160,7 @@ var data = {
                 "children":[
                     {
                         "name":"马甲/背心",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
                     }
                 ]
             },
@@ -1170,27 +1170,27 @@ var data = {
                 "children":[
                     {
                         "name":"男娃",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
                     },
                     {
                         "name":"睡袍",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
                     },
                     {
                         "name":"男士内裤",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
                     },
                     {
                         "name":"家居服",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
                     },
                     {
                         "name":"保暖内衣",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
                     },
                     {
                         "name":"抹胸",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
                     }
                 ]
             },
@@ -1200,19 +1200,19 @@ var data = {
                 "children":[
                     {
                         "name":"墨镜",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
                     },
                     {
                         "name":"围巾",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
                     },
                     {
                         "name":"丝巾",
-                        "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                        "img_url":"//img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
                     },
                     {
                         "name":"帽子",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
                     }
                 ]
             },
@@ -1222,23 +1222,23 @@ var data = {
                 "children":[
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
                     },
                     {
                         "name":"布鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
                     },
                     {
                         "name":"板鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
                     },
                     {
                         "name":"帆布鞋",
-                        "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                        "img_url":"//img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
                     },
                     {
                         "name":"凉鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
                     }
                 ]
             },
@@ -1248,19 +1248,19 @@ var data = {
                 "children":[
                     {
                         "name":"女鞋",
-                        "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                        "img_url":"//img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
                     },
                     {
                         "name":"高跟鞋",
-                        "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                        "img_url":"//img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
                     },
                     {
                         "name":"松糕鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
                     },
                     {
                         "name":"休闲鞋",
-                        "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                        "img_url":"//img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
                     }
                 ]
             }
