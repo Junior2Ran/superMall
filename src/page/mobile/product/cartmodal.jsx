@@ -2,6 +2,48 @@ import React from 'react';
 import {WhiteSpace, WingBlank, Flex, Modal} from 'antd-mobile';
 
 export default class CartModal extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = this.getInitialState();
+    }
+
+    getInitialState() {
+        const data = this.props.modalData;
+        let active = {};
+        for (let i in data) {
+            Object.assign(active, {[data[i].feature_name]: data[i].options[0].id});
+        }
+        return {active};
+    }
+
+    clickSelector(featureName, id) {
+        this.setState({
+            active: Object.assign(this.state.active, {[featureName]: id})
+        });
+    }
+
+    generateDataSet() {
+        return this.props.modalData.map((data, index) => {
+            const optionsData = data.options.map((option, key) => {
+                let className = "select_item";
+                if (this.state.active[data.feature_name] === option.id) {
+                    className+=" select_active";
+                }
+                return <div className={className} 
+                    key={index+key} 
+                    onClick={() => {this.clickSelector(data.feature_name, option.id)}}
+                >
+                    {option.option_name}
+                </div>
+            });
+            return <Flex wrap="wrap" className="content_sec" key={index}>
+                <Flex.Item>
+                    <header>{data.feature_name}</header>
+                    {optionsData}
+                </Flex.Item>
+            </Flex>
+        });
+    }
 
     render() {
         const title = <div className="popup_modal_header">
@@ -19,17 +61,7 @@ export default class CartModal extends React.Component {
             onPress: ()=>{this.props.hideModal && this.props.hideModal('success')}
         }];
 
-        const dataSet = this.props.modalData.map((data, index) => {
-            const optionsData = data.options.map((option, key) => {
-                return <div className="select_item" key={index+key} onClick={()=>{console.log(option.id)}}>{option.option_name}</div>
-            });
-            return <Flex wrap="wrap" className="content_sec" key={index}>
-                <Flex.Item>
-                    <header>{data.feature_name}</header>
-                    {optionsData}
-                </Flex.Item>
-            </Flex>
-        });
+        const dataSet = this.generateDataSet();
 
         return <Modal
             visible={this.props.modal}

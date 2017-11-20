@@ -1,18 +1,22 @@
 import React from 'react';
+import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import {Carousel, WhiteSpace, WingBlank, Modal, List, Button, Toast} from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
 import Detail from "./detail.jsx";
 import './index.less';
-import product_data from "../../../static/data/product_feature.js";   //mock假数据
+import product_data from "../../../static/data/product.js";   //mock假数据
+import product_feature_data from "../../../static/data/product_feature.js";   //mock假数据
 
-export default class Product extends React.Component {
+class Product extends React.Component {
     constructor(props,context) {
         super(props,context);
         this.state = {
+            isLoading: true,
             modal: false,
-            data: []
+            data: {},
+            featureData: []
         }
     }
 
@@ -27,10 +31,14 @@ export default class Product extends React.Component {
         // 通过API获取首页配置文件数据
         // 模拟ajax异步获取数据
         setTimeout(() => {
-            const data = product_data.data;   //mock假数据
+            const data = product_data.data;     //mock data
+            const featureData = product_feature_data.data;   //mock假数据
             this.setState({
-                data
+                data,
+                featureData,
+                isLoading: false
             });
+            console.log(data)
         }, 500);
     }
 
@@ -50,7 +58,11 @@ export default class Product extends React.Component {
     }
 
     render() {
-    	
+    	const proData = this.state.data;
+        const imgs = proData.img_urls.map((img_url, index)=>{
+            return <img src={img_url} key={index} style={{margin:'0 auto'}} />
+        });
+
         return <Layout header={true}>
             <div className="general_container">
                 <Carousel className="my-carousel"
@@ -59,14 +71,12 @@ export default class Product extends React.Component {
                     selectedIndex={0}
                     swipeSpeed={35}
                 >
-                    <img src="./images/1.jpg" style={{width:'200px', height:'200px', margin:'0 auto'}} />
-                    <img src="./images/2.jpg" style={{width:'200px', height:'200px', margin:'0 auto'}} />
-                    <img src="./images/3.jpg" style={{width:'200px', height:'200px', margin:'0 auto'}} />
+                    {imgs}
                 </Carousel>
                 <WingBlank size="lg">
-                    <h3>联想超级战舰电脑<small>【大显卡，大怪兽】</small></h3>
+                    <h3>{proData.name}<small>{proData.sub_title}</small></h3>
                     <p> 拯救者是联想在原有游戏PC——彪悍的Y系列笔记本之外,推出的全新子品牌。与联想另一个PC子品牌“小新”一样，拯救者定位于互联网产品。拯救者为发烧而生，流畅运行大型游戏，他的使命是为玩家带来爽快的体验。今天ZOL将要为大家介绍的是拯救者-14机型。</p>
-                    <h2>￥6999</h2>
+                    <h2>￥{proData.price}</h2>
                 </WingBlank>
                 <WhiteSpace size="xs" />
             </div>
@@ -98,10 +108,12 @@ export default class Product extends React.Component {
             />
 
             <CartModal 
-                modalData={this.state.data}
+                modalData={this.state.featureData}
                 modal={this.state.modal} 
                 hideModal={this.hideModal.bind(this)}
             />
         </Layout>
     }
 }
+
+export default LoadingHoc(Product);

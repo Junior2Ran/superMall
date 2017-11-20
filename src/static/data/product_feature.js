@@ -25,7 +25,7 @@ var data = {
                     "option_name":"玫瑰金"
                 },
                 {
-                    "id":"5",
+                    "id":"0",
                     "option_name":"土豪金"
                 }
             ]
@@ -50,7 +50,7 @@ var data = {
                     "option_name":"合约机"
                  },
                  {
-                    "id":"9",
+                    "id":"19",
                     "option_name":"移动合约机"
                  }
             ]

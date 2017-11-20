@@ -1,4 +1,4 @@
-{
+var data = {
     "code":1,
     "data":{
         "id":1,
@@ -176,3 +176,5 @@
         }
     }
 }
+
+export default data;
