@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
-import Bottom from "../../../common/bottom/bottom.jsx";
+import Bottom from "../../../components/bottom/index.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
 import './index.less';

@@ -1,20 +1,22 @@
 import React from 'react';
 import {WhiteSpace,Flex} from 'antd-mobile';
+import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
-import Bottom from "../../../common/bottom/bottom.jsx";
+import Bottom from "../../../components/bottom/index.jsx";
 import Carousel from "./carousel.jsx";
 import Grid from "./grid1.jsx";
 import Separator from "./separator.jsx";
 import home_data from "../../../static/data/home.js";   //mock假数据
 import './index.less';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             carousel: {},
             grid: {},
-            separator: {}
+            separator: {},
+            isLoading: true
         };
     }
 
@@ -24,26 +26,30 @@ export default class Home extends React.Component {
 
     requestData() {
         // 通过API获取首页配置文件数据
-        const data = home_data.data.rows;   //mock假数据
-        let carousel = {},
-            grid = {},
-            separator = {};
-        if (data.length) {
-            for (let i in data) {
-                if (data[i].style_id === 'carousel_view') {
-                    carousel = data[i];
-                } else if (data[i].style_id === 'grid_view') {
-                    grid = data[i];
-                } else if (data[i].style_id === 'separator_view') {
-                    separator = data[i];
+        // 模拟ajax异步获取数据
+        setTimeout(() => {
+            const data = home_data.data.rows;   //mock假数据
+            let carousel = {},
+                grid = {},
+                separator = {};
+            if (data.length) {
+                for (let i in data) {
+                    if (data[i].style_id === 'carousel_view') {
+                        carousel = data[i];
+                    } else if (data[i].style_id === 'grid_view') {
+                        grid = data[i];
+                    } else if (data[i].style_id === 'separator_view') {
+                        separator = data[i];
+                    }
                 }
             }
-        }
-        this.setState({
-            carousel,
-            grid,
-            separator
-        });
+            this.setState({
+                carousel,
+                grid,
+                separator,
+                isLoading: false
+            });
+        }, 500);
     }
 
     render() {
@@ -55,3 +61,5 @@ export default class Home extends React.Component {
         </Layout>
     }
 }
+
+export default LoadingHoc(Home);

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./bottom.less";
+import "./index.less";
 
 export default class Content extends React.Component {
     render(){
