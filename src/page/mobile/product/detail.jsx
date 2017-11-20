@@ -1,5 +1,5 @@
 import React from 'react';
-import {WhiteSpace, WingBlank, Tabs} from 'antd-mobile';
+import { WhiteSpace, WingBlank, Tabs } from 'antd-mobile';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 export default class Product extends React.Component {
@@ -10,7 +10,15 @@ export default class Product extends React.Component {
     render() {
     	
         return <div className="detail_container">
-            <StickyContainer>
+            <WhiteSpace />
+            <WingBlank>商品详情</WingBlank>
+            <WhiteSpace />
+            {this.props.ImgsData.map((img, key)=>{
+                return <img src={img.img_url} style={{width:'100%'}}/>
+            })}
+
+
+            {/*<StickyContainer>
                 <Tabs tabs={tabs}
                     initalPage={1}
                     renderTabBar={renderTabBar}
@@ -25,7 +33,7 @@ export default class Product extends React.Component {
                         content 3
                     </div>
                 </Tabs>
-            </StickyContainer>
+            </StickyContainer>*/}
         </div>
     }
 }

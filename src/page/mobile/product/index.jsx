@@ -100,7 +100,7 @@ class Product extends React.Component {
             </div>
             <WhiteSpace size="lg" />
 
-            <Detail />
+            <Detail ImgsData={proData.intro_imgs}/>
             <WhiteSpace size="lg"/>
 
             <PutInCart style={{height:'3.125rem'}}
