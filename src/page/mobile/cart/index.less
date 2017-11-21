@@ -1,0 +1,48 @@
+@paddingWidth: 0.8rem;
+
+.cart_card {
+    line-height: initial;
+
+    &_underline {
+        border-bottom: 1px solid #ccc;
+        padding: @paddingWidth;
+    }
+
+    &_shopname {
+        margin-left: @paddingWidth;
+    }
+
+    &_container {
+        padding: @paddingWidth;
+
+        .cart_card_img {
+            width: 5rem;
+            margin-left: @paddingWidth;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .title_text {
+            font-size: 1.1rem;
+        }
+        .select_text {}
+        .price_text {
+            color: red;
+            font-size: 1.1rem;
+            margin-left: -0.2rem;
+        }
+
+        .input_num {
+            flex: 0 0 4rem;
+        }
+        .input_delete {
+            flex: 0 0 2rem;
+        }
+    }
+}
+
+.putincart.cart_summary {
+    bottom: @tabHeight;
+}
