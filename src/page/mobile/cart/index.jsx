@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
 import Bottom from "../../../components/bottom/index.jsx";
+import { Link } from 'react-router-dom';
 import { Flex, InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import './index.less';
@@ -120,7 +121,7 @@ class Cart extends React.Component {
             <div style={{height:'3.5rem'}}></div>
             <div className="putincart cart_summary">
                 <div className="secondary_btn" style={{width:'60%',fontSize:'0.8rem'}}>合计：￥0</div>
-                <a className="primary_btn" style={{width:'40%'}}>结算（{this.state.checkbox0+this.state.checkbox1+this.state.checkbox2}）</a>
+                <Link to="/payment" className="primary_btn" style={{width:'40%'}}>结算（{this.state.checkbox0+this.state.checkbox1+this.state.checkbox2}）</Link>
             </div>
         </Layout>
     }
