@@ -11,14 +11,16 @@ export default class CartModal extends React.Component {
         const data = this.props.modalData;
         let active = {};
         for (let i in data) {
-            Object.assign(active, {[data[i].feature_name]: data[i].options[0].id});
+            Object.assign(active, {[data[i].feature_name]: data[i].options[0]});
         }
-        return {active};
+        return {
+            active
+        };
     }
 
-    clickSelector(featureName, id) {
+    clickSelector(featureName, option) {
         this.setState({
-            active: Object.assign(this.state.active, {[featureName]: id})
+            active: Object.assign(this.state.active, {[featureName]: option})
         });
     }
 
@@ -26,12 +28,12 @@ export default class CartModal extends React.Component {
         return this.props.modalData.map((data, index) => {
             const optionsData = data.options.map((option, key) => {
                 let className = "select_item";
-                if (this.state.active[data.feature_name] === option.id) {
+                if (this.state.active[data.feature_name].id === option.id) {
                     className+=" select_active";
                 }
                 return <div className={className} 
                     key={index+key} 
-                    onClick={() => {this.clickSelector(data.feature_name, option.id)}}
+                    onClick={() => {this.clickSelector(data.feature_name, option)}}
                 >
                     {option.option_name}
                 </div>
@@ -58,7 +60,10 @@ export default class CartModal extends React.Component {
 
         const footer = [{
             text: '加入购物车',
-            onPress: ()=>{this.props.hideModal && this.props.hideModal('success')}
+            onPress: ()=>{
+                this.props.hideModal && this.props.hideModal('success');
+                this.props.selectorText && this.props.selectorText(this.state.active);
+            }
         }];
 
         const dataSet = this.generateDataSet();

@@ -8,15 +8,15 @@ var data = {
                 "data":[
                     {
                         "img_url":"./images/banner1.png",
-                        "url":"/my"
+                        "url":"/product/1"
                     },
                     {
                         "img_url":"./images/banner2.png",
-                        "url":"/category"
+                        "url":"/product/2"
                     },
                     {
                         "img_url":"./images/banner3.png",
-                        "url":"/cart"
+                        "url":"/product/3"
                     }
                 ]
             },
@@ -29,7 +29,7 @@ var data = {
                     "cells": [
                         {
                             "image_url": "./images/4.png",
-                            "url":"/my",
+                            "url":"/product/1",
                             "weight": 1
                         },
                         {   
@@ -38,7 +38,7 @@ var data = {
                             "cells": [
                                 {
                                     "image_url": "./images/5.png",
-                                    "url":"/my",
+                                    "url":"/product/1",
                                     "weight": 1
                                 },
                                 {   
@@ -47,12 +47,12 @@ var data = {
                                     "cells": [
                                         {
                                             "image_url": "./images/4.png",
-                                            "url":"/my",
+                                            "url":"/product/1",
                                             "weight": 1
                                         },
                                         {
                                             "image_url": "./images/5.png",
-                                            "url":"/my",
+                                            "url":"/product/1",
                                             "weight": 1
                                         } 
                                     ]

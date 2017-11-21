@@ -16,7 +16,8 @@ class Product extends React.Component {
             isLoading: true,
             modal: false,
             data: {},
-            featureData: []
+            featureData: [],
+            selectorText: '未选择'
         }
     }
 
@@ -57,6 +58,17 @@ class Product extends React.Component {
         Toast.success('加入成功，快去购物车看看你的宝贝吧～', 1, null, false);
     }
 
+    changeSelectorText(active) {
+        let str = '';
+        for (let i in active) {
+            str = str + active[i].option_name + " ";
+        }
+        console.log(str)
+        this.setState({
+            selectorText: str
+        });
+    }
+
     render() {
     	const proData = this.state.data;
         const imgs = proData.img_urls.map((img_url, index)=>{
@@ -86,7 +98,7 @@ class Product extends React.Component {
                 <div className="selector_sec" onClick={this.showModal.bind(this)}>
                     <WingBlank>
                         <span>已选</span>
-                        <span>联想 拯救者R720 15.6寸 1年质保×1</span>
+                        <span>{this.state.selectorText}</span>
                         <span>></span>
                     </WingBlank>
                 </div>
@@ -111,6 +123,7 @@ class Product extends React.Component {
                 modalData={this.state.featureData}
                 modal={this.state.modal} 
                 hideModal={this.hideModal.bind(this)}
+                selectorText={this.changeSelectorText.bind(this)}
             />
         </Layout>
     }

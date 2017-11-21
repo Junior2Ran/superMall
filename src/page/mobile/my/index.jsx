@@ -10,7 +10,7 @@ export default class My extends React.Component {
         return <Layout footer={true}>
             <div className="my_header">
                 <img className="my_header_img" src="./images/zz_help_smile.png" />
-                <div className="my_header_text">登录 / 注册</div>
+                <div className="my_header_text">用户名在这儿</div>
             </div>
             <Card>
                 <div style={{borderBottom:'1px solid #ccc'}}>
