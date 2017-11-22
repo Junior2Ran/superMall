@@ -36,8 +36,8 @@ export default class App extends React.Component {
                         <Route component={Product} path='/product/:id'></Route>
 
                         <Route component={Payment} path='/payment' exact></Route>
-                        <Route component={Address} path='/payment/address' exact></Route>
-                        <Route component={AddAddress} path='/payment/address/add' exact></Route>
+                        <Route component={Address} path='/address' exact></Route>
+                        <Route component={AddAddress} path='/address/add' exact></Route>
                         <Redirect to="/home" />
                     </Switch>
                 </Router>

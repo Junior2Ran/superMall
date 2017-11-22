@@ -1,0 +1,47 @@
+@paddingWidth: 0.8rem;
+
+.address_card{
+    line-height: 1.6rem;
+
+    &_underline{
+        border-bottom: 1px solid #ccc;
+        padding: @paddingWidth;
+
+        .addr_name{
+            display: inline-block;
+            width: 70%;
+        }
+
+        .addr_phone{
+            display: inline-block;
+            width: 30%;
+        }
+        
+        .addr_detail{}
+    }
+    
+    &_edit{
+        padding: @paddingWidth;
+
+        .addr_edit{
+            float: right;
+            width: 15%;
+        }
+
+        .addr_delete{
+            float: right;
+            width: 15%;
+        }
+    }
+}
+
+.add_new_address{
+    background: @brand-primary;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: @tabHeight;
+    line-height: @tabHeight;
+    text-align: center;
+    color: #fff;
+}

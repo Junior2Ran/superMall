@@ -17,7 +17,7 @@ export default class Payment extends React.Component {
     render() {
         return <Layout header={false} footer={false}>
             <Card>
-                <Link to="/payment/address">收货地址</Link>
+                <Link to="/address">收货地址</Link>
             </Card>
             <Card>商品</Card>
             <Card>折扣和付款</Card>
