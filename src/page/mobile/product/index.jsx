@@ -72,7 +72,7 @@ class Product extends React.Component {
     render() {
     	const proData = this.state.data;
         const imgs = proData.img_urls.map((img_url, index)=>{
-            return <img src={img_url} key={index} style={{margin:'0 auto'}} />
+            return <img src={img_url} key={index} style={{margin:'0 auto'}} onLoad={() => {window.dispatchEvent(new Event('resize'));}}/>
         });
 
         return <Layout header={true}>

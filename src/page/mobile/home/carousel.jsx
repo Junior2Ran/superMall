@@ -17,7 +17,7 @@ export default class MyCarousel extends React.Component {
         if (this.props.carouselData && this.props.carouselData.data) {
             var content = this.props.carouselData.data.map((data, index) => {
                 return <Link to={data.url} key={index}>
-                    <img src={data.img_url} className="carousel-img" />
+                    <img src={data.img_url} className="carousel-img" onLoad={() => {window.dispatchEvent(new Event('resize'));}}/>
                 </Link>
             });
         }

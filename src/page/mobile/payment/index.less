@@ -1,0 +1,85 @@
+.payment_card{
+	line-height: 1.4rem;
+	padding: 0.5rem;
+
+	a{
+		color: #333;
+	}
+
+	&_img{
+		width: 5rem;
+		float: left;
+
+		img{width: 100%;}
+	}
+
+	&_text{
+		margin-left: 6rem;
+	}
+
+	.title_text{
+		font-weight: bold;
+	}
+	.small_text{
+		font-size: .5rem;
+	}
+	.price_text{
+		color: red;
+	}
+	.num_text{
+		float: right;
+		margin-right: 0.5rem;
+	}
+
+	.underline{
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.discount{
+		border-bottom: 1px solid #ccc;
+		padding: 0.5rem;
+		&:last-child{border: none;}
+		&_title{}
+		&_select{
+			float: right;
+			color: #999;
+			font-size: .5rem;
+
+			&.price_text{
+				color: red;
+				&:after{
+					content: '';
+				}
+				&.total{
+					font-size: 1rem;
+					margin-top: 0.5rem;
+					&:before{
+						content:'总价：';
+						color: #333;
+						font-weight: bold;
+					}
+				}
+			}
+
+			&:after{
+				content: '>';
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+
+.bigbutton{
+	background: @brand-primary;
+	text-align: center;
+	display: block;
+	margin: .5rem;
+	line-height: 2.5rem;
+	border-radius: .3rem;
+	color: #fff;
+}
+.cancel{
+	background: #ccc;
+}
