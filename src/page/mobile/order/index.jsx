@@ -23,23 +23,26 @@ export default class Order extends React.Component {
             <Tabs tabs={tabs}
               initialPage={1}
               onChange={(tab, index) => { console.log('onChange', index, tab); }}
-              onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
             >
-              <div>
-                Content of first tab
-              </div>
-              <div>
-                Content of second tab
-              </div>
-              <div>
-                Content of third tab
-              </div>
+                <div>
+                    暂无订单1
+                </div>
+                <div>
+                    暂无订单2
+                </div>
+                <div>
+                    暂无订单3
+                </div>
+                <div>
+                    暂无订单4
+                </div>
             </Tabs>
         </Layout>
     }
 }
 
 const tabs = [
+    { title: '全部', sub: '0' },
     { title: '待付款', sub: '1' },
     { title: '待收货', sub: '2' },
     { title: '退换修', sub: '3' },

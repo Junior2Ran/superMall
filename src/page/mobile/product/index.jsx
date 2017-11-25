@@ -1,6 +1,7 @@
 import React from 'react';
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
+import Card from "../../../components/card/index.jsx";
 import {Carousel, WhiteSpace, WingBlank, Modal, List, Button, Toast} from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
@@ -76,7 +77,7 @@ class Product extends React.Component {
         });
 
         return <Layout header={true}>
-            <div className="general_container">
+            <Card className="general_container">
                 <Carousel className="my-carousel"
                     autoplay={true}
                     infinite
@@ -85,16 +86,15 @@ class Product extends React.Component {
                 >
                     {imgs}
                 </Carousel>
-                <WingBlank size="lg">
+                <WingBlank>
                     <h3>{proData.name}<small>{proData.sub_title}</small></h3>
                     <p> 拯救者是联想在原有游戏PC——彪悍的Y系列笔记本之外,推出的全新子品牌。与联想另一个PC子品牌“小新”一样，拯救者定位于互联网产品。拯救者为发烧而生，流畅运行大型游戏，他的使命是为玩家带来爽快的体验。今天ZOL将要为大家介绍的是拯救者-14机型。</p>
                     <h2>￥{proData.price}</h2>
                 </WingBlank>
                 <WhiteSpace size="xs" />
-            </div>
-            <WhiteSpace size="lg"/>
+            </Card>
 
-            <div className="selector_container">
+            <Card className="selector_container">
                 <div className="selector_sec" onClick={this.showModal.bind(this)}>
                     <WingBlank>
                         <span>已选</span>
@@ -102,15 +102,13 @@ class Product extends React.Component {
                         <span>></span>
                     </WingBlank>
                 </div>
-                <div className="selector_sec">
-                    <WingBlank>
-                        <span>送至</span>
-                        <span>北京市 海淀区 有现货</span>
-                        <span>></span>
-                    </WingBlank>
-                </div>
-            </div>
-            <WhiteSpace size="lg" />
+            </Card>
+
+            <Card>
+                <WingBlank>
+                    shop
+                </WingBlank>
+            </Card>
 
             <Detail ImgsData={proData.intro_imgs}/>
             <WhiteSpace size="lg"/>

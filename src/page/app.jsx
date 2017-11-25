@@ -13,6 +13,7 @@ import Cart from "./mobile/cart/index.jsx";
 import My from "./mobile/my/index.jsx";
 import Search from "./mobile/search/index.jsx";
 import Product from "./mobile/product/index.jsx";
+import Shop from "./mobile/shop/index.jsx";
 import Payment from "./mobile/payment/index.jsx";
 import Order from "./mobile/order/index.jsx";
 import Address from "./mobile/address/index.jsx";
@@ -35,6 +36,7 @@ export default class App extends React.Component {
 
                         <Route component={Search} path='/search'></Route>
                         <Route component={Product} path='/product/:id'></Route>
+                        <Route component={Shop} path='/shop/:id'></Route>
                         <Route component={Payment} path='/payment'></Route>
                         <Route component={Order} path='/order'></Route>
 

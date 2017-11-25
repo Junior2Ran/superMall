@@ -1,6 +1,7 @@
 import React from 'react';
 import { WhiteSpace, WingBlank, Tabs } from 'antd-mobile';
 import { StickyContainer, Sticky } from 'react-sticky';
+import Card from "../../../components/card/index.jsx";
 
 export default class Product extends React.Component {
     constructor(props,context) {
@@ -9,7 +10,7 @@ export default class Product extends React.Component {
 
     render() {
     	
-        return <div className="detail_container">
+        return <Card>
             <WhiteSpace />
             <WingBlank>商品详情</WingBlank>
             <WhiteSpace />
@@ -34,7 +35,7 @@ export default class Product extends React.Component {
                     </div>
                 </Tabs>
             </StickyContainer>*/}
-        </div>
+        </Card>
     }
 }
 

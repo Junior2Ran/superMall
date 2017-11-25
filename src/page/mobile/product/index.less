@@ -1,7 +1,8 @@
 @sectionHeight: 3.125rem;
 
 .general_container {
-    background: #fff;
+    line-height: initial;
+    font-size: 1rem;
 }
 
 .selector_container {
@@ -10,8 +11,9 @@
     .selector_sec {
         height: 3rem;
         line-height: 3rem;
-        &:first-child{
-            border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        &:last-child{
+            border-bottom: none;
         }
         span{
             &:first-child{
@@ -25,10 +27,6 @@
             }
         }
     }
-}
-
-.detail_container {
-    background: #fff;
 }
 
 .putincart {

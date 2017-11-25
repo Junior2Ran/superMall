@@ -8,14 +8,13 @@ function getServerHost() {
         params[theParams[0]] = decodeURI(theParams[1]);
     }
 
-    let devURL = "http://cp01-huiyan-01.epc.baidu.com:8080"; // 测试地址
-    let hzURL = "http://cp01-jiaotongyun-4.epc.baidu.com:8080"; // 黄泽开发机
-    let onlineURL = "http://huiyan.baidu.com"; // 线上地址
+    let devURL = "//andysheng.cn:8080"; // 测试地址
+    let onlineURL = "//123.57.72.6:8080"; // 线上地址
 
-    if (/huiyan\.baidu\.com/.test(location.href) || params.apitype == "online") {
+    if (/*/huiyan\.baidu\.com/.test(location.href) || */params.apitype == "online") {
         return onlineURL;
     } else {
-        return hzURL;
+        return devURL;
     }
 }
 
