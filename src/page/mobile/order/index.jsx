@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
-// import './index.less';
+import './index.less';
 
 export default class Order extends React.Component {
     constructor(props, context) {
@@ -20,23 +20,25 @@ export default class Order extends React.Component {
 
     render() {
         return <Layout header={false} footer={false}>
-            <Tabs tabs={tabs}
-              initialPage={1}
-              onChange={(tab, index) => { console.log('onChange', index, tab); }}
-            >
-                <div>
-                    暂无订单1
-                </div>
-                <div>
-                    暂无订单2
-                </div>
-                <div>
-                    暂无订单3
-                </div>
-                <div>
-                    暂无订单4
-                </div>
-            </Tabs>
+            <div className="order_container">
+                <Tabs tabs={tabs}
+                  initialPage={1}
+                  onChange={(tab, index) => { console.log('onChange', index, tab); }}
+                >
+                    <div>
+                        暂无订单1
+                    </div>
+                    <div>
+                        暂无订单2
+                    </div>
+                    <div>
+                        暂无订单3
+                    </div>
+                    <div>
+                        暂无订单4
+                    </div>
+                </Tabs>
+            </div>
         </Layout>
     }
 }

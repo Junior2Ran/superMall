@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
-import {Carousel, WhiteSpace, WingBlank, Modal, List, Button, Toast} from 'antd-mobile';
+import { Carousel, WhiteSpace, WingBlank, Modal, Toast, Flex } from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
 import Detail from "./detail.jsx";
@@ -104,9 +105,24 @@ class Product extends React.Component {
                 </div>
             </Card>
 
-            <Card>
+            <Card className="shop_container">
                 <WingBlank>
-                    shop
+                    <Flex>
+                        <img src="./images/5.png" className="shop_header_img" />
+                        <Flex.Item>
+                            <div className="shop_name">瓜皮手机旗舰店</div>
+                            <div className="sub_title">一家专门卖手机的店</div>
+                        </Flex.Item>
+                    </Flex>
+                    <WhiteSpace size="lg"/>
+                    <Flex>
+                        <Flex.Item>
+                            <Link to="/shop/1" className="shop_link">查看分类</Link>
+                        </Flex.Item>
+                        <Flex.Item>
+                            <Link to="/shop/1" className="shop_link">进店逛逛</Link>
+                        </Flex.Item>
+                    </Flex>
                 </WingBlank>
             </Card>
 

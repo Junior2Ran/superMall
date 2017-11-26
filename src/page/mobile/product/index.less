@@ -12,20 +12,44 @@
         height: 3rem;
         line-height: 3rem;
         border-bottom: 1px solid #ccc;
-        &:last-child{
+        &:last-child {
             border-bottom: none;
         }
-        span{
-            &:first-child{
+        span {
+            &:first-child {
                 color: #ccc;
             }
-            &:nth-child(2){
+            &:nth-child(2) {
                 margin-left: 1rem;
             }
-            &:last-child{
+            &:last-child {
                 float: right;
             }
         }
+    }
+}
+
+.shop_container {
+    padding: 0.8rem 0;
+    line-height: 2rem;
+    .shop_header_img {
+        width: 4rem;
+        border-radius: 2rem;
+        margin-right: 1rem;
+    }
+    .shop_name {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    .sub_title {}
+    .shop_link {
+        display: block;
+        width: 8rem;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid @brand-primary;
+        border-radius: 1rem;
+        color: @brand-primary;
     }
 }
 
@@ -57,7 +81,7 @@
         font-size: 0.5rem;
         box-sizing: border-box;
         border-top: 1px solid #ccc;
-        &:first-child{
+        &:first-child {
             border-right: 1px solid #ccc;
         }
     }
