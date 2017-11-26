@@ -1,0 +1,61 @@
+{
+    "code":1,
+    "data":[
+        {
+            "shop":{
+                "id":1,
+                "shop_name":"网服旗舰店",
+            },
+            "cart_items":[
+                {
+                    "product" : {
+                        "id":1,
+                        "cover_img":"http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
+                        "detail":"红色 16G",
+                        "name":"小米5",
+                        "price":12.0,
+                    },
+                    "amount" : 1
+                },
+                {
+                    "product" : {
+                        "id":2,
+                        "cover_img":"http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg",
+                        "detail":"黑色 64G",
+                        "name":"iPhone X",
+                        "price":12.0,
+                    },
+                    "amount" : 1
+                },
+            ],
+        },
+        {
+            "shop":{
+                "id":1,
+                "shop_name":"网服旗舰店2号",
+            },
+            "cart_items":[
+                {
+                    "product" : {
+                        "id":1,
+                        "cover_img":"http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
+                        "detail":"红色 16G",
+                        "name":"小米5",
+                        "price":12.0,
+                    },
+                    "amount" : 1
+                },
+                {
+                    "product" : {
+                        "id":2,
+                        "cover_img":"http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg",
+                        "detail":"黑色 64G",
+                        "name":"iPhone X",
+                        "price":12.0,
+                    },
+                    "amount" : 1
+                },
+            ],
+        }
+    ]
+}
