@@ -8,9 +8,6 @@ export default class MyCarousel extends React.Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            window.dispatchEvent(new Event('resize'));
-        }, 0);
     }
 
     render(){
