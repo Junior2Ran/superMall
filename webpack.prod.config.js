@@ -15,7 +15,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
     bundle: path.resolve(__dirname, 'src/index.js'),
-    vendor: ['react','react-dom','react-router','react-router-dom']
+    vendor: ['react','react-dom','react-router','react-router-dom','react-responsive']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
