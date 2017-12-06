@@ -7,7 +7,7 @@
 /**
  * get the data from url
  * auto use jsonp or ajax
- * params.ethod
+ * params.method
  * params.data
  * params.url
  * params.fail
@@ -21,8 +21,10 @@ function fetch(params) {
         const pageLoc = location.href.match(/^https{0,1}:\/\/(.+?)(?=\/|$)/);
         const ajaxLoc = params.url.match(/^https{0,1}:\/\/(.+?)(?=\/|$)/);
         if (pageLoc.length === 2 && ajaxLoc.length === 2 && ajaxLoc[1] === pageLoc[1]) {
+            // use ajax
             fetchObj = this.ajax(params);
         } else {
+            // use jsonp 
             fetchObj = this.jsonp(params);
         }
     } else {
@@ -32,7 +34,7 @@ function fetch(params) {
 }
 
 /**
- * params.ethod
+ * params.method
  * params.data
  * params.url
  * params.fail
