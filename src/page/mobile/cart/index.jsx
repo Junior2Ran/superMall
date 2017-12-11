@@ -120,7 +120,7 @@ class Cart extends React.Component {
 
             <div style={{height:'3.5rem'}}></div>
             <div className="putincart cart_summary">
-                <div className="secondary_btn" style={{width:'60%',fontSize:'0.8rem'}}>合计：￥0</div>
+                <div className="secondary_btn" style={{width:'60%',fontSize:'0.8rem'}}>合计：￥60000</div>
                 <Link to="/payment" className="primary_btn" style={{width:'40%'}}>结算（{this.state.checkbox0+this.state.checkbox1+this.state.checkbox2}）</Link>
             </div>
         </Layout>

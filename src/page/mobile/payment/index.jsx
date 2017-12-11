@@ -50,7 +50,7 @@ export default class Payment extends React.Component {
                         <div className="discount_title">商品金额</div>
                         <div className="discount_select price_text">+￥0.00</div>
                         <div className="discount_title">运费</div>
-                        <div className="discount_select price_text total">￥0.00</div>
+                        <div className="discount_select price_text total">￥5000.00</div>
                     </div>
                 </div>
                 <div className="bigbutton">确认支付</div>
