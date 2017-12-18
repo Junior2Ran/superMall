@@ -18,7 +18,20 @@ class Cart extends React.Component {
             numValue0: 1,
             numValue1: 1,
             numValue2: 1,
+            price0: 5000,
+            price1: 5000,
+            price2: 5000
         };
+    }
+
+    generateTotalPrice() {
+        let total = 0;
+        for(var i = 0; i < 3; i++){
+            if (this.state[`checkbox${i}`]) {
+                total += this.state[`price${i}`];
+            }
+        }
+        return total;
     }
 
     render() {
@@ -42,7 +55,7 @@ class Cart extends React.Component {
                     <Flex.Item>
                         <div className="title_text">IPhone X 16G 2009限量版</div>
                         <div>红色 / 16G</div>
-                        <div className="price_text">￥5000</div>
+                        <div className="price_text">￥{this.state.price0}</div>
                     </Flex.Item>
                     <div className="input_num">
                         <InputItem
@@ -67,7 +80,7 @@ class Cart extends React.Component {
                     <Flex.Item>
                         <div className="title_text">IPhone X 16G 2009限量版</div>
                         <div>红色 / 16G</div>
-                        <div className="price_text">￥5000</div>
+                        <div className="price_text">￥{this.state.price1}</div>
                     </Flex.Item>
                     <div className="input_num">
                         <InputItem
@@ -100,7 +113,7 @@ class Cart extends React.Component {
                     <Flex.Item>
                         <div className="title_text">IPhone X 16G 2009限量版</div>
                         <div>红色 / 16G</div>
-                        <div className="price_text">￥5000</div>
+                        <div className="price_text">￥{this.state.price2}</div>
                     </Flex.Item>
                     <div className="input_num">
                         <InputItem
@@ -120,7 +133,9 @@ class Cart extends React.Component {
 
             <div style={{height:'3.5rem'}}></div>
             <div className="putincart cart_summary">
-                <div className="secondary_btn" style={{width:'60%',fontSize:'0.8rem'}}>合计：￥60000</div>
+                <div className="secondary_btn" style={{width:'60%',fontSize:'0.8rem'}}>
+                    合计：￥{this.generateTotalPrice()}
+                </div>
                 <Link to="/payment" className="primary_btn" style={{width:'40%'}}>结算（{this.state.checkbox0+this.state.checkbox1+this.state.checkbox2}）</Link>
             </div>
         </Layout>
