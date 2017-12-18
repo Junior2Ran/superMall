@@ -8,7 +8,7 @@ function getServerHost() {
         params[theParams[0]] = decodeURI(theParams[1]);
     }
 
-    let devURL = "//andysheng.cn:8080"; // 测试地址
+    let devURL = "//wfshop.andysheng.cn"; // 测试地址
     let onlineURL = "//123.57.72.6:8080"; // 线上地址
 
     if (/*/huiyan\.baidu\.com/.test(location.href) || */params.apitype == "online") {
