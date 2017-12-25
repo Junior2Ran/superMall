@@ -5,7 +5,7 @@ import Bottom from "../../../components/bottom/index.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
 import './index.less';
-import search_data from "../../../static/data/search_results.js";   //mock假数据
+import search_data from "../../../static/data/search_results";   //mock假数据
 
 class Search extends React.Component {
     constructor(props, context) {

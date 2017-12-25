@@ -6,7 +6,7 @@ import Bottom from "../../../components/bottom/index.jsx";
 import Carousel from "./carousel.jsx";
 import Grid from "./grid1.jsx";
 import Separator from "./separator.jsx";
-import home_data from "../../../static/data/home.js";   //mock假数据
+import home_data from "../../../static/data/home";   //mock假数据
 import homeApi from "../../../api/home.jsx";
 import './index.less';
 
