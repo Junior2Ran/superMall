@@ -1,0 +1,40 @@
+{
+    "code":1,
+    "data":[{
+        "id":1,
+        "product_count":2,
+        "products":[{
+                "id": 1,
+                "name":"小米",
+                "cover_img":"",
+                "amount":2
+            }
+        ],
+        "cost":123.0,
+        "state":0
+    },{
+        "id":2,
+        "product_count":2,
+        "products":[{
+                "id": 1,
+                "name":"小米",
+                "cover_img":"",
+                "amount":2
+            }
+        ],
+        "cost":123.0,
+        "state":0
+    },{
+        "id":3,
+        "product_count":2,
+        "products":[{
+                "id": 1,
+                "name":"小米",
+                "cover_img":"",
+                "amount":2
+            }
+        ],
+        "cost":123.0,
+        "state":0
+    }]
+}

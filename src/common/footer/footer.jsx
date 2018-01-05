@@ -28,7 +28,7 @@ export default class MyFooter extends React.Component {
 
     linkTo(link) {
         if (link !== this.state.selectedTab) {
-            this.context.router.history.push(link);
+            this.context.router.history.push(`/${link}`);
             this.setState({
               selectedTab: link
             });

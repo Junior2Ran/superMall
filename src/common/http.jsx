@@ -15,8 +15,10 @@
  */
 function fetch(params) {
     let fetchObj = null;
-    fetchObj = this.jsonp(params);
-    return fetchObj;
+    // 此处默认都用jsonp处理
+    // fetchObj = this.jsonp(params);
+    // return fetchObj;
+    
     if (/^http(s{0,1}):\/\//.test(params.url)) {
         const pageLoc = location.href.match(/^https{0,1}:\/\/(.+?)(?=\/|$)/);
         const ajaxLoc = params.url.match(/^https{0,1}:\/\/(.+?)(?=\/|$)/);

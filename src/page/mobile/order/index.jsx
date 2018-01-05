@@ -10,31 +10,42 @@ export default class Order extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            tab: ''
+            tab: 0
         };
     }
 
     componentDidMount() {
-        console.log(this.props.location.state)
+        const defaultTab = this.props.location.state;
+        if (defaultTab) {
+            this.setState({
+                tab: defaultTab.sub
+            });
+        }
+    }
+
+    onChangeTab(tab, index) {
+        this.setState({
+            tab: index
+        });
     }
 
     render() {
         return <Layout header={false} footer={false}>
             <div className="order_container">
                 <Tabs tabs={tabs}
-                  initialPage={1}
-                  onChange={(tab, index) => { console.log('onChange', index, tab); }}
+                  page={this.state.tab}
+                  onChange={this.onChangeTab.bind(this)}
                 >
-                    <div>
+                    <div style={{textAlign:'center'}}>
                         暂无订单1
                     </div>
-                    <div>
+                    <div style={{textAlign:'center'}}>
                         暂无订单2
                     </div>
-                    <div>
+                    <div style={{textAlign:'center'}}>
                         暂无订单3
                     </div>
-                    <div>
+                    <div style={{textAlign:'center'}}>
                         暂无订单4
                     </div>
                 </Tabs>

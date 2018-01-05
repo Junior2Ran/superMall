@@ -5,7 +5,8 @@ import Bottom from "../../../components/bottom/index.jsx";
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
 import './index.less';
-import search_data from "../../../static/data/search_results";   //mock假数据
+import search_data from "../../../static/data/search_result";   //mock假数据
+import searchApi from "../../../api/search.jsx";
 
 class Search extends React.Component {
     constructor(props, context) {
@@ -18,10 +19,10 @@ class Search extends React.Component {
     }
 
     componentDidMount() {
-        this.requestData();
+        this.requestMockData();
     }
 
-    requestData() {
+    requestMockData() {
         // 通过API获取首页配置文件数据
         // 模拟ajax异步获取数据
         setTimeout(() => {
@@ -31,6 +32,17 @@ class Search extends React.Component {
                 isLoading: false
             });
         }, 500);
+    }
+
+    requestRealData() {
+        searchApi.getSearchResults((rs) => {
+            console.log(rs);
+            const data = search_data.data;   //api真数据
+            this.setState({
+                data,
+                isLoading: false
+            });
+        });
     }
 
     onTabsChange(tab, index) {

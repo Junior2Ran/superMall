@@ -15,7 +15,7 @@ export default class My extends React.Component {
             </div>
             <Card>
                 <div className="card_group">
-                    <Link to={{pathname:"/order", state:{data:'miao'} }} >
+                    <Link to={{pathname:"/order", state:{title:'all', sub:0} }}>
                         <WingBlank>
                             <span>我的订单</span>
                             <span className="my_content_right">全部订单></span>
@@ -24,20 +24,20 @@ export default class My extends React.Component {
                 </div>
                 <div className="card_group">
                     <Flex style={{textAlign:'center'}}>
-                        <Flex.Item>待付款</Flex.Item>
-                        <Flex.Item>待收货</Flex.Item>
-                        <Flex.Item>退换修</Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'unpay', sub:1} }}>待付款</Link></Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'unacc', sub:2} }}>待收货</Link></Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:3} }}>退换修</Link></Flex.Item>
                     </Flex>
                 </div>
             </Card>
 
             <Card>
-                <div className="card_group">
+                {/*<div className="card_group">
                     <WingBlank>
                         <span>会员福利</span>
                         <span className="my_content_right">></span>
                     </WingBlank>
-                </div>
+                </div>*/}
                 <div className="card_group">
                     <WingBlank>
                         <span>我的优惠</span>
@@ -46,7 +46,7 @@ export default class My extends React.Component {
                 </div>
             </Card>
 
-            <Card>
+{/*            <Card>
                 <div className="card_group">
                     <WingBlank>
                         <span>服务中心</span>
@@ -77,7 +77,7 @@ export default class My extends React.Component {
                         <span className="my_content_right">></span>
                     </WingBlank>
                 </div>
-            </Card>
+            </Card>*/}
         </Layout>
     }
 }

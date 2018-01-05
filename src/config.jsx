@@ -9,12 +9,13 @@ function getServerHost() {
     }
 
     let devURL = "//wfshop.andysheng.cn"; // 测试地址
-    let onlineURL = "//123.57.72.6:8080"; // 线上地址
+    let localURL = "//127.0.0.1:8080"; // 本地地址
+    let onlineURL = "//supermall.junior2ran.cn"; // 线上地址
 
     if (/*/huiyan\.baidu\.com/.test(location.href) || */params.apitype == "online") {
         return onlineURL;
     } else {
-        return devURL;
+        return localURL;
     }
 }
 

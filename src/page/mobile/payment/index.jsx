@@ -37,10 +37,10 @@ export default class Payment extends React.Component {
 
             <Card className="payment_card">
                 <div>
-                    <div className="discount">
+                    {/*<div className="discount">
                         <div className="discount_select">个人 明细</div>
                         <div className="discount_title">发票信息</div>
-                    </div>
+                    </div>*/}
                     <div className="discount">
                         <div className="discount_select">暂无可用</div>
                         <div className="discount_title">优惠券</div>
