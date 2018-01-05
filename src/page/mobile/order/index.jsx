@@ -36,17 +36,95 @@ export default class Order extends React.Component {
                   page={this.state.tab}
                   onChange={this.onChangeTab.bind(this)}
                 >
-                    <div style={{textAlign:'center'}}>
-                        暂无订单1
+                    <div>
+                        <Card className="order_card">
+                            <div className="order_card_group">
+                                <span>阿呆的店铺</span>
+                                <span className="order_card_status">待付款</span>
+                            </div>
+                            <Flex className="order_card_group">
+                                <div className="order_card_img">
+                                    <img src="./images/4.png" />
+                                </div>
+                                <Flex.Item>
+                                    <div className="bold_text">IPhone X 16G 2009限量版</div>
+                                    <div>红色 / 16G</div>
+                                </Flex.Item>
+                                <div>
+                                    <Flex className="bold_text" justify="end">￥5000</Flex>
+                                    <Flex justify="end"><small>×1</small></Flex>
+                                </div>
+                            </Flex>
+                            <Flex className="order_card_group">
+                                <div className="order_card_img">
+                                    <img src="./images/4.png" />
+                                </div>
+                                <Flex.Item>
+                                    <div className="bold_text">IPhone X 16G 2009限量版</div>
+                                    <div>红色 / 16G</div>
+                                </Flex.Item>
+                                <div>
+                                    <Flex className="bold_text" justify="end">￥5000</Flex>
+                                    <Flex justify="end"><small>×1</small></Flex>
+                                </div>
+                            </Flex>
+                            <div className="order_card_group">
+                                <Flex justify="end">共2件商品 合计：￥10000.00</Flex>
+                            </div>
+                            <div className="order_card_group">
+                                <Flex className="order_button" justify="end">
+                                    <Link to="payment">去付款</Link>
+                                </Flex>
+                            </div>
+                        </Card>
                     </div>
-                    <div style={{textAlign:'center'}}>
-                        暂无订单2
+                    <div>
+                        <Card className="order_card">
+                            <div className="order_card_group">
+                                <span>阿呆的店铺</span>
+                                <span className="order_card_status">待付款</span>
+                            </div>
+                            <Flex className="order_card_group">
+                                <div className="order_card_img">
+                                    <img src="./images/4.png" />
+                                </div>
+                                <Flex.Item>
+                                    <div className="bold_text">IPhone X 16G 2009限量版</div>
+                                    <div>红色 / 16G</div>
+                                </Flex.Item>
+                                <div>
+                                    <Flex className="bold_text" justify="end">￥5000</Flex>
+                                    <Flex justify="end"><small>×1</small></Flex>
+                                </div>
+                            </Flex>
+                            <Flex className="order_card_group">
+                                <div className="order_card_img">
+                                    <img src="./images/4.png" />
+                                </div>
+                                <Flex.Item>
+                                    <div className="bold_text">IPhone X 16G 2009限量版</div>
+                                    <div>红色 / 16G</div>
+                                </Flex.Item>
+                                <div>
+                                    <Flex className="bold_text" justify="end">￥5000</Flex>
+                                    <Flex justify="end"><small>×1</small></Flex>
+                                </div>
+                            </Flex>
+                            <div className="order_card_group">
+                                <Flex justify="end">共2件商品 合计：￥10000.00</Flex>
+                            </div>
+                            <div className="order_card_group">
+                                <Flex className="order_button" justify="end">
+                                    <Link to="payment">去付款</Link>
+                                </Flex>
+                            </div>
+                        </Card>
                     </div>
-                    <div style={{textAlign:'center'}}>
-                        暂无订单3
+                    <div className="empty">
+                        暂无订单
                     </div>
-                    <div style={{textAlign:'center'}}>
-                        暂无订单4
+                    <div className="empty">
+                        暂无订单
                     </div>
                 </Tabs>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd-mobile';
 import {Link} from 'react-router-dom';
 
 export default class PutInCart extends React.Component {

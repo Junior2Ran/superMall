@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
-import {Flex,WingBlank} from 'antd-mobile';
+import {Flex,WingBlank,Badge} from 'antd-mobile';
 import './index.less';
 
 export default class My extends React.Component {
@@ -24,9 +24,15 @@ export default class My extends React.Component {
                 </div>
                 <div className="card_group">
                     <Flex style={{textAlign:'center'}}>
-                        <Flex.Item><Link to={{pathname:"/order", state:{title:'unpay', sub:1} }}>待付款</Link></Flex.Item>
-                        <Flex.Item><Link to={{pathname:"/order", state:{title:'unacc', sub:2} }}>待收货</Link></Flex.Item>
-                        <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:3} }}>退换修</Link></Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'unpay', sub:1} }}>
+                            <Badge text={1}>待付款</Badge>
+                        </Link></Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'unacc', sub:2} }}>
+                            待收货
+                        </Link></Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:3} }}>
+                            退换修
+                        </Link></Flex.Item>
                     </Flex>
                 </div>
             </Card>
@@ -40,7 +46,7 @@ export default class My extends React.Component {
                 </div>*/}
                 <div className="card_group">
                     <WingBlank>
-                        <span>我的优惠</span>
+                        <span>我的优惠券</span>
                         <span className="my_content_right">></span>
                     </WingBlank>
                 </div>

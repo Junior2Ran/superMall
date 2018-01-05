@@ -54,7 +54,7 @@ export default class Payment extends React.Component {
                     </div>
                 </div>
                 <div className="bigbutton">确认支付</div>
-                <Link className="bigbutton cancel" to="/cart">取消付款</Link>
+                <div className="bigbutton cancel" onClick={this.props.history.goBack}>取消付款</div>
             </Card>
         </Layout>
     }

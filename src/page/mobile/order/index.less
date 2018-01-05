@@ -1,9 +1,54 @@
+@paddingWidth: 0.8rem;
+
 .order_container{
     .am-tabs-default-bar{
         height: auto;
     }
-    .am-tabs-content-wrap,
-    .am-tabs-pane-wrap{
-        background: #fff;
+
+    .empty{
+        text-align: center;
+        margin-top: 10rem;
+        color: #999;
+    }
+
+    .order_card {
+        line-height: initial;
+        border-bottom: 1px solid #ccc;
+        margin-top: 1rem;
+
+        &_group {
+            border-bottom: 1px solid #ccc;
+            padding: @paddingWidth;
+            &:last-child{
+                border: none;
+            }
+        }
+
+        &_status{
+            float: right;
+            color: @brand-primary;
+        }
+
+        .bold_text {
+            font-size: 1.1rem;
+        }
+
+        .order_card_img {
+            width: 5rem;
+            margin-left: @paddingWidth;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .order_button{
+            a{
+                border: 1px solid #ccc;
+                border-radius: 50px;
+                color: @brand-primary;
+                padding: 6px @paddingWidth;
+            }
+        }
     }
 }
