@@ -16,6 +16,8 @@ import Product from "./mobile/product/index.jsx";
 import Shop from "./mobile/shop/index.jsx";
 import Payment from "./mobile/payment/index.jsx";
 import Order from "./mobile/order/index.jsx";
+import Discount from "./mobile/discount/index.jsx";
+import AddDiscount from "./mobile/discount/add/index.jsx"
 import Address from "./mobile/address/index.jsx";
 import AddAddress from "./mobile/address/add/index.jsx";
 
@@ -39,6 +41,9 @@ export default class App extends React.Component {
                         <Route component={Shop} path='/shop/:id'></Route>
                         <Route component={Payment} path='/payment'></Route>
                         <Route component={Order} path='/order'></Route>
+
+                        <Route component={Discount} path='/discount' exact></Route>
+                        <Route component={AddDiscount} path='/discount/add' exact></Route>
 
                         <Route component={Address} path='/address' exact></Route>
                         <Route component={AddAddress} path='/address/add' exact></Route>

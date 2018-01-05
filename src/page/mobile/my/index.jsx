@@ -45,10 +45,12 @@ export default class My extends React.Component {
                     </WingBlank>
                 </div>*/}
                 <div className="card_group">
-                    <WingBlank>
-                        <span>我的优惠券</span>
-                        <span className="my_content_right">></span>
-                    </WingBlank>
+                    <Link to="/discount">
+                        <WingBlank>
+                            <span>我的优惠券</span>
+                            <span className="my_content_right">></span>
+                        </WingBlank>
+                    </Link>
                 </div>
             </Card>
 

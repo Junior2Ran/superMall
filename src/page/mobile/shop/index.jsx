@@ -18,7 +18,7 @@ export default class Shop extends React.Component {
     }
 
     render() {
-        return <Layout header={true} footer={true}>
+        return <Layout header={false} footer={false}>
             <div style={{margin:'10rem auto',textAlign:'center'}}>
                 content
             </div>
