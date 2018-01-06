@@ -14,7 +14,7 @@ export default class Shop extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.location.state)
+        console.log(this.props.location)
     }
 
     render() {

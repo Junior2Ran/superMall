@@ -26,7 +26,6 @@ export default class Payment extends React.Component {
     }
 
     onClickDiscount(discount) {
-        console.log(discount);
         this.setState({
             discount: discount.value
         }, () => {

@@ -62,7 +62,6 @@ class Product extends React.Component {
         for (let i in active) {
             str = str + active[i].option_name + " ";
         }
-        console.log(str)
         this.setState({
             selectorText: str
         });
@@ -100,28 +99,35 @@ class Product extends React.Component {
                         <span>></span>
                     </WingBlank>
                 </div>
+                <div className="selector_sec">
+                    <WingBlank>
+                        <span>运费</span>
+                        <span>￥{proData.ship_fee}</span>
+                        <span></span>
+                    </WingBlank>
+                </div>
             </Card>
 
-            <Card className="shop_container">
+            {/*<Card className="shop_container">
                 <WingBlank>
                     <Flex>
-                        <img src="./images/5.png" className="shop_header_img" />
+                        <img src={proData.shop.cover_img} className="shop_header_img" />
                         <Flex.Item>
-                            <div className="shop_name">瓜皮手机旗舰店</div>
-                            <div className="sub_title">一家专门卖手机的店</div>
+                            <div className="shop_name">{proData.shop.shop_name}</div>
+                            <div className="sub_title">{proData.shop.sub_title}</div>
                         </Flex.Item>
                     </Flex>
                     <WhiteSpace size="lg"/>
                     <Flex>
                         <Flex.Item>
-                            <Link to="/shop/1" className="shop_link">查看分类</Link>
+                            <Link to={`/shop/${proData.shop.id}`} className="shop_link">查看分类</Link>
                         </Flex.Item>
                         <Flex.Item>
-                            <Link to="/shop/1" className="shop_link">进店逛逛</Link>
+                            <Link to={`/shop/${proData.shop.id}`} className="shop_link">进店逛逛</Link>
                         </Flex.Item>
                     </Flex>
                 </WingBlank>
-            </Card>
+            </Card>*/}
 
             <Detail ImgsData={proData.intro_imgs}/>
             <WhiteSpace size="lg"/>
