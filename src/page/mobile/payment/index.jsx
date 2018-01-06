@@ -1,5 +1,5 @@
 import React from 'react';
-import {WhiteSpace,Flex} from 'antd-mobile';
+import {WhiteSpace,Flex,Modal,List,Button} from 'antd-mobile';
 import { Link } from 'react-router-dom';
 // import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
@@ -10,9 +10,29 @@ export default class Payment extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
+            discount: 0,
+            ship_fee: 0,
+            payment_price: 5000,
+            modal: false
         };
     }
 
+    showModal() {
+        this.setState({modal: true});
+    }
+
+    hideModal() {
+        this.setState({modal: false});
+    }
+
+    onClickDiscount(discount) {
+        console.log(discount);
+        this.setState({
+            discount: discount.value
+        }, () => {
+            this.hideModal(); 
+        });
+    }
 
     render() {
         return <Layout header={false} footer={false}>
@@ -42,22 +62,50 @@ export default class Payment extends React.Component {
                         <div className="discount_title">发票信息</div>
                     </div>*/}
                     <div className="discount">
-                        <div className="discount_select">暂无可用</div>
+                        <div className="discount_select" onClick={this.showModal.bind(this)}>{this.state.discount ? `-￥${this.state.discount}` : '暂不使用'}</div>
                         <div className="discount_title">优惠券</div>
                     </div>
                     <div className="discount clearfix">
-                        <div className="discount_select price_text">￥5000.00</div>
+                        <div className="discount_select price_text">￥{this.state.payment_price}</div>
                         <div className="discount_title">商品金额</div>
-                        <div className="discount_select price_text">+￥0.00</div>
+                        <div className="discount_select price_text">+￥{this.state.ship_fee}</div>
                         <div className="discount_title">运费</div>
-                        <div className="discount_select price_text total">￥5000.00</div>
+                        <div className="discount_select price_text total">￥{this.state.payment_price + this.state.ship_fee - this.state.discount}</div>
                     </div>
                 </div>
                 <div className="bigbutton">确认支付</div>
                 <div className="bigbutton cancel" onClick={this.props.history.goBack}>取消付款</div>
             </Card>
+            <Modal
+                popup
+                visible={this.state.modal}
+                onClose={()=>{this.hideModal && this.hideModal('close')}}
+                animationType="slide-up"
+            >
+                <List renderHeader={() => <div>选择优惠券</div>} className="popup-list">
+                    <List.Item onClick={() => {this.onClickDiscount({value:0})}}>暂不使用</List.Item>
+                    {data.map((discount, index) => (
+                        <List.Item multipleLine key={index} extra={`${discount.time}到期`} onClick={() => {this.onClickDiscount(discount)}}>
+                            ￥{discount.value}
+                        </List.Item>
+                    ))}
+                </List>
+            </Modal>
         </Layout>
     }
 }
 
 // export default LoadingHoc(Payment);
+const data = [
+    {
+        value: '500',
+        time: '2018-07-01',
+    }, {
+        value: '500',
+        time: '2018-07-01',
+      },
+      {
+        value: '500',
+        time: '2018-07-01',
+    },
+];
