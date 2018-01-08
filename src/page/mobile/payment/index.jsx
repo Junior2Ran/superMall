@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
+import paymentApi from "../../../api/payment.jsx";
 import './index.less';
 
 export default class Payment extends React.Component {
@@ -30,6 +31,13 @@ export default class Payment extends React.Component {
             discount: discount.value
         }, () => {
             this.hideModal(); 
+        });
+    }
+
+    payCharge() {
+        console.log('click');
+        paymentApi.postCharge((rs) => {
+            console.log(rs);
         });
     }
 
@@ -72,7 +80,7 @@ export default class Payment extends React.Component {
                         <div className="discount_select price_text total">￥{this.state.payment_price + this.state.ship_fee - this.state.discount}</div>
                     </div>
                 </div>
-                <div className="bigbutton">确认支付</div>
+                <div className="bigbutton" onClick={this.payCharge.bind(this)}>确认支付</div>
                 <div className="bigbutton cancel" onClick={this.props.history.goBack}>取消付款</div>
             </Card>
             <Modal

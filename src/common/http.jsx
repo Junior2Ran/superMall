@@ -48,7 +48,7 @@ function ajax(params) {
     let isAbort = false;
     client.open(method, params.url);
     client.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    client.withCredentials = true;
+    client.withCredentials = false;
     if (method === 'GET') {
         client.send();
     } else {
