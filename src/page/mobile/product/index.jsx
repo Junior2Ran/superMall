@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
-import { Carousel, WhiteSpace, WingBlank, Modal, Toast, Flex } from 'antd-mobile';
+import { Carousel, WhiteSpace, WingBlank, Modal, Toast, Flex, List } from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
 import Detail from "./detail.jsx";
 import './index.less';
 import product_data from "../../../static/data/product.js";   //mock假数据
 import product_feature_data from "../../../static/data/product_feature.js";   //mock假数据
+
+const Item = List.Item;
+const Brief = Item.Brief;
 
 class Product extends React.Component {
     constructor(props,context) {
@@ -130,7 +133,18 @@ class Product extends React.Component {
             </Card>*/}
 
             <Detail ImgsData={proData.intro_imgs}/>
-            <WhiteSpace size="lg"/>
+            {/*<WhiteSpace size="lg"/>*/}
+
+            <Card>
+                <List renderHeader={() => '评论'}>
+                    <Item multipleLine extra="好评">
+                      商品品质不错！ <Brief>用户1 <span style={{marginLeft:'2rem'}}>2018-01-01</span></Brief>
+                    </Item>
+                    <Item multipleLine extra="中评">
+                      一般，手机很卡。 <Brief>用户2 <span style={{marginLeft:'2rem'}}>2018-01-01</span></Brief>
+                    </Item>
+                </List>
+            </Card>
 
             <PutInCart style={{height:'3.125rem'}}
                 showModal={this.showModal.bind(this)}
