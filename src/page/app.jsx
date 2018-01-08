@@ -20,6 +20,7 @@ import Discount from "./mobile/discount/index.jsx";
 import AddDiscount from "./mobile/discount/add/index.jsx"
 import Address from "./mobile/address/index.jsx";
 import AddAddress from "./mobile/address/add/index.jsx";
+import Comment from "./mobile/comment/index.jsx";
 
 export default class App extends React.Component {
     
@@ -47,6 +48,8 @@ export default class App extends React.Component {
 
                         <Route component={Address} path='/address' exact></Route>
                         <Route component={AddAddress} path='/address/add' exact></Route>
+
+                        <Route component={Comment} path='/comment' exact></Route>
                         <Redirect to="/home" />
                     </Switch>
                 </Router>

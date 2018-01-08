@@ -30,7 +30,10 @@ export default class My extends React.Component {
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'unacc', sub:2} }}>
                             待收货
                         </Link></Flex.Item>
-                        <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:3} }}>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'uncmt', sub:3} }}>
+                            待评价
+                        </Link></Flex.Item>
+                        <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:4} }}>
                             退换修
                         </Link></Flex.Item>
                     </Flex>
@@ -54,7 +57,7 @@ export default class My extends React.Component {
                 </div>
             </Card>
 
-{/*            <Card>
+            {/*<Card>
                 <div className="card_group">
                     <WingBlank>
                         <span>服务中心</span>
@@ -76,16 +79,18 @@ export default class My extends React.Component {
                         <span className="my_content_right">></span>
                     </WingBlank>
                 </div>
-            </Card>
+            </Card>*/}
 
             <Card>
                 <div className="card_group">
-                    <WingBlank>
-                        <span>设置</span>
-                        <span className="my_content_right">></span>
-                    </WingBlank>
+                    <Link to="/address">
+                        <WingBlank>
+                            <span>收货地址管理</span>
+                            <span className="my_content_right">></span>
+                        </WingBlank>
+                    </Link>
                 </div>
-            </Card>*/}
+            </Card>
         </Layout>
     }
 }

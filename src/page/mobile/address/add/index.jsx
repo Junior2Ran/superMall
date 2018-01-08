@@ -1,6 +1,5 @@
 import React from 'react';
 import { InputItem, TextareaItem } from 'antd-mobile';
-import { Link } from 'react-router-dom';
 import Card from "../../../../components/card/index.jsx";
 import Submit from "../../../../components/submit/index.jsx";
 
@@ -35,8 +34,8 @@ export default class AddAddress extends React.Component {
                     placeholder="填写详细的楼层或房间号信息"
                 />
             </Card>
-            <Submit>
-                <Link to="/payment">确认添加</Link>
+            <Submit onClick={this.props.history.goBack}>
+                确认添加
             </Submit>
         </div>
     }
