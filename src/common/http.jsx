@@ -53,7 +53,8 @@ function ajax(params) {
     if (method === 'GET') {
         client.send();
     } else {
-        client.send(params.data);
+        client.setRequestHeader('Content-Type', 'application/json');
+        client.send(JSON.stringify(params.data));
     }
 
     // timeout

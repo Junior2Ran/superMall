@@ -2,12 +2,12 @@ import {getServerHost} from '../config.jsx';
 import http from '../common/http.jsx';
 
 var api = {
-    postCharge(type, callback) {
+    postCharge(callback) {
         http.ajax({
             method: 'POST',
-            url: getServerHost() + '/charge/1',
+            url: getServerHost() + '/charge/12345678',
             data: {
-                amount: 0.01,
+                amount: 1,
                 channel: 'wx'
             },
             success: (rs) => {
