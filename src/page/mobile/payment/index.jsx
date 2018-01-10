@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
 import paymentApi from "../../../api/payment.jsx";
-var pingpp = require('pingpp-js');
+import pingpp from 'pingpp-js';
 import './index.less';
 
 export default class Payment extends React.Component {
@@ -37,18 +37,22 @@ export default class Payment extends React.Component {
 
     payCharge() {
         paymentApi.postCharge((rs) => {
-            console.log(rs);
-            pingpp.createPayment(rs.data, function(result, err){
-                console.log(result);
-                console.log(err.msg);
-                console.log(err.extra);
+            const charge = rs.data;
+            console.log(charge)
+            charge.extra = {
+                result_url : window.location.origin + '/#/payment/result'
+            };
+
+            pingpp.createPayment(charge, function(result, err){
                 if (result == "success") {
-                    // 只有微信公众号 (wx_pub)、QQ 公众号 (qpay_pub)
-                    //支付成功的结果会在这里返回，其他的支付结果都会跳转到 extra 中对应的 URL
+                    // 只有微信公众号 (wx_pub)、QQ 公众号 (qpay_pub)，支付成功的结果会在这里返回，其他的支付结果都会跳转到 extra 中对应的 URL
+                    console.log('success');
                 } else if (result == "fail") {
                     // charge 不正确或者微信公众号/QQ 公众号支付失败时会在此处返回
+                    console.log('fail');
                 } else if (result == "cancel") {
                     // 微信公众号/QQ 公众号支付取消支付
+                    console.log('cancel');
                 }
             });
         });

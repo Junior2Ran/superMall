@@ -8,7 +8,10 @@ var api = {
             url: getServerHost() + '/charge/12345678',
             data: {
                 amount: 1,
-                channel: 'wx'
+                channel: 'wx_wap',
+                extra: {
+                    result_url: 'http://127.0.0.1:8080/#/payment'
+                }
             },
             success: (rs) => {
                 callback && callback(rs);
