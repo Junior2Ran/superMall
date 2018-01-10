@@ -23,18 +23,20 @@ export default class My extends React.Component {
                     </Link>
                 </div>
                 <div className="card_group">
-                    <Flex style={{textAlign:'center'}}>
+                    <Flex style={{textAlign:'center',height:'6rem'}}>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'unpay', sub:1} }}>
-                            <Badge text={1}>待付款</Badge>
+                            <Badge text={1}>
+                                <div className="iconH icon_pay"></div>待付款
+                            </Badge>
                         </Link></Flex.Item>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'unacc', sub:2} }}>
-                            待收货
+                            <span style={{lineHeight:1}}><div className="iconH icon_deliver"></div>待收货</span>
                         </Link></Flex.Item>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'uncmt', sub:3} }}>
-                            待评价
+                            <span style={{lineHeight:1}}><div className="iconH icon_comment"></div>待评价</span>
                         </Link></Flex.Item>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:4} }}>
-                            退换修
+                            <span style={{lineHeight:1}}><div className="iconH icon_repair"></div>退换修</span>
                         </Link></Flex.Item>
                     </Flex>
                 </div>
