@@ -48,6 +48,7 @@ function ajax(params) {
     let isAbort = false;
     client.open(method, params.url);
     client.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    // 跨域时是否传cookie
     client.withCredentials = false;
     if (method === 'GET') {
         client.send();
