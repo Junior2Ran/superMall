@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
-import { Carousel, WhiteSpace, WingBlank, Modal, Toast, Flex, List } from 'antd-mobile';
+import { Carousel, WhiteSpace, WingBlank, Modal, Toast, Flex, List, NoticeBar } from 'antd-mobile';
 import PutInCart from './putincart.jsx';
 import CartModal from './cartmodal.jsx';
 import Detail from "./detail.jsx";
 import './index.less';
 import product_data from "../../../static/data/product.js";   //mock假数据
 import product_feature_data from "../../../static/data/product_feature.js";   //mock假数据
+import queryString from 'query-string';
+import locManager from "../../../common/distribute-sale.jsx";
 
 const Item = List.Item;
 const Brief = Item.Brief;
@@ -24,6 +26,10 @@ class Product extends React.Component {
             featureData: [],
             selectorText: '未选择'
         }
+    }
+
+    componentWillMount() {
+        locManager.generateURL();
     }
 
     componentDidMount() {
@@ -41,7 +47,6 @@ class Product extends React.Component {
                 featureData,
                 isLoading: false
             });
-            console.log(data)
         }, 500);
     }
 
@@ -77,6 +82,9 @@ class Product extends React.Component {
         });
 
         return <Layout header={true}>
+            <NoticeBar mode="link" action={<span>我是{locManager.getMockId()}</span>}>
+                来自 {locManager.getSaleLink()} 的分享。
+            </NoticeBar>
             <Card className="general_container">
                 <Carousel className="my-carousel"
                     autoplay={true}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flex } from 'antd-mobile';
+import { Flex, Modal } from 'antd-mobile';
 import Card from "../../../components/card/index.jsx";
+const alert = Modal.alert;
 
 export default class Orderlist extends React.Component {
     constructor(props, context) {
@@ -72,10 +73,20 @@ export default class Orderlist extends React.Component {
             </div>
             <div className="order_card_group">
                 <Flex className="order_button" justify="end">
+                    { this.state.button === '确认收货' ? 
+                    <a href="javascript:" onClick={showAlert}>{this.state.button}</a>
+                    :
                     <Link to={this.state.link}>{this.state.button}</Link>
+                    }
                 </Flex>
             </div>
         </Card>
     }
 }
 
+const showAlert = () => {
+    const alertInstance = alert('您要确认收货吗？', '该操作无法撤消', [
+        { text: '取消', onPress: () => console.log('cancel'), style: 'default' },
+        { text: '确认', onPress: () => console.log('ok') },
+    ]);
+};
