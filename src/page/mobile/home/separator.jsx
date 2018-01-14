@@ -20,6 +20,7 @@ export default class Separator extends React.Component {
 
         return <div className="separator_view">
             <Link to={separator.url}>{separator.title}</Link>
+            <img src={separator.img_url} style={{width:'100%'}}/>
             <WhiteSpace/>
         </div>
     }

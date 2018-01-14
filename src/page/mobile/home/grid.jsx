@@ -40,13 +40,13 @@ export default class Grid extends React.Component {
             if (parentOrientation === 'h') {
                 vdom.push(
                     <Flex.Item key={key}>
-                        <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
+                        <Link to={data.url}><img src={data.img_url} className="grid-img"/></Link>
                     </Flex.Item>
                 );
             } else {
                 vdom.push(
                     <Flex key={key}><Flex.Item>
-                        <Link to={data.url}><img src={data.image_url} className="grid-img"/></Link>
+                        <Link to={data.url}><img src={data.img_url} className="grid-img"/></Link>
                     </Flex.Item></Flex>
                 );
                 vdom.push(<WhiteSpace key={`ws${key}`}/>);
