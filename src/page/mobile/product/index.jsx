@@ -10,7 +10,6 @@ import Detail from "./detail.jsx";
 import './index.less';
 import product_data from "../../../static/data/product.js";   //mock假数据
 import product_feature_data from "../../../static/data/product_feature.js";   //mock假数据
-import queryString from 'query-string';
 import locManager from "../../../common/distribute-sale.jsx";
 
 const Item = List.Item;

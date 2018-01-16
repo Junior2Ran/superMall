@@ -19,4 +19,8 @@ function getServerHost() {
     }
 }
 
-export {getServerHost};
+const appId = 'wx6d6fd71af24c22c3';
+
+const appSecret = '0094e566a880a093082b7e805f5b1c71';
+
+export { getServerHost, appId, appSecret };
