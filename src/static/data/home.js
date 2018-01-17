@@ -5,25 +5,25 @@ var data = {
             "style_id": "carousel_view",
             "ratio": 0.5,
             "data": [{
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/1.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/1.jpg",
                 "url": "/product/1"
             }, {
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/2.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/2.jpg",
                 "url": "/product/2"
             }, {
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/3.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/3.jpg",
                 "url": "/product/3"
             }, {
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/4.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/4.jpg",
                 "url": "/product/3"
             }, {
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/5.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/5.jpg",
                 "url": "/product/3"
             }, {
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/6.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/6.jpg",
                 "url": "/product/3"
             }, {
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/banner/7.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/banner/7.jpg",
                 "url": "/product/3"
             }]
         }, {
@@ -36,23 +36,23 @@ var data = {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/1.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/1.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/2.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/2.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/3.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/3.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/4.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/4.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/5.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/5.png",
                         "url": "/category",
                         "weight": 1
                     }]
@@ -60,23 +60,23 @@ var data = {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/6.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/6.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/7.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/7.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/8.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/8.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/9.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/9.png",
                         "url": "/category",
                         "weight": 1
                     }, {
-                        "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/icon/10.png",
+                        "img_url": "//wfshop.andysheng.cn/img/homepage/jd/icon/10.png",
                         "url": "/category",
                         "weight": 1
                     }]
@@ -87,7 +87,7 @@ var data = {
             "ratio": 0.5,
             "data": {
                 "title": "",
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/sperator/1.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/sperator/1.jpg",
                 "url": "/category"
             }
         }, {
@@ -100,28 +100,28 @@ var data = {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://ws1.sinaimg.cn/large/006tNc79ly1fm7katglufj30af06twm6.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws1.sinaimg.cn/large/006tNc79ly1fm7katglufj30af06twm6.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws3.sinaimg.cn/large/006tNc79ly1fm7katm80rj30af06t467.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws3.sinaimg.cn/large/006tNc79ly1fm7katm80rj30af06t467.jpg",
+                        "url": "",
                         "weight": 1
                     }]
                 }, {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://ws3.sinaimg.cn/large/006tNc79ly1fm7kattzvmj305a06t42i.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws3.sinaimg.cn/large/006tNc79ly1fm7kattzvmj305a06t42i.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws4.sinaimg.cn/large/006tNc79ly1fm7katxyhoj305a06tdju.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws4.sinaimg.cn/large/006tNc79ly1fm7katxyhoj305a06tdju.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws2.sinaimg.cn/large/006tNc79ly1fm7katqnrzj30af06t467.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws2.sinaimg.cn/large/006tNc79ly1fm7katqnrzj30af06t467.jpg",
+                        "url": "",
                         "weight": 2
                     }]
                 }]
@@ -131,7 +131,7 @@ var data = {
             "ratio": 0.1,
             "data": {
                 "title": "",
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/sperator/2.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/sperator/2.jpg",
                 "url": ""
             }
         }, {
@@ -144,28 +144,28 @@ var data = {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://ws1.sinaimg.cn/large/006tNc79ly1fm7katglufj30af06twm6.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws1.sinaimg.cn/large/006tNc79ly1fm7katglufj30af06twm6.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws3.sinaimg.cn/large/006tNc79ly1fm7katm80rj30af06t467.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws3.sinaimg.cn/large/006tNc79ly1fm7katm80rj30af06t467.jpg",
+                        "url": "",
                         "weight": 1
                     }]
                 }, {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://ws3.sinaimg.cn/large/006tNc79ly1fm7kattzvmj305a06t42i.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws3.sinaimg.cn/large/006tNc79ly1fm7kattzvmj305a06t42i.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws4.sinaimg.cn/large/006tNc79ly1fm7katxyhoj305a06tdju.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws4.sinaimg.cn/large/006tNc79ly1fm7katxyhoj305a06tdju.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws2.sinaimg.cn/large/006tNc79ly1fm7katqnrzj30af06t467.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws2.sinaimg.cn/large/006tNc79ly1fm7katqnrzj30af06t467.jpg",
+                        "url": "",
                         "weight": 2
                     }]
                 }]
@@ -175,7 +175,7 @@ var data = {
             "ratio": 0.1,
             "data": {
                 "title": "",
-                "img_url": "https://wfshop.andysheng.cn/img/homepage/jd/sperator/3.jpg",
+                "img_url": "//wfshop.andysheng.cn/img/homepage/jd/sperator/3.jpg",
                 "url": ""
             }
         }, {
@@ -188,28 +188,28 @@ var data = {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://ws1.sinaimg.cn/large/006tNc79ly1fm7katglufj30af06twm6.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws1.sinaimg.cn/large/006tNc79ly1fm7katglufj30af06twm6.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws3.sinaimg.cn/large/006tNc79ly1fm7katm80rj30af06t467.jpg",
-                        url: "wfshop://abc",
+                        "img_url": "//ws3.sinaimg.cn/large/006tNc79ly1fm7katm80rj30af06t467.jpg",
+                        url: "",
                         "weight": 1
                     }]
                 }, {
                     "orientation": "h",
                     "weight": 1,
                     "cells": [{
-                        "img_url": "https://ws3.sinaimg.cn/large/006tNc79ly1fm7kattzvmj305a06t42i.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws3.sinaimg.cn/large/006tNc79ly1fm7kattzvmj305a06t42i.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws4.sinaimg.cn/large/006tNc79ly1fm7katxyhoj305a06tdju.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws4.sinaimg.cn/large/006tNc79ly1fm7katxyhoj305a06tdju.jpg",
+                        "url": "",
                         "weight": 1
                     }, {
-                        "img_url": "https://ws2.sinaimg.cn/large/006tNc79ly1fm7katqnrzj30af06t467.jpg",
-                        "url": "wfshop://abc",
+                        "img_url": "//ws2.sinaimg.cn/large/006tNc79ly1fm7katqnrzj30af06t467.jpg",
+                        "url": "",
                         "weight": 2
                     }]
                 }]
