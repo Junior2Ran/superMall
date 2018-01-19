@@ -14,8 +14,10 @@ export default class My extends React.Component {
     render() {
         return <Layout footer={true}>
             <div className="my_header">
-                <img className="my_header_img" src={this.headimgurl} />
-                <div className="my_header_text">{this.nickname}</div>
+                <img className="my_header_img" src={this.headimgurl ? this.headimgurl : "./images/zz_help_smile.png"}/>
+                <div className="my_header_text">
+                    {this.nickname ? this.nickname : <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6d6fd71af24c22c3&redirect_uri=http://supermall.junior2ran.cn/&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect" style={{color:"#fff"}}>点击登录</a>}
+                </div>
             </div>
             <Card>
                 <div className="card_group">
