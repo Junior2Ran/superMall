@@ -1,4 +1,4 @@
-import { appId, appSecret } from '../config.jsx';
+import { wxconfig } from '../config.jsx';
 import http from '../common/http.jsx';
 
 var api = {
@@ -6,8 +6,8 @@ var api = {
         http.fetch({
             url: 'https://api.weixin.qq.com/sns/oauth2/access_token',
             data: {
-                appid: appId,
-                secret: appSecret,
+                appid: wxconfig.appId,
+                secret: wxconfig.appSecret,
                 code: code,
                 grant_type: 'authorization_code'
             },

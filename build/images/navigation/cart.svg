@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg [
+        <!ELEMENT svg (defs|path)*>
+        <!ATTLIST svg
+                t CDATA #REQUIRED
+                class CDATA #REQUIRED
+                style CDATA #REQUIRED
+                viewBox CDATA #REQUIRED
+                version CDATA #REQUIRED
+                xmlns CDATA #REQUIRED
+                p-id CDATA #REQUIRED
+                xmlns:xlink CDATA #REQUIRED
+                width CDATA #REQUIRED
+                height CDATA #REQUIRED>
+        <!ELEMENT defs (style)*>
+        <!ELEMENT style (#PCDATA)>
+        <!ATTLIST style
+                type CDATA #REQUIRED>
+        <!ELEMENT path (#PCDATA)>
+        <!ATTLIST path
+                d CDATA #REQUIRED
+                p-id CDATA #REQUIRED>
+        ]>
+<svg t="1514359336737" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1839" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"><defs><style type="text/css"></style></defs><path d="M409.6 981.334c-56.474 0-102.4-45.926-102.4-102.4s45.926-102.4 102.4-102.4 102.4 45.926 102.4 102.4-45.926 102.4-102.4 102.4zM409.6 827.734c-28.211 0-51.2 22.989-51.2 51.2s22.989 51.2 51.2 51.2 51.2-22.989 51.2-51.2-22.989-51.2-51.2-51.2zM768 981.334c-56.474 0-102.4-45.926-102.4-102.4s45.926-102.4 102.4-102.4 102.4 45.926 102.4 102.4-45.926 102.4-102.4 102.4zM768 827.734c-28.211 0-51.2 22.989-51.2 51.2s22.989 51.2 51.2 51.2 51.2-22.989 51.2-51.2-22.989-51.2-51.2-51.2zM897.997 186.044c-12.851-15.206-32.256-23.91-53.197-23.91l-626.842 0-5.069-30.515c-6.707-40.294-43.981-71.885-84.89-71.885l-51.2 0c-14.131 0-25.6 11.469-25.6 25.6s11.469 25.6 25.6 25.6l51.2 0c15.718 0 31.795 13.619 34.355 29.133l85.555 513.382c6.707 40.294 43.981 71.885 84.89 71.885l512 0c14.131 0 25.6-11.469 25.6-25.6s-11.469-25.6-25.6-25.6l-512 0c-15.718 0-31.795-13.619-34.355-29.133l-12.646-75.776 510.208-44.39c39.68-3.43 75.93-36.915 82.483-76.237l34.355-206.182c3.43-20.685-1.946-41.267-14.797-56.422zM862.31 234.018l-34.355 206.182c-2.714 16.179-20.019 32.205-36.403 33.638l-514.202 44.698-50.893-305.254 618.291 0c5.99 0 11.008 2.048 14.131 5.786s4.352 9.011 3.379 14.899z" p-id="1840"></path></svg>

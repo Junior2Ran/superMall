@@ -8,8 +8,6 @@ import Grid from "./grid.jsx";
 import Separator from "./separator.jsx";
 import home_data from "../../../static/data/home";   //mock假数据
 import homeApi from "../../../api/home.jsx";
-import weixinApi from "../../../api/weixin.jsx";
-import queryString from 'query-string';
 import './index.less';
 
 class Home extends React.Component {
@@ -21,15 +19,6 @@ class Home extends React.Component {
             separatorDataSet: [],
             isLoading: true
         };
-    }
-
-    componentWillMount() {
-        const parsed = queryString.parse(location.search);
-        const code = parsed.code;
-        console.log(code);
-        // weixinApi.getOpenId(code, (rs) => {
-        //     console.log(rs)
-        // });
     }
 
     componentDidMount() {

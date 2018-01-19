@@ -1,17 +1,17 @@
-import {getServerHost} from '../config.jsx';
+import { getServerHost, wxconfig } from '../config.jsx';
 import http from '../common/http.jsx';
 
 var api = {
-    postCharge(callback) {
+    postCharge(fee, openid, callback) {
         http.ajax({
             method: 'POST',
-            url: getServerHost() + '/charge/12345678',
+            url: 'http://tobyli16.com:8080/pay/wechat/mp/' + Date.parse(new Date()),
             data: {
-                amount: 1,
-                channel: 'wx_wap',
-                extra: {
-                    result_url: 'http://127.0.0.1:8080/#/payment'
-                }
+                body: 'js pay asdasfsdgaadf',
+                total_fee: fee,
+                spbill_create_ip: '123.12.12.123',
+                notify_url: 'http://tobyli16.com/',
+                openid: openid
             },
             success: (rs) => {
                 callback && callback(rs);

@@ -17,7 +17,7 @@ export default class Comment extends React.Component {
             <Card full>
               <Card.Header
                 title="华为 HUAWEI Mate9 Pro （LON-AL00）6GB+128GB 琥珀金"
-                thumb={<img src="/images/4.png" style={{width:'20%'}}/>}
+                thumb={<img src="/images/hdr4.png" style={{width:'20%'}}/>}
                 
               />
               <Card.Body>

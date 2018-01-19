@@ -50,7 +50,7 @@ class Cart extends React.Component {
                         checkbox0: !this.state.checkbox0
                     })}} />
                     <div className="cart_card_img">
-                        <img src="./images/4.png" />
+                        <img src="./images/hdr4.png" />
                     </div>
                     <Flex.Item>
                         <div className="title_text">IPhone X 16G 2009限量版</div>
@@ -75,7 +75,7 @@ class Cart extends React.Component {
                         checkbox1: !this.state.checkbox1
                     })}} />
                     <div className="cart_card_img">
-                        <img src="./images/4.png" />
+                        <img src="./images/hdr4.png" />
                     </div>
                     <Flex.Item>
                         <div className="title_text">IPhone X 16G 2009限量版</div>
@@ -108,7 +108,7 @@ class Cart extends React.Component {
                         checkbox2: !this.state.checkbox2
                     })}} />
                     <div className="cart_card_img">
-                        <img src="./images/4.png" />
+                        <img src="./images/hdr4.png" />
                     </div>
                     <Flex.Item>
                         <div className="title_text">IPhone X 16G 2009限量版</div>

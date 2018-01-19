@@ -44,7 +44,7 @@ export default class Orderlist extends React.Component {
             </div>
             <Flex className="order_card_group">
                 <div className="order_card_img">
-                    <img src="./images/4.png" />
+                    <img src="./images/hdr4.png" />
                 </div>
                 <Flex.Item>
                     <div className="bold_text">IPhone X 16G 2009限量版</div>
@@ -57,7 +57,7 @@ export default class Orderlist extends React.Component {
             </Flex>
             <Flex className="order_card_group">
                 <div className="order_card_img">
-                    <img src="./images/4.png" />
+                    <img src="./images/hdr4.png" />
                 </div>
                 <Flex.Item>
                     <div className="bold_text">IPhone X 16G 2009限量版</div>

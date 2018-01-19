@@ -18,10 +18,6 @@ export default class Payment extends React.Component {
         };
     }
 
-    componentWillMount() {
-        
-    }
-
     showModal() {
         this.setState({modal: true});
     }
@@ -39,15 +35,27 @@ export default class Payment extends React.Component {
     }
 
     payCharge() {
-        wx.chooseWXPay({
-            timestamp: 0, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
-            nonceStr: '', // 支付签名随机串，不长于 32 位
-            package: '', // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=\*\*\*）
-            signType: '', // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
-            paySign: '', // 支付签名
-            success: function (res) {
-                // 支付成功后的回调函数
-            }
+        // const openid = localStorage.getItem("openid");
+        const openid = 'ocgJPv1kyOAGEJbNYlhmOry7lgBg';
+        const fee = '1';
+        paymentApi.postCharge(fee, openid, (rs) => {
+            console.log(rs.result);
+            this.nonceStr = rs.result.nonceStr;
+            this.package = rs.result.package;
+            this.paySign = rs.result.paySign;
+            this.signType = rs.result.signType;
+            this.timestamp = rs.result.timestamp;
+
+            wx.chooseWXPay({
+                timestamp: this.timestamp, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
+                nonceStr: this.nonceStr, // 支付签名随机串，不长于 32 位
+                package: this.package, // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=\*\*\*）
+                signType: this.signType, // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
+                paySign: this.paySign, // 支付签名
+                success: function (res) {
+                    alert(res);
+                }
+            });
         });
     }
 
@@ -62,7 +70,7 @@ export default class Payment extends React.Component {
 
             <Card className="payment_card clearfix">
                 <div className="payment_card_img">
-                    <img src="./images/4.png" />
+                    <img src="./images/hdr4.png" />
                 </div>
                 <div className="payment_card_text">
                     <div className="title_text">IPhone X 16G 2009限量版 现货</div>
