@@ -40,6 +40,7 @@ export default class Payment extends React.Component {
         const fee = '1';
         paymentApi.postCharge(fee, openid, (rs) => {
             console.log(rs.result);
+            this.appId = rs.result.appId;
             this.nonceStr = rs.result.nonceStr;
             this.package = rs.result.package;
             this.paySign = rs.result.paySign;
@@ -47,6 +48,7 @@ export default class Payment extends React.Component {
             this.timestamp = rs.result.timestamp;
 
             wx.chooseWXPay({
+                appId: this.appId,
                 timestamp: this.timestamp, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
                 nonceStr: this.nonceStr, // 支付签名随机串，不长于 32 位
                 package: this.package, // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=\*\*\*）
@@ -54,6 +56,13 @@ export default class Payment extends React.Component {
                 paySign: this.paySign, // 支付签名
                 success: function (res) {
                     alert(res);
+                },
+                cancel:function(res){
+                    alert(res+"*");
+                      //支付取消
+                },
+                error:function(res){
+                    alert(res+"-");
                 }
             });
         });

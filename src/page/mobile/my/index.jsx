@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
 import {Flex,WingBlank,Badge} from 'antd-mobile';
+import {wxconfig} from "../../../config.jsx";
 import './index.less';
 
 export default class My extends React.Component {
@@ -16,7 +17,7 @@ export default class My extends React.Component {
             <div className="my_header">
                 <img className="my_header_img" src={this.headimgurl ? this.headimgurl : "./images/zz_help_smile.png"}/>
                 <div className="my_header_text">
-                    {this.nickname ? this.nickname : <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6d6fd71af24c22c3&redirect_uri=http://supermall.junior2ran.cn/&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect" style={{color:"#fff"}}>点击登录</a>}
+                    {this.nickname ? this.nickname : <a href={wxconfig.redirectUri} style={{color:"#fff"}}>点击登录</a>}
                 </div>
             </div>
             <Card>
