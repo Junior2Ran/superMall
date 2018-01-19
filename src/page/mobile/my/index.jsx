@@ -6,12 +6,16 @@ import {Flex,WingBlank,Badge} from 'antd-mobile';
 import './index.less';
 
 export default class My extends React.Component {
-    
+    componentWillMount() {
+        this.nickname = localStorage.getItem("nickname");
+        this.headimgurl = localStorage.getItem("headimgurl");
+    }
+
     render() {
         return <Layout footer={true}>
             <div className="my_header">
-                <img className="my_header_img" src="./images/zz_help_smile.png" />
-                <div className="my_header_text">用户名在这儿</div>
+                <img className="my_header_img" src={this.headimgurl} />
+                <div className="my_header_text">{this.nickname}</div>
             </div>
             <Card>
                 <div className="card_group">

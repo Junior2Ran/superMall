@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
 import paymentApi from "../../../api/payment.jsx";
-import pingpp from 'pingpp-js';
 import './index.less';
 
 export default class Payment extends React.Component {

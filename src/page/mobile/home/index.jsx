@@ -27,9 +27,9 @@ class Home extends React.Component {
         const parsed = queryString.parse(location.search);
         const code = parsed.code;
         console.log(code);
-        weixinApi.getOpenId(code, (rs) => {
-            console.log(rs)
-        });
+        // weixinApi.getOpenId(code, (rs) => {
+        //     console.log(rs)
+        // });
     }
 
     componentDidMount() {
