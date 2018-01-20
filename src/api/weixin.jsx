@@ -2,27 +2,12 @@ import { wxconfig } from '../config.jsx';
 import http from '../common/http.jsx';
 
 var api = {
-    getOpenId(code, callback) {
-        http.fetch({
-            url: 'https://api.weixin.qq.com/sns/oauth2/access_token',
+    postJsApiData(url, callback) {
+        http.ajax({
+            method: 'POST',
+            url: 'http://supermall.junior2ran.cn/auth',
             data: {
-                appid: wxconfig.appId,
-                secret: wxconfig.appSecret,
-                code: code,
-                grant_type: 'authorization_code'
-            },
-            success: (rs) => {
-                callback && callback(rs);
-            }
-        });
-    },
-
-    getUserInfo(accessToken, openId, callback) {
-        http.fetch({
-            url: 'https://api.weixin.qq.com/sns/oauth2/access_token',
-            data: {
-                access_token: accessToken,
-                openid: openId
+                url: url
             },
             success: (rs) => {
                 callback && callback(rs);

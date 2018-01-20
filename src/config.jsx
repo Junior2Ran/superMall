@@ -12,7 +12,7 @@ function getServerHost() {
     let localURL = "//127.0.0.1:8080"; // 本地地址
     let onlineURL = "//supermall.junior2ran.cn"; // 线上地址
 
-    if (/*/huiyan\.baidu\.com/.test(location.href) || */params.apitype == "online") {
+    if (/*/supermall\.junior2ran\.cn/.test(location.href) || */params.apitype == "online") {
         return onlineURL;
     } else {
         return devURL;

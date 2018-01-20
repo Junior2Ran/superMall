@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
+import wxApi from "../../../api/weixin.jsx";
 import paymentApi from "../../../api/payment.jsx";
 import './index.less';
 
@@ -16,6 +17,36 @@ export default class Payment extends React.Component {
             payment_price: 5000,
             modal: false
         };
+    }
+
+    componentWillMount() {
+        const url = encodeURIComponent(window.location.href.split('#')[0]);
+        wxApi.postJsApiData(url, (rs) => {
+            const data = rs.result;
+            wx.config({  
+                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。  
+                appId: data.appId, // 必填，公众号的唯一标识  
+                timestamp: data.timestamp, // 必填，生成签名的时间戳  
+                nonceStr: data.nonceStr, // 必填，生成签名的随机串  
+                signature: data.signature, // 必填，签名，见附录1  
+                jsApiList: ["chooseWXPay","chooseImage","onMenuShareTimeline"]
+            });  
+        });
+    }
+
+    componentDidMount() {
+        wx.ready(function(){
+            wx.checkJsApi({
+                jsApiList: ['chooseWXPay',"chooseImage","onMenuShareTimeline"],
+                success: function(res) {
+                    console.log(res)
+                }
+            });
+        });
+        wx.error(function(res){
+            console.log('wx.error');
+            console.log(res);
+        });
     }
 
     showModal() {
@@ -34,37 +65,53 @@ export default class Payment extends React.Component {
         });
     }
 
+    onBridgeReady() {
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest', {
+               "appId": this.appId,             //公众号名称，由商户传入     
+               "timeStamp": this.timestamp,     //时间戳，自1970年以来的秒数     
+               "nonceStr": this.nonceStr,       //随机串     
+               "package": this.package,     
+               "signType": this.signType,       //微信签名方式：     
+               "paySign": this.paySign          //微信签名 
+            },
+            function(res){     
+                if(res.err_msg == "get_brand_wcpay_request:ok") {
+                    console.log(1)
+                    // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                } else if (res.err_msg == "get_brand_wcpay_request:cancel") {
+                    console.log('cancel');
+                    console.log(res);
+                } else if (res.err_msg == "get_brand_wcpay_request:fail") {
+                    console.log('fail');
+                    console.log(res);
+                }
+            }
+        );
+    }
+
     payCharge() {
         // const openid = localStorage.getItem("openid");
         const openid = 'ocgJPv1kyOAGEJbNYlhmOry7lgBg';
         const fee = '1';
         paymentApi.postCharge(fee, openid, (rs) => {
-            console.log(rs.result);
             this.appId = rs.result.appId;
             this.nonceStr = rs.result.nonceStr;
             this.package = rs.result.package;
             this.paySign = rs.result.paySign;
             this.signType = rs.result.signType;
-            this.timestamp = rs.result.timestamp;
-
-            wx.chooseWXPay({
-                appId: this.appId,
-                timestamp: this.timestamp, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
-                nonceStr: this.nonceStr, // 支付签名随机串，不长于 32 位
-                package: this.package, // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=\*\*\*）
-                signType: this.signType, // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
-                paySign: this.paySign, // 支付签名
-                success: function (res) {
-                    alert(res);
-                },
-                cancel:function(res){
-                    alert(res+"*");
-                      //支付取消
-                },
-                error:function(res){
-                    alert(res+"-");
+            this.timestamp = rs.result.timestamp;             
+            
+            if (typeof WeixinJSBridge == "undefined") {
+                if ( document.addEventListener ) {
+                    document.addEventListener('WeixinJSBridgeReady', this.onBridgeReady, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent('WeixinJSBridgeReady', this.onBridgeReady); 
+                    document.attachEvent('onWeixinJSBridgeReady', this.onBridgeReady);
                 }
-            });
+            } else {
+                this.onBridgeReady();
+            }
         });
     }
 
