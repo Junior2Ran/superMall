@@ -60,14 +60,14 @@ class Search extends React.Component {
 
     render() {
         const content = this.state.data && this.state.data.map((item, index) => {
-        	return <Link to={`/product/${item.id}`} key={index}>
+        	return <Link to={`/product/${item.id}`} key={index} className="search_item">
         		<Flex style={{background:'#fff'}}>
-	        		<Flex.Item>
+	        		<Flex.Item style={{flex:'0 0 35%'}}>
 	        			<img src={item.img_url} style={{width: '100%'}}/>
 	        		</Flex.Item>
 	        		<Flex.Item>
-	        			<div style={{marginBottom: 10}}>{item.name}</div>
-	        			<div style={{marginBottom: 10}}>￥{item.price}</div>
+	        			<div style={{marginBottom: 5}}>{item.name}</div>
+	        			<div style={{marginBottom: 5}}>￥{item.price}</div>
 	        			<div>评论数：{item.comment_count}</div>
 	        		</Flex.Item>
         		</Flex>

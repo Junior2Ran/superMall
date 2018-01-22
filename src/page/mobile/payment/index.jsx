@@ -19,6 +19,10 @@ export default class Payment extends React.Component {
         };
     }
 
+    static contextTypes = {  
+        router: React.PropTypes.object
+    } 
+    
     componentWillMount() {
         const url = encodeURIComponent(window.location.href.split('#')[0]);
         wxApi.postJsApiData(url, (rs) => {
@@ -65,6 +69,7 @@ export default class Payment extends React.Component {
         });
     }
 
+    // 微信支付接口
     onBridgeReady() {
         WeixinJSBridge.invoke(
             'getBrandWCPayRequest', {
@@ -77,22 +82,15 @@ export default class Payment extends React.Component {
             },
             function(res){     
                 if(res.err_msg == "get_brand_wcpay_request:ok") {
-                    console.log(1)
-                    // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
-                } else if (res.err_msg == "get_brand_wcpay_request:cancel") {
-                    console.log('cancel');
-                    console.log(res);
-                } else if (res.err_msg == "get_brand_wcpay_request:fail") {
-                    console.log('fail');
-                    console.log(res);
+                    this.context.router.history.push('payment/result');
                 }
             }
         );
     }
 
     payCharge() {
-        // const openid = localStorage.getItem("openid");
-        const openid = 'ocgJPv1kyOAGEJbNYlhmOry7lgBg';
+        const openid = localStorage.getItem("openid");
+        // const openid = 'ocgJPv1kyOAGEJbNYlhmOry7lgBg';
         const fee = '1';
         paymentApi.postCharge(fee, openid, (rs) => {
             this.appId = rs.result.appId;
@@ -102,6 +100,7 @@ export default class Payment extends React.Component {
             this.signType = rs.result.signType;
             this.timestamp = rs.result.timestamp;             
             
+            // 调起微信支付接口
             if (typeof WeixinJSBridge == "undefined") {
                 if ( document.addEventListener ) {
                     document.addEventListener('WeixinJSBridgeReady', this.onBridgeReady, false);

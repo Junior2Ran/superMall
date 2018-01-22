@@ -41,6 +41,7 @@ export default class Order extends React.Component {
                         <OrderList />
                         <OrderList tab={2} />
                         <OrderList tab={3} />
+                        <OrderList tab={4} />
                     </div>
                     <div>
                         <OrderList />
@@ -51,8 +52,8 @@ export default class Order extends React.Component {
                     <div>
                         <OrderList tab={3} />
                     </div>
-                    <div className="empty">
-                        暂无订单
+                    <div>
+                        <OrderList tab={4} />
                     </div>
                 </Tabs>
             </div>

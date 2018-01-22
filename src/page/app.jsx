@@ -15,6 +15,7 @@ import Search from "./mobile/search/index.jsx";
 import Product from "./mobile/product/index.jsx";
 import Shop from "./mobile/shop/index.jsx";
 import Order from "./mobile/order/index.jsx";
+import Profitshare from "./mobile/profitshare/index.jsx";
 import Payment from "./mobile/payment/index.jsx";
 import PaymentResult from "./mobile/payment/result/index.jsx";
 import Discount from "./mobile/discount/index.jsx";
@@ -22,6 +23,7 @@ import AddDiscount from "./mobile/discount/add/index.jsx"
 import Address from "./mobile/address/index.jsx";
 import AddAddress from "./mobile/address/add/index.jsx";
 import Comment from "./mobile/comment/index.jsx";
+import Refund from "./mobile/refund/index.jsx";
 
 export default class App extends React.Component {
     
@@ -42,6 +44,7 @@ export default class App extends React.Component {
                         <Route component={Product} path='/product/:id'></Route>
                         <Route component={Shop} path='/shop/:id'></Route>
                         <Route component={Order} path='/order'></Route>
+                        <Route component={Profitshare} path='/profitshare'></Route>
 
                         <Route component={Payment} path='/payment' exact></Route>
                         <Route component={PaymentResult} path='/payment/result' exact></Route>
@@ -53,6 +56,7 @@ export default class App extends React.Component {
                         <Route component={AddAddress} path='/address/add' exact></Route>
 
                         <Route component={Comment} path='/comment' exact></Route>
+                        <Route component={Refund} path='/refund' exact></Route>
                         <Redirect to="/home" />
                     </Switch>
                 </Router>

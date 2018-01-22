@@ -9,7 +9,8 @@ export default class Orderlist extends React.Component {
         super(props, context);
         this.state = {
             status: '待付款',
-            button: '去付款',
+            primaryButton: '确认付款',
+            secondaryButton: '取消订单',
             link: '/payment'
         };
     }
@@ -20,16 +21,26 @@ export default class Orderlist extends React.Component {
             case 2:
                 this.setState({
                     status: '待确认收货',
-                    button: '确认收货',
+                    primaryButton: '确认收货',
+                    secondaryButton: '联系客服',
                     link: '/order'
                 });
                 break;
             case 3:
                 this.setState({
                     status: '待评价',
-                    button: '去评价',
+                    primaryButton: '去评价',
+                    secondaryButton: '删除订单',
                     link: '/comment'
-                })
+                });
+                break;
+            case 4:
+                this.setState({
+                    status: '退换修',
+                    primaryButton: '申请售后',
+                    secondaryButton: '',
+                    link: '/refund'
+                });
                 break;
             default:
                 break;
@@ -47,11 +58,11 @@ export default class Orderlist extends React.Component {
                     <img src="./images/hdr4.png" />
                 </div>
                 <Flex.Item>
-                    <div className="bold_text">IPhone X 16G 2009限量版</div>
+                    <div>IPhone X 16G 2009限量版</div>
                     <div>红色 / 16G</div>
                 </Flex.Item>
                 <div>
-                    <Flex className="bold_text" justify="end">￥5000</Flex>
+                    <Flex justify="end">￥5000</Flex>
                     <Flex justify="end"><small>×1</small></Flex>
                 </div>
             </Flex>
@@ -60,11 +71,11 @@ export default class Orderlist extends React.Component {
                     <img src="./images/hdr4.png" />
                 </div>
                 <Flex.Item>
-                    <div className="bold_text">IPhone X 16G 2009限量版</div>
+                    <div>IPhone X 16G 2009限量版</div>
                     <div>红色 / 16G</div>
                 </Flex.Item>
                 <div>
-                    <Flex className="bold_text" justify="end">￥5000</Flex>
+                    <Flex justify="end">￥5000</Flex>
                     <Flex justify="end"><small>×1</small></Flex>
                 </div>
             </Flex>
@@ -73,10 +84,15 @@ export default class Orderlist extends React.Component {
             </div>
             <div className="order_card_group">
                 <Flex className="order_button" justify="end">
-                    { this.state.button === '确认收货' ? 
-                    <a href="javascript:" onClick={showAlert}>{this.state.button}</a>
+                    { this.state.primaryButton === '确认收货' ? 
+                    <a href="javascript:" onClick={()=>{showAlert(`您确定要${this.state.primaryButton}？`)}}>{this.state.primaryButton}</a>
                     :
-                    <Link to={this.state.link}>{this.state.button}</Link>
+                    <Link to={this.state.link}>{this.state.primaryButton}</Link>
+                    }
+                    { this.state.secondaryButton ? 
+                    <a href="javascript:" onClick={()=>{showAlert(`您确定要${this.state.secondaryButton}？`)}} style={{marginLeft: 10}}>{this.state.secondaryButton}</a>
+                    :
+                    null
                     }
                 </Flex>
             </div>
@@ -84,8 +100,8 @@ export default class Orderlist extends React.Component {
     }
 }
 
-const showAlert = () => {
-    const alertInstance = alert('您要确认收货吗？', '该操作无法撤消', [
+const showAlert = (msg) => {
+    const alertInstance = alert(msg, '该操作无法撤消', [
         { text: '取消', onPress: () => console.log('cancel'), style: 'default' },
         { text: '确认', onPress: () => console.log('ok') },
     ]);
