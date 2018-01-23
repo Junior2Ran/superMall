@@ -46,7 +46,7 @@ class Product extends React.Component {
                 featureData,
                 isLoading: false
             });
-        }, 500);
+        }, 100);
     }
 
     showModal() {

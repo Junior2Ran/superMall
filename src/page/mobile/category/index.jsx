@@ -29,7 +29,7 @@ class Category extends React.Component {
                 data,
                 isLoading: false
             });
-        }, 500);
+        }, 100);
     }
 
     scrollToAnchor = (anchorName) => {

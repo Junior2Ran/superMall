@@ -50,7 +50,7 @@ class Home extends React.Component {
                 separatorDataSet,
                 isLoading: false
             });
-        }, 500);
+        }, 100);
     }
 
     requestRealData() {

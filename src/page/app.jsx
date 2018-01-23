@@ -44,7 +44,7 @@ export default class App extends React.Component {
                         <Route component={Product} path='/product/:id'></Route>
                         <Route component={Shop} path='/shop/:id'></Route>
                         <Route component={Order} path='/order'></Route>
-                        <Route component={Profitshare} path='/profitshare'></Route>
+                        <Route component={Profitshare} path='/profitshare/:type'></Route>
 
                         <Route component={Payment} path='/payment' exact></Route>
                         <Route component={PaymentResult} path='/payment/result' exact></Route>

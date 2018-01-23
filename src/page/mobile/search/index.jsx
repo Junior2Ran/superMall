@@ -31,7 +31,7 @@ class Search extends React.Component {
                 data,
                 isLoading: false
             });
-        }, 500);
+        }, 100);
     }
 
     requestRealData() {
@@ -55,7 +55,7 @@ class Search extends React.Component {
             this.setState({
                 isLoading: false
             });
-        }, 300);
+        }, 100);
     }
 
     render() {
