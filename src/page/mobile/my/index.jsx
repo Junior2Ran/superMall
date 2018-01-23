@@ -98,7 +98,7 @@ export default class My extends React.Component {
                     <Link to={{pathname:"/profitshare/daily"}}>
                         <WingBlank>
                             <div className="iconH iconH_inline icon_pie" style={{marginRight:'10px'}}></div><span>日分成</span>
-                            <span className="my_content_right">￥102 ></span>
+                            <span className="my_content_right">￥16 ></span>
                         </WingBlank>
                     </Link>
                 </div>
@@ -106,7 +106,7 @@ export default class My extends React.Component {
                     <Link to={{pathname:"/profitshare/total"}}>
                         <WingBlank>
                             <div className="iconH iconH_inline icon_calendar" style={{marginRight:'10px'}}></div><span>总分成</span>
-                            <span className="my_content_right">￥1028 ></span>
+                            <span className="my_content_right">￥16 ></span>
                         </WingBlank>
                     </Link>
                 </div>

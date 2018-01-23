@@ -7,7 +7,7 @@ var api = {
             method: 'POST',
             url: 'http://tobyli16.com:8080/pay/wechat/mp/' + Date.parse(new Date()),
             data: {
-                body: 'js pay',
+                body: 'WF电商平台通用客户端',
                 total_fee: fee,
                 spbill_create_ip: '123.12.12.123',
                 notify_url: 'http://tobyli16.com/',

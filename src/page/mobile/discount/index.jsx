@@ -15,28 +15,28 @@ export default class Discount extends React.Component {
 
     render() {
         return <Layout header={false} footer={false}>
-            <List renderHeader={() => '未使用'}>
-                <Item multipleLine onClick={() => {}} extra="2018-07-01到期">
-                    ￥500 <Brief>家电类满10000可用</Brief>
+            <List renderHeader={() => <div><div className="iconH iconH_inline icon_ticket" style={{margin:'0 5',height:'16'}}></div>未使用</div>}>
+                <Item multipleLine onClick={() => {}} extra="50元代金券">
+                    <div className="iconH iconH_inline icon_calendar" style={{margin:'0 5'}}></div>携程飞机票
                 </Item>
-                <Item multipleLine onClick={() => {}} extra="2018-07-01到期">
-                    ￥500 <Brief>家电类满10000可用</Brief>
+                <Item multipleLine onClick={() => {}} extra="8折优惠券">
+                    <div className="iconH iconH_inline icon_pie" style={{margin:'0 5'}}></div>儿童拼图店
                 </Item>
-                <Item multipleLine onClick={() => {}} extra="2018-07-01到期">
-                    ￥500 <Brief>家电类满10000可用</Brief>
-                </Item>
-            </List>
-            <List renderHeader={() => '已使用'}>
-                <Item multipleLine disabled extra="2018-07-01到期">
-                    ￥500 <Brief>家电类满10000可用</Brief>
+                <Item multipleLine onClick={() => {}} extra="10元代金券">
+                    <div className="iconH iconH_inline icon_await" style={{margin:'0 5'}}></div>捷安特自行车
                 </Item>
             </List>
-            <List renderHeader={() => '已过期'}>
-                <Item multipleLine disabled extra="2018-07-01到期">
-                    ￥500 <Brief>家电类满10000可用</Brief>
+            <List renderHeader={() => <div><div className="iconH iconH_inline icon_ticket" style={{margin:'0 5',height:'16'}}></div>已使用</div>}>
+                <Item multipleLine disabled extra="30元代金券">
+                    <div className="iconH iconH_inline icon_deliver" style={{margin:'0 5'}}></div>水滴食品店
                 </Item>
-                <Item multipleLine disabled extra="2018-07-01到期">
-                    ￥500 <Brief>家电类满10000可用</Brief>
+            </List>
+            <List renderHeader={() => <div><div className="iconH iconH_inline icon_ticket" style={{margin:'0 5',height:'16'}}></div>已过期</div>}>
+                <Item multipleLine disabled extra="10元代金券">
+                    <div className="iconH iconH_inline icon_comment" style={{margin:'0 5'}}></div>小绿植株店
+                </Item>
+                <Item multipleLine disabled extra="20元代金券">
+                    <div className="iconH iconH_inline icon_pay" style={{margin:'0 5'}}></div>小明文具店
                 </Item>
             </List>
             <Submit><Link to="/discount/add">添加优惠券</Link></Submit>
