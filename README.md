@@ -30,5 +30,6 @@ npm run build
 PS.暂时`images`文件夹无法打包到`dist`内，需要手动复制粘贴`build`目录下或`src/static`目录下的`images`文件夹到`dist`内，同时`build`目录和`src/static`目录下的文件也只能手动同步。
 
 5. 上传到线上服务器，部署到公众号
+
 详细操作请访问：[supermallDemo README.md]()
 将打包好的文件布置在`supermallDemo`项目中对应的位置，上传更新后的`supermallDemo`到github，然后在服务端pull下代码。
