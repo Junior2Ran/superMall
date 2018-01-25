@@ -19,13 +19,13 @@ export default class My extends React.Component {
                     <Flex.Item style={{flex:'0 0 20%'}}>
                         <img className="my_header_img" src={this.headimgurl ? this.headimgurl : "./images/zz_help_smile.png"}/>
                     </Flex.Item>
-                    <Flex.Item style={{flex:'0 0 20%'}}>
+                    <Flex.Item style={{flex:'0 0 80%'}}>
                         <div className="my_header_text">
                             {this.nickname ? this.nickname : <a href={wxconfig.redirectUri} style={{color:"#fff"}}>点击登录</a>}
                         </div>
                         <Link to={{pathname:'/my/tel'}}>
                             <div className="my_header_text">
-                                <img src="./images/icons/手机.png" style={{width:'20%'}}/>
+                                <img src="./images/icons/手机.png" style={{width:'5%'}}/>
                                 未绑定
                             </div>
                         </Link>
