@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import LoadingHoc from "../../../common/loading-hoc.jsx";
 import Layout from "../../../common/layout/layout.jsx";
 import Card from "../../../components/card/index.jsx";
+import {wxconfig} from "../../../config.jsx";
 import wxApi from "../../../api/weixin.jsx";
 import paymentApi from "../../../api/payment.jsx";
 import './index.less';
@@ -33,7 +34,7 @@ export default class Payment extends React.Component {
                 timestamp: data.timestamp, // 必填，生成签名的时间戳  
                 nonceStr: data.nonceStr, // 必填，生成签名的随机串  
                 signature: data.signature, // 必填，签名，见附录1  
-                jsApiList: ["chooseWXPay","chooseImage","onMenuShareTimeline"]
+                jsApiList: ["chooseWXPay","onMenuShareTimeline","onMenuShareAppMessage"]
             });  
         });
     }
@@ -41,7 +42,7 @@ export default class Payment extends React.Component {
     componentDidMount() {
         wx.ready(function(){
             wx.checkJsApi({
-                jsApiList: ['chooseWXPay',"chooseImage","onMenuShareTimeline"],
+                jsApiList: ['chooseWXPay',"onMenuShareTimeline","onMenuShareAppMessage"],
                 success: function(res) {
                     console.log(res)
                 }

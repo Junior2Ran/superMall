@@ -3,26 +3,13 @@
  */
 import queryString from 'query-string';
 
-function getUA(){
-    const u = navigator.userAgent;
-    if (u.indexOf("Android") > -1 || u.indexOf("Linux") > -1) {
-        return 'Android';   // A
-    } else if (u.indexOf("iPhone") > -1) {
-        return 'iPhone';    // B
-    } else {
-        return 'else';      // C
-    }
+function getMyOpenId(){
+    return localStorage.getItem("openid");
 }
 
-function getMockId(){
-    const plat = getUA();
-    let id = 'C';
-    if (plat == 'Android') {
-        id = 'A';
-    } else if (plat == 'iPhone') {
-        id = 'B';
-    }
-    return id;
+function getFromOpenId(){
+    const parsed = queryString.parse(location.search);
+    return parsed.from_user;
 }
 
 function getSaleLink(){
@@ -73,8 +60,8 @@ function generateURL(){
 }
 
 const locManager = {
-    getUA,
-    getMockId,
+    getMyOpenId,
+    getFromOpenId,
     getSaleLink,
     generateURL
 }

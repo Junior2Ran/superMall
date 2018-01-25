@@ -11,6 +11,7 @@ import './index.less';
 import product_data from "../../../static/data/product.js";   //mock假数据
 import product_feature_data from "../../../static/data/product_feature.js";   //mock假数据
 import locManager from "../../../common/salelink.jsx";
+import wxApi from "../../../api/weixin.jsx";
 
 const Item = List.Item;
 const Brief = Item.Brief;
@@ -28,11 +29,41 @@ class Product extends React.Component {
     }
 
     componentWillMount() {
-        locManager.generateURL();
+        const url = encodeURIComponent(window.location.href.split('#')[0]);
+        wxApi.postJsApiData(url, (rs) => {
+            const data = rs.result;
+            wx.config({  
+                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。  
+                appId: data.appId, // 必填，公众号的唯一标识  
+                timestamp: data.timestamp, // 必填，生成签名的时间戳  
+                nonceStr: data.nonceStr, // 必填，生成签名的随机串  
+                signature: data.signature, // 必填，签名，见附录1  
+                jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"]
+            });  
+        });
     }
 
     componentDidMount() {
         this.requestData();
+        var shareData = {//自定义分享数据
+            title: 'WF微商城',
+            desc: '来自'+localStorage.getItem("nickname")+'的分享',
+            link: 'http://supermall.junior2ran.cn/?from_user='+localStorage.openid,//链接地址
+        };
+        wx.ready(function(){
+            wx.checkJsApi({
+                jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"],
+                success: function(res) {
+                    console.log(res)
+                }
+            });
+            wx.onMenuShareAppMessage(shareData);
+            wx.onMenuShareTimeline(shareData);
+        });
+        wx.error(function(res){
+            console.log('wx.error');
+            console.log(res);
+        });
     }
 
     requestData() {
@@ -81,8 +112,8 @@ class Product extends React.Component {
         });
 
         return <Layout header={true}>
-            <NoticeBar mode="link" action={<span>我是{locManager.getMockId()}</span>}>
-                来自 {locManager.getSaleLink()} 的分享。
+            <NoticeBar mode="link" action=''>
+                来自 {locManager.getFromOpenId()} 的分享。
             </NoticeBar>
             <Card className="general_container">
                 <Carousel className="my-carousel"
