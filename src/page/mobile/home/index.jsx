@@ -9,6 +9,7 @@ import Separator from "./separator.jsx";
 import home_data from "../../../static/data/home";   //mock假数据
 import homeApi from "../../../api/home.jsx";
 import './index.less';
+import queryString from 'query-string';
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -23,6 +24,11 @@ class Home extends React.Component {
 
     componentDidMount() {
         this.requestMockData();
+        const uid = queryString.parse(location.search).uid;
+        const openid = localStorage.getItem("openid");
+        homeApi.postOpenId(uid, openid, (rs)=>{
+            alert(rs);
+        });
     }
 
     requestMockData() {

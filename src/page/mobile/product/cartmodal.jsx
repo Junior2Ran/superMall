@@ -50,7 +50,7 @@ export default class CartModal extends React.Component {
     render() {
         const title = <div className="popup_modal_header">
             <Flex justify="end">
-                <Flex.Item><img src="./images/hdr4.png" /></Flex.Item>
+                <Flex.Item><img src="./images/hdr4.png" style={{width:'50%'}}/></Flex.Item>
                 <Flex.Item>
                     <h3>￥6999</h3>
                     <p>联想 拯救者R987</p>
