@@ -10,6 +10,10 @@ import home_data from "../../../static/data/home";   //mock假数据
 import homeApi from "../../../api/home.jsx";
 import './index.less';
 import queryString from 'query-string';
+import locManager from "../../../common/salelink.jsx";
+import wxApi from "../../../api/weixin.jsx";
+
+const host = 'http://ymymmall.swczyc.com/';
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -22,12 +26,55 @@ class Home extends React.Component {
         };
     }
 
+    componentWillMount() {
+        const url = encodeURIComponent(window.location.href.split('#')[0]);
+        wxApi.postJsApiData(url, (rs) => {
+            const data = rs.result;
+            wx.config({  
+                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。  
+                appId: data.appId, // 必填，公众号的唯一标识  
+                timestamp: data.timestamp, // 必填，生成签名的时间戳  
+                nonceStr: data.nonceStr, // 必填，生成签名的随机串  
+                signature: data.signature, // 必填，签名，见附录1  
+                jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"]
+            });  
+        });
+    }
+
     componentDidMount() {
         this.requestMockData();
-        const uid = queryString.parse(location.search).uid;
-        const openid = localStorage.getItem("openid");
-        homeApi.postOpenId(uid, openid, (rs)=>{
-            alert(rs);
+
+        const uid = locManager.getUId();
+        const from_user = locManager.getFromUser();
+        const myopenid = locManager.getMyOpenId();
+        const mynickname = locManager.getMyNickname();
+        var shareData = {   // 自定义分享数据
+            title: 'WF微商城',
+            desc: '来自'+locManager.getMyNickname()+'的分享',
+            link: host + locManager.generateSaleLink()
+        };
+        if (uid) {          // 第一次扫码，url带uid字段，不带from_user
+            homeApi.postOpenId(uid, myopenid, (rs)=>{
+                alert(rs);
+            });
+        } else {            // 分享后的链接，url不带uid字段，带from_user
+            homeApi.createAccount(mynickname, myopenid, (rs)=>{
+                alert(rs);
+            });
+        }
+        wx.ready(function(){
+            wx.checkJsApi({
+                jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"],
+                success: function(res) {
+                    console.log(res)
+                }
+            });
+            wx.onMenuShareAppMessage(shareData);
+            wx.onMenuShareTimeline(shareData);
+        });
+        wx.error(function(res){
+            console.log('wx.error');
+            console.log(res);
         });
     }
 

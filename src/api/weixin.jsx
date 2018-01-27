@@ -5,7 +5,7 @@ var api = {
     postJsApiData(url, callback) {
         http.ajax({
             method: 'POST',
-            url: 'http://supermall.junior2ran.cn/auth',
+            url: 'http://ymymmall.swczyc.com/auth',
             data: {
                 url: url
             },

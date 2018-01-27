@@ -15,6 +15,7 @@ import wxApi from "../../../api/weixin.jsx";
 
 const Item = List.Item;
 const Brief = Item.Brief;
+const host = 'http://ymymmall.swczyc.com/';
 
 class Product extends React.Component {
     constructor(props,context) {
@@ -45,10 +46,14 @@ class Product extends React.Component {
 
     componentDidMount() {
         this.requestData();
+        
+        const uid = locManager.getUId();
+        const from_user = locManager.getFromUser();
+        const myopenid = locManager.getMyOpenId();
         var shareData = {//自定义分享数据
             title: 'WF微商城',
-            desc: '来自'+localStorage.getItem("nickname")+'的分享',
-            link: 'http://supermall.junior2ran.cn/?from_user='+localStorage.openid,//链接地址
+            desc: '来自'+locManager.getMyNickname()+'的分享',
+            link: host + locManager.generateSaleLink()
         };
         wx.ready(function(){
             wx.checkJsApi({
@@ -113,7 +118,7 @@ class Product extends React.Component {
 
         return <Layout header={true}>
             <NoticeBar mode="link" action=''>
-                来自 {locManager.getFromOpenId()} 的分享。
+                来自 {locManager.getFromUser()} 的分享。
             </NoticeBar>
             <Card className="general_container">
                 <Carousel className="my-carousel"
