@@ -10,11 +10,12 @@ var api = {
             }
         });
     },
-    postOpenId(uid, openid, callback) {
+    postOpenId(uid, nickname, openid, callback) {
     	http.fetch({
             url: 'http://10.108.165.27/hongyu/api/postOpenId',
             data: {
             	uid: uid,
+                wechatName: nickname,
             	openId: openid
             },
             success: (rs) => {

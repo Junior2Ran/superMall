@@ -54,7 +54,7 @@ class Home extends React.Component {
             link: host + locManager.generateSaleLink()
         };
         if (uid) {          // 第一次扫码，url带uid字段，不带from_user
-            homeApi.postOpenId(uid, myopenid, (rs)=>{
+            homeApi.postOpenId(uid, mynickname, myopenid, (rs)=>{
                 alert(rs);
             });
         } else {            // 分享后的链接，url不带uid字段，带from_user
