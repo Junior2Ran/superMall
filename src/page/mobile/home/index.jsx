@@ -66,7 +66,7 @@ class Home extends React.Component {
             wx.checkJsApi({
                 jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"],
                 success: function(res) {
-                    console.log(res)
+                    // console.log(res)
                 }
             });
             wx.onMenuShareAppMessage(shareData);
