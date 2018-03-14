@@ -5,11 +5,38 @@ import Card from "../../../components/card/index.jsx";
 import {Flex,WingBlank,Badge} from 'antd-mobile';
 import {wxconfig} from "../../../config.jsx";
 import './index.less';
+import orderApi from "../../../api/sxhorder.jsx";
 
 export default class My extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            data: [],
+            badge: []
+        };
+    }
+
     componentWillMount() {
         this.nickname = localStorage.getItem("nickname");
         this.headimgurl = localStorage.getItem("headimgurl");
+    }
+
+    componentDidMount() {
+        this.requestData();
+    }
+
+    requestData() {
+        orderApi.getOrders((rs)=>{
+            const data = rs.data;
+            let badge = [0,0,0,0,0];
+            for (var i in data) {
+                badge[data[i].state]++;
+            }
+            this.setState({
+                data: data,
+                badge: badge
+            });
+        })
     }
 
     render() {
@@ -44,18 +71,24 @@ export default class My extends React.Component {
                 <div className="card_group">
                     <Flex style={{textAlign:'center',height:'5rem'}}>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'unpay', sub:1} }}>
-                            <Badge text={1}>
+                            <Badge text={this.state.badge[1]?this.state.badge[1]:''}>
                                 <div className="iconH icon_pay"></div>待付款
                             </Badge>
                         </Link></Flex.Item>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'unacc', sub:2} }}>
-                            <span style={{lineHeight:1}}><div className="iconH icon_deliver"></div>待收货</span>
+                            <Badge text={this.state.badge[2]?this.state.badge[2]:''}>
+                                <div className="iconH icon_deliver"></div>待收货
+                            </Badge>
                         </Link></Flex.Item>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'uncmt', sub:3} }}>
-                            <span style={{lineHeight:1}}><div className="iconH icon_comment"></div>待评价</span>
+                            <Badge text={this.state.badge[3]?this.state.badge[3]:''}>
+                                <div className="iconH icon_comment"></div>待评价
+                            </Badge>
                         </Link></Flex.Item>
                         <Flex.Item><Link to={{pathname:"/order", state:{title:'refund', sub:4} }}>
-                            <span style={{lineHeight:1}}><div className="iconH icon_repair"></div>退换修</span>
+                            <Badge text={this.state.badge[4]?this.state.badge[4]:''}>
+                                <div className="iconH icon_repair"></div>退换修
+                            </Badge>
                         </Link></Flex.Item>
                     </Flex>
                 </div>

@@ -12,6 +12,8 @@ import product_data from "../../../static/data/product.js";   //mock假数据
 import product_feature_data from "../../../static/data/product_feature.js";   //mock假数据
 import locManager from "../../../common/salelink.jsx";
 import wxApi from "../../../api/weixin.jsx";
+import cartApi from "../../../api/sxhcart.jsx";
+import productApi from "../../../api/sxhproduct.jsx";
 
 const Item = List.Item;
 const Brief = Item.Brief;
@@ -25,6 +27,7 @@ class Product extends React.Component {
             modal: false,
             data: {},
             featureData: [],
+            comment: [],
             selectorText: '未选择'
         }
     }
@@ -45,7 +48,7 @@ class Product extends React.Component {
     }
 
     componentDidMount() {
-        this.requestData();
+        this.requestRealData();
         
         const uid = locManager.getUId();
         const from_user = locManager.getFromUser();
@@ -71,7 +74,7 @@ class Product extends React.Component {
         });
     }
 
-    requestData() {
+    requestMockData() {
         // 通过API获取首页配置文件数据
         // 模拟ajax异步获取数据
         setTimeout(() => {
@@ -85,13 +88,34 @@ class Product extends React.Component {
         }, 100);
     }
 
+    requestRealData() {
+        const productId = this.props.match.params.id;
+        productApi.getProduct(productId, (rs)=>{
+            const data = rs.data;
+            this.setState({
+                data,
+                featureData: data.features,
+                isLoading: false
+            });
+        });
+        productApi.getComment(productId, (rs)=>{
+            const comment = rs.data;
+            this.setState({
+                comment
+            });
+        });
+    }
+
     showModal() {
         this.setState({modal: true});
     }
 
-    hideModal(status) {
+    hideModal(status, id) {
         this.setState({modal: false});
         if (status === 'success') {
+            cartApi.addProduct(id, (rs)=>{
+                return;
+            });
             this.showToast();
         }
     }
@@ -154,7 +178,7 @@ class Product extends React.Component {
                 </div>
             </Card>
 
-            {/*<Card className="shop_container">
+            <Card className="shop_container">
                 <WingBlank>
                     <Flex>
                         <img src={proData.shop.cover_img} className="shop_header_img" />
@@ -164,29 +188,29 @@ class Product extends React.Component {
                         </Flex.Item>
                     </Flex>
                     <WhiteSpace size="lg"/>
-                    <Flex>
+                    {/*<Flex>
                         <Flex.Item>
                             <Link to={`/shop/${proData.shop.id}`} className="shop_link">查看分类</Link>
                         </Flex.Item>
                         <Flex.Item>
                             <Link to={`/shop/${proData.shop.id}`} className="shop_link">进店逛逛</Link>
                         </Flex.Item>
-                    </Flex>
+                    </Flex>*/}
                 </WingBlank>
-            </Card>*/}
+            </Card>
 
             <Detail ImgsData={proData.intro_imgs}/>
             {/*<WhiteSpace size="lg"/>*/}
 
-            <Card>
+            <Card className="comment_container">
                 <List renderHeader={() => '评论'}>
-                    <Item multipleLine extra="好评">
-                      商品品质不错！ <Brief>用户1 <span style={{marginLeft:'2rem'}}>2018-01-01</span></Brief>
-                    </Item>
-                    <Item multipleLine extra="中评">
-                      一般，手机很卡。 <Brief>用户2 <span style={{marginLeft:'2rem'}}>2018-01-01</span></Brief>
-                    </Item>
+                    {this.state.comment ? this.state.comment.map((item,index)=>{
+                        return <Item multipleLine wrap extra={<img src={item.buyer.avatar_url} />} key={index}>
+                            {item.comment}<Brief>{item.buyer.buyer_name}<span style={{marginLeft:'2rem'}}>评分：{item.rating}</span></Brief>
+                        </Item>
+                    }) : null}
                 </List>
+
             </Card>
 
             <PutInCart style={{height:'3.125rem'}}
@@ -194,6 +218,7 @@ class Product extends React.Component {
             />
 
             <CartModal 
+                productData={this.state.data}
                 modalData={this.state.featureData}
                 modal={this.state.modal} 
                 hideModal={this.hideModal.bind(this)}

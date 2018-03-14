@@ -8,13 +8,15 @@ import {wxconfig} from "../../../config.jsx";
 import wxApi from "../../../api/weixin.jsx";
 import paymentApi from "../../../api/payment.jsx";
 import './index.less';
+import orderApi from "../../../api/sxhorder.jsx";
 
 export default class Payment extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
+            data: {},
             discount: 0,
-            ship_fee: 0,
+            ship_fee: 12,
             payment_price: 5000,
             modal: false
         };
@@ -51,6 +53,19 @@ export default class Payment extends React.Component {
         wx.error(function(res){
             console.log('wx.error');
             console.log(res);
+        });
+        this.requestData();
+    }
+
+    requestData() {
+        const orderid = this.props.location.query || localStorage.getItem("nowOrderId");
+        if (this.props.location.query) {
+            localStorage.setItem("nowOrderId", this.props.location.query);
+        }
+        orderApi.getOrder(orderid, (rs)=>{
+            this.setState({
+                data: rs.data
+            })
         });
     }
 
@@ -115,6 +130,48 @@ export default class Payment extends React.Component {
         });
     }
 
+    generateProducts() {
+        const data = this.state.data;
+        let vdom = [];
+
+        for(var i in data.products) {
+            vdom.push(<Card className="payment_card clearfix" key={i}>
+                <div className="payment_card_img">
+                    <img src={data.products[i].cover_img} />
+                </div>
+                <div className="payment_card_text">
+                    <div className="title_text">{data.products[i].name}</div>
+                    <div className="num_text">数量：{data.products[i].amount}</div>
+                    <div className="price_text">￥{data.products[i].price}</div>
+                </div>
+            </Card>);
+        }
+
+        vdom.push(<Card className="payment_card" key='000'>
+            <div>
+                {/*<div className="discount">
+                    <div className="discount_select">个人 明细</div>
+                    <div className="discount_title">发票信息</div>
+                </div>*/}
+                <div className="discount">
+                    <div className="discount_select" onClick={this.showModal.bind(this)}>{this.state.discount ? `-￥${this.state.discount}` : '暂不使用'}</div>
+                    <div className="discount_title">优惠券</div>
+                </div>
+                <div className="discount clearfix">
+                    <div className="discount_select price_text">￥{data.cost}</div>
+                    <div className="discount_title">商品金额</div>
+                    <div className="discount_select price_text">+￥{this.state.ship_fee}</div>
+                    <div className="discount_title">运费</div>
+                    <div className="discount_select price_text total">￥{parseInt(data.cost) + parseInt(this.state.ship_fee) - parseInt(this.state.discount)}</div>
+                </div>
+            </div>
+            <div className="bigbutton" onClick={this.payCharge.bind(this)}>确认支付</div>
+            <div className="bigbutton cancel" onClick={this.props.history.goBack}>取消付款</div>
+        </Card>);
+
+        return vdom;
+    }
+
     render() {
         return <Layout header={false} footer={false}>
             <Card className="payment_card">
@@ -124,39 +181,8 @@ export default class Payment extends React.Component {
                 </Link>
             </Card>
 
-            <Card className="payment_card clearfix">
-                <div className="payment_card_img">
-                    <img src="./images/hdr4.png" />
-                </div>
-                <div className="payment_card_text">
-                    <div className="title_text">IPhone X 16G 2009限量版 现货</div>
-                    <div className="small_text">红色 / 16G</div>
-                    <div className="num_text">数量：1</div>
-                    <div className="price_text">￥5000</div>
-                </div>
-            </Card>
+            {this.generateProducts()}
 
-            <Card className="payment_card">
-                <div>
-                    {/*<div className="discount">
-                        <div className="discount_select">个人 明细</div>
-                        <div className="discount_title">发票信息</div>
-                    </div>*/}
-                    <div className="discount">
-                        <div className="discount_select" onClick={this.showModal.bind(this)}>{this.state.discount ? `-￥${this.state.discount}` : '暂不使用'}</div>
-                        <div className="discount_title">优惠券</div>
-                    </div>
-                    <div className="discount clearfix">
-                        <div className="discount_select price_text">￥{this.state.payment_price}</div>
-                        <div className="discount_title">商品金额</div>
-                        <div className="discount_select price_text">+￥{this.state.ship_fee}</div>
-                        <div className="discount_title">运费</div>
-                        <div className="discount_select price_text total">￥{this.state.payment_price + this.state.ship_fee - this.state.discount}</div>
-                    </div>
-                </div>
-                <div className="bigbutton" onClick={this.payCharge.bind(this)}>确认支付</div>
-                <div className="bigbutton cancel" onClick={this.props.history.goBack}>取消付款</div>
-            </Card>
             <Modal
                 popup
                 visible={this.state.modal}

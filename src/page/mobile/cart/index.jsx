@@ -7,136 +7,146 @@ import { Link } from 'react-router-dom';
 import { Flex, InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import './index.less';
+import cartApi from "../../../api/sxhcart.jsx";
+import orderApi from "../../../api/sxhorder.jsx";
 
 class Cart extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor(props, context) {
+        super(props, context);
         this.state = {
-            checkbox0: true,
-            checkbox1: false,
-            checkbox2: true,
-            numValue0: 1,
-            numValue1: 1,
-            numValue2: 1,
-            price0: 5000,
-            price1: 5000,
-            price2: 5000
+            data: [],
+            select: []
         };
     }
 
-    generateTotalPrice() {
+    static contextTypes = {  
+        router: React.PropTypes.object
+    }  
+
+    componentDidMount() {
+        this.requestData();
+    }
+
+    getTotalPrice() {
         let total = 0;
-        for(var i = 0; i < 3; i++){
-            if (this.state[`checkbox${i}`]) {
-                total += this.state[`price${i}`];
+        let cart = [];
+        this.state.data.map((data,index)=>{
+            data.cart_items.map((val,index)=>{
+                cart.push(val);
+            });
+        });
+        const select = this.state.select;
+        for(var i in cart){
+            if(select[cart[i].id] == true){
+                total += cart[i].amount*cart[i].product.price;
             }
         }
         return total;
     }
 
+    requestData() {
+        cartApi.getCart((rs) => {
+            const data = rs.data;
+            this.setState({
+                data: data
+            });
+        });
+    }
+
+    modifyCart(cartitemid, val) {
+        cartApi.modifyProduct(cartitemid, val, (rs) => {
+            this.requestData();
+        });
+    }
+
+    deleteCart(cartitemid) {
+        cartApi.deleteProduct(cartitemid, (rs) => {
+            this.requestData();
+        });
+    }
+
+    toggleCheckbox(cartitemid) {
+        let select = this.state.select;
+        select[cartitemid] = !select[cartitemid];
+        this.setState({
+            select: select
+        });
+    }
+
+    createOrder() {
+        let products = [],
+            amounts = [],
+            cart = [];
+        this.state.data.map((data,index)=>{
+            data.cart_items.map((val,index)=>{
+                cart.push(val);
+            });
+        });
+        const select = this.state.select;
+        for(var i in cart){
+            if(select[cart[i].id] == true){
+                amounts.push(cart[i].amount);
+                products.push(cart[i].product.id);
+            }
+        }
+        if (amounts.length) {
+            orderApi.createOrder(products, amounts, (rs) => {
+                let path = {
+                    pathname: '/payment',
+                    query: rs.data.id
+                }
+                this.context.router.history.push(path);
+            });
+        }
+    }
+
+    generateCard() {
+        const data = this.state.data;
+        let vdom = [];
+        for (var i in data) {
+            vdom.push(<Card className="cart_card" key={i}>
+                <div className="cart_card_underline">
+                    <span className="cart_card_shopname">{data[i].shop.shop_name}</span>
+                </div>
+                {data[i].cart_items.map((item, index) => {
+                    return <Flex className="cart_card_container" key={index}>
+                        <input type="checkbox" checked={this.state.select[item.id]||false} onChange={(e)=>{this.toggleCheckbox(item.id)}} />
+                        <div className="cart_card_img">
+                            <img src={item.product.cover_img} />
+                        </div>
+                        <Flex.Item>
+                            <div className="title_text">{item.product.name}</div>
+                            <div className="price_text">￥{item.product.price}</div>
+                        </Flex.Item>
+                        <div className="input_num">
+                            <InputItem
+                                type="number"
+                                value={item.amount}
+                                onChange={(val)=>{this.modifyCart(item.id, val)}}
+                            />
+                        </div>
+                        <div className="input_delete" onClick={()=>{this.deleteCart(item.id)}}>
+                            删除
+                        </div>
+                    </Flex>
+                })}
+            </Card>);
+        }
+        return vdom;
+    }
+
     render() {
         const { getFieldProps } = this.props.form;
         return <Layout footer={true}>
-            <Card className="cart_card">
-                <div className="cart_card_underline">
-                    <input type="checkbox" checked={this.state.checkbox0 && this.state.checkbox1} onChange={()=>{this.setState({
-                            checkbox0: !(this.state.checkbox0 && this.state.checkbox1),
-                            checkbox1: !(this.state.checkbox0 && this.state.checkbox1)
-                    })}}/>
-                    <span className="cart_card_shopname">阿呆的店铺</span>
-                </div>
-                <Flex className="cart_card_container cart_card_underline">
-                    <input type="checkbox" checked={this.state.checkbox0} onChange={()=>{this.setState({
-                        checkbox0: !this.state.checkbox0
-                    })}} />
-                    <div className="cart_card_img">
-                        <img src="./images/hdr4.png" />
-                    </div>
-                    <Flex.Item>
-                        <div className="title_text">IPhone X 16G 2009限量版</div>
-                        <div>红色 / 16G</div>
-                        <div className="price_text">￥{this.state.price0}</div>
-                    </Flex.Item>
-                    <div className="input_num">
-                        <InputItem
-                            type="number"
-                            value={this.state.numValue0}
-                            onChange={(val)=>{this.setState({
-                                numValue0: val
-                            })}}
-                        />
-                    </div>
-                    <div className="input_delete">
-                        删除
-                    </div>
-                </Flex>
-                <Flex className="cart_card_container">
-                    <input type="checkbox" checked={this.state.checkbox1} onChange={()=>{this.setState({
-                        checkbox1: !this.state.checkbox1
-                    })}} />
-                    <div className="cart_card_img">
-                        <img src="./images/hdr4.png" />
-                    </div>
-                    <Flex.Item>
-                        <div className="title_text">IPhone X 16G 2009限量版</div>
-                        <div>红色 / 16G</div>
-                        <div className="price_text">￥{this.state.price1}</div>
-                    </Flex.Item>
-                    <div className="input_num">
-                        <InputItem
-                            type="number"
-                            value={this.state.numValue1}
-                            onChange={(val)=>{this.setState({
-                                numValue1: val
-                            })}}
-                        />
-                    </div>
-                    <div className="input_delete">
-                        删除
-                    </div>
-                </Flex>
-            </Card>
-            <Card className="cart_card">
-                <div className="cart_card_underline">
-                    <input type="checkbox" checked={this.state.checkbox2} onChange={()=>{this.setState({
-                        checkbox2: !this.state.checkbox2
-                    })}} />
-                    <span className="cart_card_shopname">阿呆的店铺</span>
-                </div>
-                <Flex className="cart_card_container">
-                    <input type="checkbox" checked={this.state.checkbox2} onChange={()=>{this.setState({
-                        checkbox2: !this.state.checkbox2
-                    })}} />
-                    <div className="cart_card_img">
-                        <img src="./images/hdr4.png" />
-                    </div>
-                    <Flex.Item>
-                        <div className="title_text">IPhone X 16G 2009限量版</div>
-                        <div>红色 / 16G</div>
-                        <div className="price_text">￥{this.state.price2}</div>
-                    </Flex.Item>
-                    <div className="input_num">
-                        <InputItem
-                            type="number"
-                            value={this.state.numValue2}
-                            onChange={(val)=>{this.setState({
-                                numValue2: val
-                            })}}
-                        />
-                    </div>
-                    <div className="input_delete">
-                        删除
-                    </div>
-                </Flex>
-            </Card>
+            {this.generateCard()}
             <Bottom>我是有底线的</Bottom>
 
             <div style={{height:'3.5rem'}}></div>
             <div className="putincart cart_summary">
                 <div className="secondary_btn" style={{width:'60%',fontSize:'0.8rem'}}>
-                    合计：￥{this.generateTotalPrice()}
+                    合计：￥{this.getTotalPrice()}
                 </div>
-                <Link to="/payment" className="primary_btn" style={{width:'40%'}}>结算（{this.state.checkbox0+this.state.checkbox1+this.state.checkbox2}）</Link>
+                <div className="primary_btn" style={{width:'40%'}} onClick={this.createOrder.bind(this)}>结算</div>
             </div>
         </Layout>
     }

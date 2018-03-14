@@ -6,7 +6,7 @@ import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {WhiteSpace,Flex,Tabs} from 'antd-mobile';
 import './index.less';
 import search_data from "../../../static/data/search_result";   //mock假数据
-import searchApi from "../../../api/search.jsx";
+import searchApi from "../../../api/sxhsearch.jsx";
 
 class Search extends React.Component {
     constructor(props, context) {
@@ -19,7 +19,7 @@ class Search extends React.Component {
     }
 
     componentDidMount() {
-        this.requestMockData();
+        this.requestRealData();
     }
 
     requestMockData() {
@@ -36,8 +36,7 @@ class Search extends React.Component {
 
     requestRealData() {
         searchApi.getSearchResults((rs) => {
-            console.log(rs);
-            const data = search_data.data;   //api真数据
+            const data = rs.data;   //api真数据
             this.setState({
                 data,
                 isLoading: false

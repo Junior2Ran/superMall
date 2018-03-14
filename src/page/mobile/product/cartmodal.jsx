@@ -50,10 +50,10 @@ export default class CartModal extends React.Component {
     render() {
         const title = <div className="popup_modal_header">
             <Flex justify="end">
-                <Flex.Item><img src="./images/hdr4.png" style={{width:'50%'}}/></Flex.Item>
+                <Flex.Item><img src={this.props.productData.img_urls[0]} style={{width:'50%'}}/></Flex.Item>
                 <Flex.Item>
-                    <h3>￥6999</h3>
-                    <p>联想 拯救者R987</p>
+                    <h3>￥{this.props.productData.price}</h3>
+                    <p>{this.props.productData.name}</p>
                 </Flex.Item>
             </Flex>
         </div>;
@@ -61,7 +61,7 @@ export default class CartModal extends React.Component {
         const footer = [{
             text: '加入购物车',
             onPress: ()=>{
-                this.props.hideModal && this.props.hideModal('success');
+                this.props.hideModal && this.props.hideModal('success',this.props.productData.id);
                 this.props.selectorText && this.props.selectorText(this.state.active);
             }
         }];

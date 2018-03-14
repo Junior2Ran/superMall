@@ -11,11 +11,12 @@ function getServerHost() {
     let devURL = "https://wfshop.andysheng.cn"; // 测试地址
     let localURL = "//127.0.0.1:8080"; // 本地地址
     let onlineURL = "//ymymmall.swczyc.com"; // 线上地址
+    let wfURL = "//admin.swczyc.com/hyapi/ymmall"; //学弟后台
 
     if (/*/supermall\.junior2ran\.cn/.test(location.href) || */params.apitype == "online") {
         return onlineURL;
     } else {
-        return devURL;
+        return wfURL;
     }
 }
 

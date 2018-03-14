@@ -6,6 +6,7 @@ import LoadingHoc from "../../../common/loading-hoc.jsx";
 import {Accordion, List, WingBlank} from 'antd-mobile';
 import './index.less';
 import category_data from "../../../static/data/category.js";   //mock假数据
+import categoryApi from "../../../api/sxhsearch.jsx";
 
 class Category extends React.Component {
     constructor(props) {
@@ -17,10 +18,10 @@ class Category extends React.Component {
     }
 
     componentDidMount() {
-        this.requestData();
+        this.requestRealData();
     }
 
-    requestData() {
+    requestMockData() {
         // 通过API获取首页配置文件数据
         // 模拟ajax异步获取数据
         setTimeout(() => {
@@ -30,6 +31,15 @@ class Category extends React.Component {
                 isLoading: false
             });
         }, 100);
+    }
+
+    requestRealData() {
+        categoryApi.getCategory((rs)=>{
+            this.setState({
+                data: rs.data,
+                isLoading: false
+            });
+        });
     }
 
     scrollToAnchor = (anchorName) => {
