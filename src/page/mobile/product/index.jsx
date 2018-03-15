@@ -206,7 +206,7 @@ class Product extends React.Component {
                 <List renderHeader={() => '评论'}>
                     {this.state.comment ? this.state.comment.map((item,index)=>{
                         return <Item multipleLine wrap extra={<img src={item.buyer.avatar_url} />} key={index}>
-                            {item.comment}<Brief>{item.buyer.buyer_name}<span style={{marginLeft:'2rem'}}>评分：{item.rating}</span></Brief>
+                            {item.comment}<Brief>{item.buyer.buyer_name}<span style={{marginLeft:'2rem'}}>评价：好评</span></Brief>
                         </Item>
                     }) : null}
                 </List>

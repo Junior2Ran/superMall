@@ -81,6 +81,19 @@ var api = {
             }
         });
     },
+
+    commentOrder(id, callback) {
+        http.ajax({
+            method: 'POST',
+            url: devURL + "/order/" + id + "/comment",
+            data: {
+                
+            },
+            success: (rs) => {
+                callback && callback(rs);
+            }
+        });
+    },
 };
 
 export default api;

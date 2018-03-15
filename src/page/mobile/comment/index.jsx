@@ -2,22 +2,53 @@ import React from 'react';
 import { TextareaItem, List, Card, Tag, Flex } from 'antd-mobile';
 import Submit from "../../../components/submit/index.jsx";
 // import './index.less';
+import orderApi from "../../../api/sxhorder.jsx";
 
 export default class Comment extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            score: 2
+            score: 2,
+            data: {}
         };
     }
+
+    static contextTypes = {  
+        router: React.PropTypes.object
+    } 
     
+    componentDidMount() {
+        this.requestData();
+    }
+
+    requestData() {
+        const orderid = this.props.location.query;
+        console.log(orderid)
+        orderApi.getOrder(orderid, (rs)=>{
+            this.setState({
+                data: rs.data
+            })
+        });
+    }
+
+    commentOrder() {
+        const orderid = this.props.location.query;
+        orderApi.commentOrder(orderid, (rs)=>{
+            this.props.history.goBack();
+        });
+    }
+
     render(){
         const score = this.state.score;
+        const product = this.state.data.products && this.state.data.products[0];
+        const name = product && product.name;
+        const url = product && product.cover_img;
+        console.log(this.state.data)
         return <div>
             <Card full>
               <Card.Header
-                title="华为 HUAWEI Mate9 Pro （LON-AL00）6GB+128GB 琥珀金"
-                thumb={<img src="/images/hdr4.png" style={{width:'20%'}}/>}
+                title={name}
+                thumb={<img src={url} style={{width:'20%'}}/>}
                 
               />
               <Card.Body>
@@ -32,12 +63,11 @@ export default class Comment extends React.Component {
                 <TextareaItem 
                     placeholder="请输入您的评论..."
                     autoHeight
-                    count={100}
                     rows={4}
                 />
             </List>
 
-            <Submit onClick={this.props.history.goBack}>确认评价</Submit>
+            <Submit onClick={this.commentOrder.bind(this)}>确认评价</Submit>
         </div>
     }
 }

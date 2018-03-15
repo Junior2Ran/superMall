@@ -61,7 +61,6 @@ class Orderlist extends React.Component {
     }
 
     requestData() {
-        console.log(1);
         orderApi.getOrdersByType(this.state.tab, (rs)=>{
             const data = rs.data;
             this.setState({
@@ -153,7 +152,6 @@ class Orderlist extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return <div>
             {this.generateCard()}
         </div>

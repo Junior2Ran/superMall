@@ -29,11 +29,10 @@ export default class Refund extends React.Component {
             </Card>
             <Card className="refund_card">
                 <Flex>
-                    <Flex.Item style={{flex:'0 0 20%'}}><img src="./images/hdr4.png" style={{width:'100%'}} /></Flex.Item>
+                    <Flex.Item style={{flex:'0 0 20%'}}><img src="https://wfshop.andysheng.cn/img/product1/cover-1.jpg" style={{width:'100%'}} /></Flex.Item>
                     <Flex.Item>
-                        <div className="title_text">IPhone X 16G 2009限量版</div>
-                        <div>红色 / 16G</div>
-                        <div className="price_text">￥5000</div>
+                        <div className="title_text">小米 红米5A 全网通版 3GB+32GB 香槟金 移动联通电信4G手机 双卡双待</div>
+                        <div className="price_text">￥699.00</div>
                     </Flex.Item>
                 </Flex>
             </Card>
@@ -41,7 +40,6 @@ export default class Refund extends React.Component {
                 <TextareaItem 
                     placeholder="请输入您遇到问题的描述..."
                     autoHeight
-                    count={100}
                     rows={4}
                 />
             </List>

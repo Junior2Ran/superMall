@@ -9,12 +9,14 @@ import wxApi from "../../../api/weixin.jsx";
 import paymentApi from "../../../api/payment.jsx";
 import './index.less';
 import orderApi from "../../../api/sxhorder.jsx";
+import userApi from "../../../api/sxhuser.jsx";
 
 export default class Payment extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             data: {},
+            address: {},
             discount: 0,
             ship_fee: 12,
             payment_price: 5000,
@@ -65,8 +67,13 @@ export default class Payment extends React.Component {
         orderApi.getOrder(orderid, (rs)=>{
             this.setState({
                 data: rs.data
-            })
+            });
         });
+        userApi.getDefaultShipAddress((rs)=>{
+            this.setState({
+                address: JSON.parse(localStorage.getItem("address")) || rs.data
+            });
+        })
     }
 
     showModal() {
@@ -173,11 +180,12 @@ export default class Payment extends React.Component {
     }
 
     render() {
+        const address = this.state.address;
         return <Layout header={false} footer={false}>
             <Card className="payment_card">
                 <Link to="/address">
-                    <div>何东燃 13041017126</div>
-                    <div>北京市海淀区西土城路10号北京邮电大学</div>
+                    <div>{address.receiver_name} {address.receiver_phone}</div>
+                    <div>{address.province} {address.city} {address.detail}</div>
                 </Link>
             </Card>
 
