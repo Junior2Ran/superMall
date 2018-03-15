@@ -11,7 +11,7 @@ export default class Address extends React.Component {
         super(props, context);
         this.state = {
             shipData: [],
-            checkid: JSON.parse(localStorage.getItem("address")).id || 1,
+            checkid: JSON.parse(localStorage.getItem("address")) ? JSON.parse(localStorage.getItem("address")).id : 1,
             isLoading: true
         };
     }

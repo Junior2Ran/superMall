@@ -141,9 +141,9 @@ class Product extends React.Component {
         });
 
         return <Layout header={true}>
-            <NoticeBar mode="link" action=''>
+            {/*<NoticeBar mode="link" action=''>
                 来自 {locManager.getFromUser()} 的分享。
-            </NoticeBar>
+            </NoticeBar>*/}
             <Card className="general_container">
                 <Carousel className="my-carousel"
                     autoplay={true}
@@ -155,7 +155,7 @@ class Product extends React.Component {
                 </Carousel>
                 <WingBlank>
                     <h3>{proData.name}<small>{proData.sub_title}</small></h3>
-                    <p> 拯救者是联想在原有游戏PC——彪悍的Y系列笔记本之外,推出的全新子品牌。与联想另一个PC子品牌“小新”一样，拯救者定位于互联网产品。拯救者为发烧而生，流畅运行大型游戏，他的使命是为玩家带来爽快的体验。今天ZOL将要为大家介绍的是拯救者-14机型。</p>
+                    {/*<p> 拯救者是联想在原有游戏PC——彪悍的Y系列笔记本之外,推出的全新子品牌。与联想另一个PC子品牌“小新”一样，拯救者定位于互联网产品。拯救者为发烧而生，流畅运行大型游戏，他的使命是为玩家带来爽快的体验。今天ZOL将要为大家介绍的是拯救者-14机型。</p>*/}
                     <h2>￥{proData.price}</h2>
                 </WingBlank>
                 <WhiteSpace size="xs" />
